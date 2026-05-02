@@ -8,6 +8,51 @@
       "permanent": true
     },
     {
+      "source": "/bellevue",
+      "destination": "/bellevue-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/mt-juliet",
+      "destination": "/mt-juliet-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/belle-meade",
+      "destination": "/belle-meade-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/green-hills",
+      "destination": "/green-hills-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/hendersonville",
+      "destination": "/hendersonville-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/donelson",
+      "destination": "/donelson-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/spring-hill",
+      "destination": "/spring-hill-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/manchester",
+      "destination": "/manchester-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/tullahoma",
+      "destination": "/tullahoma-insurance",
+      "permanent": true
+    },
+    {
       "source": "/franklin",
       "destination": "/franklin-insurance",
       "permanent": true
@@ -68,48 +113,8 @@
       "permanent": true
     },
     {
-      "source": "/bellevue",
-      "destination": "/bellevue-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/mt-juliet",
-      "destination": "/mt-juliet-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/belle-meade",
-      "destination": "/belle-meade-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/green-hills",
-      "destination": "/green-hills-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/hendersonville",
-      "destination": "/hendersonville-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/donelson",
-      "destination": "/donelson-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/spring-hill",
-      "destination": "/spring-hill-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/manchester",
-      "destination": "/manchester-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/tullahoma",
-      "destination": "/tullahoma-insurance",
+      "source": "/health-insurance-brentwood-tn",
+      "destination": "/brentwood-insurance",
       "permanent": true
     },
     {
@@ -155,11 +160,6 @@
     {
       "source": "/health-insurance-tullahoma-tn",
       "destination": "/tullahoma-insurance",
-      "permanent": true
-    },
-    {
-      "source": "/health-insurance-brentwood-tn",
-      "destination": "/brentwood-insurance",
       "permanent": true
     },
     {
@@ -214,7 +214,12 @@
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.dcinsuranceagency.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dcinsuranceagency.com"
+        }
+      ],
       "destination": "https://dcinsuranceagency.com/:path*",
       "permanent": true
     }
@@ -233,4 +238,27 @@
         },
         {
           "key": "Referrer-Policy",
-          "value": "strict-origi
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/styles.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/:path.(jpg|jpeg|png|gif|svg|ico|webp)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
