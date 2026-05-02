@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
   <url>
     <loc>https://dcinsuranceagency.com/</loc>
     <changefreq>weekly</changefreq>
@@ -20,6 +22,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- City / location pages -->
   <url>
     <loc>https://dcinsuranceagency.com/nashville-insurance</loc>
     <changefreq>monthly</changefreq>
@@ -51,6 +55,41 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://dcinsuranceagency.com/belle-meade-insurance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/green-hills-insurance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/bellevue-insurance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/mt-juliet-insurance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/hendersonville-insurance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/spring-hill-insurance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/donelson-insurance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://dcinsuranceagency.com/shelbyville-insurance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -71,41 +110,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dcinsuranceagency.com/bellevue-insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/mt-juliet-insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/belle-meade-insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/green-hills-insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/hendersonville-insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/donelson-insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/spring-hill-insurance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://dcinsuranceagency.com/manchester-insurance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -115,6 +119,35 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Topic / money pages -->
+  <url>
+    <loc>https://dcinsuranceagency.com/self-employed-health-insurance-tennessee</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/1099-health-insurance-tennessee</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/small-business-health-insurance-tennessee</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/private-ppo-health-insurance-tennessee</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/aca-vs-private-health-insurance-tennessee</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
   <url>
     <loc>https://dcinsuranceagency.com/dc-insurance-blog</loc>
     <changefreq>weekly</changefreq>
@@ -145,6 +178,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Utility pages -->
   <url>
     <loc>https://dcinsuranceagency.com/free-health-coverage-pdf</loc>
     <changefreq>yearly</changefreq>
@@ -155,25 +190,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/self-employed-health-insurance-tennessee</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/1099-health-insurance-tennessee</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/private-ppo-health-insurance-tennessee</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsuranceagency.com/aca-vs-private-health-insurance-tennessee</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dcinsur
+
+</urlset>
