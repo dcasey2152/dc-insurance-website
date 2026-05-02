@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Insurance Services | DC Insurance | Middle Tennessee</title>
+  <meta name="description" content="DC Insurance offers private PPO health plans, ACA marketplace comparisons, supplemental coverage, and life and income protection for Middle Tennessee residents. Independent agent. Call 615-513-0313." />
+  <link rel="canonical" href="https://dcinsuranceagency.com/services" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Health Insurance Services | DC Insurance | Middle Tennessee" />
+  <meta property="og:description" content="DC Insurance offers private PPO health plans, ACA marketplace comparisons, supplemental coverage, and life and income protection for Middle Tennessee residents. Independent agent. Call 615-513-0313." />
+  <meta property="og:url" content="https://dcinsuranceagency.com/services" />
+  <meta property="og:site_name" content="DC Insurance" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "InsuranceAgency"
+      ],
+      "@id": "https://dcinsuranceagency.com/#business",
+      "name": "DC Insurance",
+      "description": "Independent health insurance agent serving Middle Tennessee. Comparing private PPO plans, ACA marketplace options, and supplemental coverage for self-employed individuals, small business owners, and families.",
+      "url": "https://dcinsuranceagency.com",
+      "telephone": "+1-615-513-0313",
+      "email": "denton@dcinsuranceagency.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Denton Casey"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "TN",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Middle Tennessee"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "14"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://dcinsuranceagency.com/services",
+      "url": "https://dcinsuranceagency.com/services",
+      "name": "Health Insurance Services | DC Insurance",
+      "description": "Private PPO plans, ACA marketplace coverage, supplemental plans, and income protection for Middle Tennessee.",
+      "isPartOf": {
+        "@id": "https://dcinsuranceagency.com/#website"
+      },
+      "about": {
+        "@id": "https://dcinsuranceagency.com/#business"
+      }
+    }
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Service deep-dive layout */
+    .service-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .service-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .service-block.reverse .service-text { order: 2; }
+    .service-block.reverse .service-visual { order: 1; }
+
+    .service-visual {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .service-panel {
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+    }
+    .service-panel.aca-panel {
+      background: linear-gradient(135deg, #0a3d5c 0%, #0f5278 100%);
+      color: var(--white);
+    }
+    .service-panel.ppo-panel {
+      background: linear-gradient(135deg, var(--navy) 0%, #122847 100%);
+      color: var(--white);
+    }
+    .service-panel.emp-panel {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      color: var(--white);
+    }
+    .service-panel h3 {
+      color: var(--white);
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    .service-panel p { color: rgba(255,255,255,0.78); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .pro-con-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+    .pro-item, .con-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .pro-item { color: #86efac; }
+    .pro-item i { color: #4ade80; margin-top: 0.15rem; flex-shrink: 0; }
+    .con-item { color: #fca5a5; }
+    .con-item i { color: #f87171; margin-top: 0.15rem; flex-shrink: 0; }
+
+    /* Best For section */
+    .best-for {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+    .best-for-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sky);
+      width: 100%;
+      margin-bottom: 0.25rem;
+    }
+    .best-chip {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 100px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Comparison table section */
+    .compare-section { background: var(--off-white); }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid var(--gray-light);
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 1.25rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .faq-question i { color: var(--sky); flex-shrink: 0; transition: transform 0.25s ease; }
+    .faq-question.open i { transform: rotate(180deg); }
+    .faq-answer {
+      display: none;
+      padding: 0 0 1.25rem;
+      color: var(--gray-dark);
+      font-size: 0.97rem;
+      line-height: 1.75;
+    }
+    .faq-answer.open { display: block; }
+
+    @media (max-width: 900px) {
+      .service-block { grid-template-columns: 1fr; gap: 2.5rem; }
+      .service-block.reverse .service-text { order: 1; }
+      .service-block.reverse .service-visual { order: 2; }
+      .pro-con-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.jpeg" alt="DC Insurance" style="height:46px;width:auto;" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary nav-cta">Book a Free Review</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Book a Free Review</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:rgba(255,255,255,0.5);">Services</span>
+      <h1>Every Lane. Honestly Compared.</h1>
+      <p>ACA marketplace, employer coverage, private PPO plans — I look at all three and tell you which one actually fits your situation.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE OVERVIEW NAV TABS -->
+  <div style="background:var(--white);border-bottom:1px solid var(--gray-light);position:sticky;top:70px;z-index:500;">
+    <div class="container">
+      <div style="display:flex;gap:0;overflow-x:auto;">
+        <a href="#private-ppo" style="padding:1rem 1.5rem;font-weight:600;font-size:0.9rem;color:var(--navy);border-bottom:2px solid var(--sky);white-space:nowrap;display:block;">⭐ Private Market PPO</a>
+        <a href="#aca" style="padding:1rem 1.5rem;font-weight:600;font-size:0.9rem;color:var(--gray);border-bottom:2px solid transparent;white-space:nowrap;display:block;transition:color 0.2s;">ACA Marketplace</a>
+        <a href="#employer" style="padding:1rem 1.5rem;font-weight:600;font-size:0.9rem;color:var(--gray);border-bottom:2px solid transparent;white-space:nowrap;display:block;transition:color 0.2s;">Employer Coverage</a>
+        <a href="#comparison" style="padding:1rem 1.5rem;font-weight:600;font-size:0.9rem;color:var(--gray);border-bottom:2px solid transparent;white-space:nowrap;display:block;transition:color 0.2s;">Side-by-Side Comparison</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE DEEP DIVES -->
+  <section class="section">
+    <div class="container">
+
+      <!-- PRIVATE PPO -->
+      <div class="service-block" id="private-ppo">
+        <div class="service-text">
+          <span class="section-label">Most Recommended for Self-Employed</span>
+          <h2>Private Market PPO Plans</h2>
+          <div class="divider divider-left"></div>
+          <p>We specialize in private PPO health plans and supplemental coverage for self-employed individuals, 1099 contractors, and small business owners across Middle Tennessee. From dental and vision to critical illness and term life, we build coverage bundles that work the way employer plans do — without requiring an employer.</p>
+          <p style="margin-top:1rem;">These are medically underwritten plans with real major medical benefits, nationwide PPO access, no referrals needed, and in many cases significantly lower premiums than ACA alternatives for healthy individuals.</p>
+
+          <div class="highlight-box">
+            <p><strong>Key difference:</strong> These plans are underwritten — meaning you qualify based on your health history. Healthy individuals often see their best coverage-to-cost ratio here. Pre-existing conditions may affect eligibility.</p>
+          </div>
+
+          <div class="value-item" style="margin-top:1.5rem;">
+            <div class="value-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="value-body">
+              <h4>Nationwide PPO Access</h4>
+              <p>No regional network restrictions. If you travel, work across state lines, or just want to see any doctor you choose — this is how you get that.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="value-body">
+              <h4>Enroll Any Time of Year</h4>
+              <p>No open enrollment window required. If you're self-employed or lose coverage, you can get into a private plan year-round.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-stethoscope"></i></div>
+            <div class="value-body">
+              <h4>No Referrals Needed</h4>
+              <p>See a specialist directly. No gatekeeper. No waiting for a primary care approval before you can get the care you actually need.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="margin-top:0.5rem;">Ask About Private PPO Options</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-panel ppo-panel">
+            <span class="badge badge-teal" style="margin-bottom:1rem;">⭐ Most Recommended</span>
+            <h3>Private Market PPO</h3>
+            <p>Medically underwritten. Nationwide access. Real major medical benefits.</p>
+            <div class="pro-con-grid">
+              <div>
+                <div class="pro-item"><i class="fa-solid fa-check"></i> Nationwide PPO network</div>
+                <div class="pro-item" style="margin-top:0.5rem;"><i class="fa-solid fa-check"></i> No referrals needed</div>
+                <div class="pro-item" style="margin-top:0.5rem;"><i class="fa-solid fa-check"></i> Year-round enrollment</div>
+                <div class="pro-item" style="margin-top:0.5rem;"><i class="fa-solid fa-check"></i> Lower premiums for healthy</div>
+              </div>
+              <div>
+                <div class="con-item"><i class="fa-solid fa-circle-info"></i> Requires underwriting</div>
+                <div class="con-item" style="margin-top:0.5rem;"><i class="fa-solid fa-circle-info"></i> Pre-existing limitations may apply</div>
+                <div class="con-item" style="margin-top:0.5rem;"><i class="fa-solid fa-circle-info"></i> No income-based subsidies</div>
+              </div>
+            </div>
+            <div class="best-for">
+              <span class="best-for-label">Best For</span>
+              <span class="best-chip">Self-Employed</span>
+              <span class="best-chip">1099 Contractors</span>
+              <span class="best-chip">Small Business Owners</span>
+              <span class="best-chip">Frequent Travelers</span>
+              <span class="best-chip">Higher-Income Households</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACA MARKETPLACE -->
+      <div class="service-block reverse" id="aca">
+        <div class="service-text">
+          <span class="section-label">Dependent on Your Income</span>
+          <h2>ACA Marketplace Plans</h2>
+          <div class="divider divider-left"></div>
+          <p>ACA marketplace plans can be an excellent option — but it depends heavily on your income and household situation. If your income falls within a range that qualifies for significant subsidies, the math can work in your favor. If it doesn't, you're often paying full price for a plan with real limitations.</p>
+          <p style="margin-top:1rem;">The coverage is solid. Pre-existing conditions are covered, no underwriting required. But the network restrictions, referral requirements, and regional limitations matter more than people realize — especially if you travel or have specific providers you want to keep.</p>
+
+          <div class="highlight-box">
+            <p><strong>The honest take:</strong> ACA works well at certain income levels. Above the subsidy threshold? You're often overpaying for coverage that's more restricted than private market alternatives. Let's run the numbers and see where you actually stand.</p>
+          </div>
+
+          <div class="value-item" style="margin-top:1.5rem;">
+            <div class="value-icon" style="background:var(--red-light);color:var(--red);"><i class="fa-solid fa-dollar-sign"></i></div>
+            <div class="value-body">
+              <h4>Income-Based Subsidies</h4>
+              <p>If your income qualifies, subsidies can dramatically reduce your monthly premium. This is where ACA plans are genuinely competitive.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon" style="background:var(--red-light);color:var(--red);"><i class="fa-solid fa-notes-medical"></i></div>
+            <div class="value-body">
+              <h4>Pre-Existing Conditions Covered</h4>
+              <p>No medical underwriting. If you have ongoing conditions that would disqualify you from private plans, ACA marketplace is worth a serious look.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon" style="background:var(--red-light);color:var(--red);"><i class="fa-solid fa-calendar-days"></i></div>
+            <div class="value-body">
+              <h4>Open Enrollment Windows</h4>
+              <p>You can only enroll during open enrollment or a qualifying life event — which limits flexibility for the self-employed who need coverage year-round.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:0.5rem;">See If ACA Makes Sense For You</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-panel aca-panel">
+            <span class="badge" style="background:rgba(41,171,226,0.2);color:#7dd3fc;margin-bottom:1rem;">ACA Marketplace</span>
+            <h3>ACA Marketplace Plans</h3>
+            <p>Income-driven subsidies. No underwriting. But know the limitations before you assume it's your best option.</p>
+            <div class="pro-con-grid">
+              <div>
+                <div class="pro-item"><i class="fa-solid fa-check"></i> Pre-existing conditions covered</div>
+                <div class="pro-item" style="margin-top:0.5rem;"><i class="fa-solid fa-check"></i> Subsidies at qualifying income</div>
+                <div class="pro-item" style="margin-top:0.5rem;"><i class="fa-solid fa-check"></i> No medical underwriting</div>
+              </div>
+              <div>
+                <div class="con-item"><i class="fa-solid fa-xmark"></i> Regional network limits</div>
+                <div class="con-item" style="margin-top:0.5rem;"><i class="fa-solid fa-xmark"></i> Referrals often required</div>
+                <div class="con-item" style="margin-top:0.5rem;"><i class="fa-solid fa-xmark"></i> Open enrollment windows only</div>
+                <div class="con-item" style="margin-top:0.5rem;"><i class="fa-solid fa-xmark"></i> High cost without subsidies</div>
+              </div>
+            </div>
+            <div class="best-for">
+              <span class="best-for-label">Best For</span>
+              <span class="best-chip">Lower-to-mid income earners</span>
+              <span class="best-chip">Pre-existing conditions</span>
+              <span class="best-chip">Subsidy-eligible households</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMPLOYER COVERAGE -->
+      <div class="service-block" id="employer">
+        <div class="service-text">
+          <span class="section-label">Don't Assume — Verify</span>
+          <h2>Employer Coverage Review</h2>
+          <div class="divider divider-left"></div>
+          <p>A lot of people default to their employer plan because it feels like the "safe" or "included" option. But employer plans vary enormously in quality and total cost — and sometimes a private market plan is substantially more affordable once you factor in payroll deductions, deductibles, and network restrictions.</p>
+          <p style="margin-top:1rem;">I'll help you run the real comparison: what you're paying in premiums vs. what you'd pay privately, what the network actually covers, and whether your current plan actually protects you the way you think it does.</p>
+
+          <div class="highlight-box">
+            <p><strong>What people don't realize:</strong> Your employer plan is only "free" up to what they contribute. You're still paying for the rest — and that cost is often higher than people assume when compared directly to private options.</p>
+          </div>
+
+          <div class="value-item" style="margin-top:1.5rem;">
+            <div class="value-icon"><i class="fa-solid fa-arrows-left-right"></i></div>
+            <div class="value-body">
+              <h4>Side-by-Side Cost Analysis</h4>
+              <p>We look at your actual out-of-pocket cost — not just the premium. Deductibles, copays, and max out-of-pocket all go into the real number.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="value-body">
+              <h4>Network & Coverage Review</h4>
+              <p>Can you keep your current doctors? Are you restricted to a EPO? Do you need referrals? These questions matter more than the monthly premium.</p>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-dark" style="margin-top:0.5rem;">Compare Your Employer Plan</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-panel emp-panel">
+            <span class="badge" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.75);margin-bottom:1rem;">Employer Coverage</span>
+            <h3>Employer Plan Review</h3>
+            <p>It might be the right call. But let's actually verify that before you assume.</p>
+            <div class="pro-con-grid">
+              <div>
+                <div class="pro-item"><i class="fa-solid fa-check"></i> Employer contribution reduces cost</div>
+                <div class="pro-item" style="margin-top:0.5rem;"><i class="fa-solid fa-check"></i> Pre-tax premium deductions</div>
+                <div class="pro-item" style="margin-top:0.5rem;"><i class="fa-solid fa-check"></i> Guaranteed coverage</div>
+              </div>
+              <div>
+                <div class="con-item"><i class="fa-solid fa-circle-info"></i> Often more expensive than it appears</div>
+                <div class="con-item" style="margin-top:0.5rem;"><i class="fa-solid fa-circle-info"></i> Limited network options</div>
+                <div class="con-item" style="margin-top:0.5rem;"><i class="fa-solid fa-circle-info"></i> No flexibility on plan design</div>
+              </div>
+            </div>
+            <div class="best-for">
+              <span class="best-for-label">Worth Reviewing When</span>
+              <span class="best-chip">High employer contributions</span>
+              <span class="best-chip">Pre-existing conditions</span>
+              <span class="best-chip">Large family on one plan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="section compare-section" id="comparison">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-label">Side-by-Side</span>
+        <h2>How the Three Lanes Stack Up</h2>
+        <div class="divider"></div>
+        <p>This is a general comparison. Your specific situation will change the math. That's why we talk first.</p>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>⭐ Private Market PPO</th>
+              <th>ACA Marketplace</th>
+              <th>Employer Plan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Network Type</td>
+              <td><span class="check">✓</span> Nationwide PPO</td>
+              <td><span class="neutral">~</span> Regional (varies)</td>
+              <td><span class="neutral">~</span> Varies by plan</td>
+            </tr>
+            <tr>
+              <td>Referrals Required</td>
+              <td><span class="check">✓</span> No referrals needed</td>
+              <td><span class="cross">✗</span> Often required (EPO)</td>
+              <td><span class="neutral">~</span> Depends on plan type</td>
+            </tr>
+            <tr>
+              <td>Year-Round Enrollment</td>
+              <td><span class="check">✓</span> Enroll any time</td>
+              <td><span class="cross">✗</span> Open enrollment only</td>
+              <td><span class="cross">✗</span> Annual window only</td>
+            </tr>
+            <tr>
+              <td>Pre-Existing Conditions</td>
+              <td><span class="neutral">~</span> Underwriting applies</td>
+              <td><span class="check">✓</span> Fully covered</td>
+              <td><span class="check">✓</span> Fully covered</td>
+            </tr>
+            <tr>
+              <td>Income-Based Subsidies</td>
+              <td><span class="cross">✗</span> Not available</td>
+              <td><span class="check">✓</span> If income qualifies</td>
+              <td><span class="cross">✗</span> Not applicable</td>
+            </tr>
+            <tr>
+              <td>Premium Cost (Healthy Adults)</td>
+              <td><span class="check">✓</span> Often lower</td>
+              <td><span class="neutral">~</span> High without subsidies</td>
+              <td><span class="neutral">~</span> Varies by employer</td>
+            </tr>
+            <tr>
+              <td>Travel &amp; Multi-State Use</td>
+              <td><span class="check">✓</span> Works nationwide</td>
+              <td><span class="cross">✗</span> Regional restrictions</td>
+              <td><span class="neutral">~</span> Depends on network</td>
+            </tr>
+            <tr>
+              <td>Best For</td>
+              <td>Self-employed, 1099, higher-income, healthy individuals</td>
+              <td>Lower income, pre-existing conditions, subsidy-eligible</td>
+              <td>Those with strong employer contributions</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight-box" style="margin-top:2rem;">
+        <p><strong>Important:</strong> This table shows general patterns — not guarantees. Coverage, premiums, and eligibility vary by individual health history, income, location, and plan selection. I always review your specific situation before making any recommendation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background:var(--white);">
+    <div class="container" style="max-width:780px;">
+      <div class="text-center" style="margin-bottom:2.5rem;">
+        <span class="section-label">Common Questions</span>
+        <h2>Things People Ask Before We Talk</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What's the difference between ACA and private PPO plans?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            ACA plans are offered through the federal or state marketplace and are income-regulated — meaning subsidies are available at qualifying income levels. Private market PPO plans are medically underwritten and sold outside the ACA marketplace. For healthy individuals above the subsidy threshold, private plans often offer better coverage at a lower cost. For those with pre-existing conditions or lower income, ACA plans may be the better fit.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I enroll in a private PPO plan any time of year?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Yes. Unlike ACA marketplace plans which require open enrollment or a qualifying life event, most private market plans allow you to enroll year-round. This is one of the major advantages for self-employed individuals and those who lose coverage unexpectedly.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How does medical underwriting work?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Private market plans review your health history before approving coverage. Depending on your situation, this may mean standard coverage, modified coverage with exclusions for certain conditions, a higher premium, or a denial. I'll walk you through how underwriting applies to your specific health history before you apply for anything.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is my employer plan always the best option?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Not necessarily. Employer plans vary widely in quality and true cost. While the employer contribution reduces your out-of-pocket premium, the total cost — including deductibles, network restrictions, and payroll deductions — can sometimes be higher than a private market alternative. I'll help you run the real comparison.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Why do you compare multiple types of plans?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            Because the right answer isn't always the same one. ACA marketplace plans, employer coverage, and private PPO plans each have situations where they're the better fit — different income levels, health histories, and priorities change the math. We shop across all of them so you're not leaving better options on the table.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you work with people outside of Tennessee?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            I'm based in Tennessee, and that's where most of my clients are located. Reach out and we can discuss whether I'm able to assist in your state. Licensing requirements vary by state, so I'll be upfront about what I can and can't do in your area.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;">
+      <h2>Not Sure Which Lane Is Right for You?</h2>
+      <p>That's exactly what the conversation is for. 15 minutes. Honest answers. No pressure.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <i class="fa-regular fa-calendar-check"></i>&nbsp; Book a Free Review
+        </a>
+        <a href="about-us.html" class="btn btn-outline btn-lg">Learn My Approach</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" style="display:inline-block;margin-bottom:1rem;">
+          <img src="logo.jpeg" alt="DC Insurance" style="height:52px;width:auto;" />
+        </a>
+          <p>Tennessee's independent health insurance specialist. We shop the whole market to find coverage that actually fits.</p>
+          <p class="footer-disclaimer" style="margin-top:1rem;">Licensed health insurance agent. Coverage availability and eligibility vary by state and individual circumstances. Contact for details.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Denton</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy-page.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:6155130313"><i class="fa-solid fa-phone" style="color:var(--sky);margin-right:0.4rem;"></i>615-513-0313</a></li>
+            <li><a href="mailto:denton@dcinsuranceagency.com">denton@dcinsuranceagency.com</a></li>
+            <li><a href="contact.html">Book a Free Appointment</a></li>
+            <li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon–Fri 8am–5pm · Sat 9am–2pm</li>
+          </ul>
+          <div class="social-links" style="margin-top:1.25rem;">
+            <a href="https://www.facebook.com/dcinsurance/" class="social-link fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/dcinsurance2152/" class="social-link ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/dentoncasey/" class="social-link li" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DC Insurance · Denton Casey · Middle Tennessee</span>
+        <span>Independent Health Insurance Specialist · 615-513-0313</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/16155130313" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Message on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navMobile.classList.toggle('open');
+    });
+    navMobile.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMobile.classList.remove('open');
+      });
+    });
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      btn.classList.toggle('open');
+      answer.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
