@@ -111,6 +111,12 @@
       "source": "/outside-of-tennessee",
       "destination": "/contact",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.dcinsuranceagency.com" }],
+      "destination": "https://dcinsuranceagency.com/:path*",
+      "permanent": true
     }
   ],
   "headers": [
@@ -136,7 +142,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=3600"
         }
       ]
     },
