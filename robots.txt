@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# No crawl budget on conversion/utility pages
+Disallow: /intake
+Disallow: /thank-you
+
+Sitemap: https://dcinsuranceagency.com/sitemap.xml
