@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/brentwood",
+      "destination": "/brentwood-insurance",
+      "permanent": true
+    },
+    {
       "source": "/franklin",
       "destination": "/franklin-insurance",
       "permanent": true
@@ -60,6 +65,101 @@
     {
       "source": "/privacy",
       "destination": "/privacy-page",
+      "permanent": true
+    },
+    {
+      "source": "/bellevue",
+      "destination": "/bellevue-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/mt-juliet",
+      "destination": "/mt-juliet-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/belle-meade",
+      "destination": "/belle-meade-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/green-hills",
+      "destination": "/green-hills-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/hendersonville",
+      "destination": "/hendersonville-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/donelson",
+      "destination": "/donelson-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/spring-hill",
+      "destination": "/spring-hill-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/manchester",
+      "destination": "/manchester-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/tullahoma",
+      "destination": "/tullahoma-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-bellevue-tn",
+      "destination": "/bellevue-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-mt-juliet-tn",
+      "destination": "/mt-juliet-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-belle-meade-tn",
+      "destination": "/belle-meade-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-green-hills-tn",
+      "destination": "/green-hills-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-hendersonville-tn",
+      "destination": "/hendersonville-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-donelson-tn",
+      "destination": "/donelson-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-spring-hill-tn",
+      "destination": "/spring-hill-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-manchester-tn",
+      "destination": "/manchester-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-tullahoma-tn",
+      "destination": "/tullahoma-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/health-insurance-brentwood-tn",
+      "destination": "/brentwood-insurance",
       "permanent": true
     },
     {
@@ -133,27 +233,4 @@
         },
         {
           "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/styles.css",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
-    },
-    {
-      "source": "/:path.(jpg|jpeg|png|gif|svg|ico|webp)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    }
-  ]
-}
+          "value": "strict-origi

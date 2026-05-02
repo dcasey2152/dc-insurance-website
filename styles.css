@@ -394,7 +394,7 @@ footer {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -462,8 +462,9 @@ footer {
   pointer-events: none;
 }
 .hero-content { position: relative; z-index: 1; }
-.hero h1 { color: var(--white); margin-bottom: 1.25rem; }
+.hero h1 { color: var(--white); margin-bottom: 0.5rem; font-size: clamp(1.7rem, 3.5vw, 2.6rem); }
 .hero h1 em { font-style: normal; color: var(--sky); }
+.hero-tagline { font-size: 1.35rem; font-style: italic; color: var(--sky); margin-bottom: 1.1rem; font-family: var(--font-head); font-weight: 600; }
 .hero p {
   color: rgba(255,255,255,0.78);
   font-size: 1.15rem;
@@ -642,6 +643,15 @@ footer {
   display: block;
 }
 
+/* ---------- Money pages / long-form content ---------- */
+.content-narrow { max-width: 780px; margin: 0 auto; }
+.content-narrow h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; }
+.content-narrow h3 { margin-top: 1.75rem; margin-bottom: 0.5rem; color: var(--navy); font-size: 1.1rem; }
+.content-narrow p { margin-bottom: 1.1rem; line-height: 1.75; }
+.content-narrow ul { margin-bottom: 1.1rem; line-height: 1.9; }
+.content-narrow a { color: var(--teal); }
+.content-narrow a:hover { color: var(--sky); }
+
 /* ---------- Page Hero (inner pages) ---------- */
 .page-hero {
   background: linear-gradient(135deg, var(--navy) 0%, #112c52 100%);
@@ -670,6 +680,41 @@ footer {
   padding: 0.3rem 0.9rem;
   font-size: 0.82rem;
   font-weight: 600;
+}
+
+/* ---------- Who We Help Cards ---------- */
+.who-help-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+.who-help-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  border-color: var(--sky);
+}
+.who-help-card i {
+  font-size: 1.4rem;
+  color: var(--sky);
+  margin-bottom: 0.25rem;
+}
+.who-help-card h3 {
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin: 0;
+}
+.who-help-card p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin: 0;
+  line-height: 1.55;
 }
 
 /* ---------- CTA Section ---------- */
