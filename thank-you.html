@@ -478,6 +478,7 @@
     burger.addEventListener('click', function(){
       burger.classList.toggle('open');
       mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
     });
   }
   // Close mobile nav on link click

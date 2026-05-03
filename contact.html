@@ -574,4 +574,63 @@
             <a href="https://www.linkedin.com/in/dentoncasey/" class="social-link li" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
         </div>
-    
+        <div class="footer-col">
+          <h4>Who We Help</h4>
+          <ul>
+            <li><a href="self-employed-health-insurance-tennessee.html">Self-Employed</a></li>
+            <li><a href="1099-health-insurance-tennessee.html">1099 Contractors</a></li>
+            <li><a href="small-business-health-insurance-tennessee.html">Small Business Owners</a></li>
+            <li><a href="private-ppo-health-insurance-tennessee.html">Private PPO Plans</a></li>
+            <li><a href="aca-vs-private-health-insurance-tennessee.html">ACA vs. Private</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DC Insurance &middot; Denton Casey &middot; Middle Tennessee</span>
+        <span>Independent Health Insurance Specialist &middot; 615-513-0313</span>
+      </div>
+    </div>
+  </footer>
+  <a href="https://wa.me/16155130313" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Message on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+<script>
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('navMobile');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      if(window.innerWidth < 900){
+        e.preventDefault();
+        li.classList.toggle('open');
+        document.querySelectorAll('.nav-dropdown').forEach(function(other){
+          if(other !== li) other.classList.remove('open');
+        });
+      }
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+})();
+</script>
+</body>
+</html>
