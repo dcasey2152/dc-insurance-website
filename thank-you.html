@@ -2,6 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2111055412751447');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2111055412751447&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel -->
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX5340TR64"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SX5340TR64');
+  </script>
+  <!-- End Google Analytics -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You | DC Insurance</title>
   <meta name="description" content="Thanks for reaching out to DC Insurance. Denton Casey will review your situation and be in touch within one business day." />
@@ -447,5 +469,48 @@
       }
     });
   </script>
+<script>
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('navMobile');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+  }
+  // Close mobile nav on link click
+  if(mobileNav){
+    mobileNav.querySelectorAll && mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger && burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+      });
+    });
+  }
+  // Desktop dropdown: also support click/touch (for tablets)
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      // On narrow screens treat as toggle; on wide screens let href work
+      if(window.innerWidth < 900){
+        e.preventDefault();
+        li.classList.toggle('open');
+        // close siblings
+        document.querySelectorAll('.nav-dropdown').forEach(function(other){
+          if(other !== li) other.classList.remove('open');
+        });
+      }
+    });
+  });
+  // Close dropdowns on outside click
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+})();
+</script>
 </body>
 </html>
