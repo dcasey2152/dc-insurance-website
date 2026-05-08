@@ -213,6 +213,16 @@
       "permanent": true
     },
     {
+      "source": "/downloadable-pdf-guides",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/m/bookings",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
