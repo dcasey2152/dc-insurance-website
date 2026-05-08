@@ -223,6 +223,16 @@
       "permanent": true
     },
     {
+      "source": "/m/login",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/m/create-account",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
@@ -258,15 +268,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600"
-        }
-      ]
-    },
-    {
-      "source": "/:path.(jpg|jpeg|png|gif|svg|ico|webp)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
