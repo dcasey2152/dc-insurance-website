@@ -233,6 +233,11 @@
       "permanent": true
     },
     {
+      "source": "/m/reset",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
