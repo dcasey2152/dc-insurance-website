@@ -263,6 +263,7 @@
           form.style.display = 'none';
           var success = document.getElementById('formSuccess');
           if(success) success.style.display = 'block';
+          if(typeof fbq === 'function'){ fbq('track', 'Lead'); }
         } else {
           alert('Something went wrong — please call or email directly: 615-513-0313');
           if(btn){ btn.disabled = false; btn.textContent = orig; }

@@ -430,6 +430,18 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 <script>
+// Meta Pixel — fire Lead event when Jotform submission completes
+window.addEventListener('message', function(e) {
+  if (typeof e.origin === 'string' && e.origin.indexOf('jotform') !== -1) {
+    var data = {};
+    try { data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch(err) {}
+    if (data.action === 'submission-completed') {
+      if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+    }
+  }
+});
+</script>
+<script>
 (function(){
   var burger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('navMobile');
