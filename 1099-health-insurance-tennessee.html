@@ -51,8 +51,39 @@
       "priceRange": "Free Consultation",
       "image": "https://dcinsuranceagency.com/logo.jpeg",
       "founder": {"@type": "Person","name": "Denton Casey"},
-      "address": {"@type": "PostalAddress","addressRegion": "TN","addressCountry": "US"},
-      "areaServed": {"@type": "AdministrativeArea","name": "Middle Tennessee"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Smyrna",
+        "addressRegion": "TN",
+        "postalCode": "37167",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Smyrna"},
+        {"@type": "City", "name": "Nolensville"},
+        {"@type": "City", "name": "Nashville"},
+        {"@type": "City", "name": "Franklin"},
+        {"@type": "City", "name": "Murfreesboro"},
+        {"@type": "City", "name": "Brentwood"},
+        {"@type": "City", "name": "Belle Meade"},
+        {"@type": "City", "name": "Green Hills"},
+        {"@type": "City", "name": "Bellevue"},
+        {"@type": "City", "name": "Mt. Juliet"},
+        {"@type": "City", "name": "Hendersonville"},
+        {"@type": "City", "name": "Spring Hill"},
+        {"@type": "City", "name": "Donelson"},
+        {"@type": "City", "name": "Shelbyville"},
+        {"@type": "City", "name": "Chapel Hill"},
+        {"@type": "City", "name": "College Grove"},
+        {"@type": "City", "name": "Christiana"},
+        {"@type": "City", "name": "Manchester"},
+        {"@type": "City", "name": "Tullahoma"},
+        {"@type": "AdministrativeArea", "name": "Middle Tennessee"}
+      ],
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens": "08:00","closes": "17:00"},
+        {"@type": "OpeningHoursSpecification","dayOfWeek": "Saturday","opens": "09:00","closes": "14:00"}
+      ],
       "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "14"}
     },
     {
@@ -61,6 +92,46 @@
       "url": "https://dcinsuranceagency.com/1099-health-insurance-tennessee",
       "name": "Health Insurance for 1099 Contractors in Tennessee | DC Insurance",
       "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can 1099 contractors get health insurance in Tennessee?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. As a 1099 contractor in Tennessee, you have access to individual health coverage through the ACA marketplace, through the private medically underwritten market, or — if a spouse has employer coverage — through a group plan. Which option makes the most sense depends on your income, health history, and coverage priorities."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is health insurance tax deductible for 1099 workers in Tennessee?",
+          "acceptedAnswer": {"@type": "Answer", "text": "In many cases, yes. Self-employed individuals and 1099 contractors who pay for their own health coverage and are not eligible for employer-sponsored coverage through a spouse may be able to deduct 100% of their premiums as an above-the-line deduction on their federal taxes. This applies to ACA plans and private plans alike. Confirm the specifics with your CPA."}
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an ACA plan and a private PPO plan for a 1099 contractor?",
+          "acceptedAnswer": {"@type": "Answer", "text": "ACA marketplace plans are guaranteed-issue — you cannot be declined based on health history — and are priced based on your income and age. Private medically underwritten PPO plans are priced based on your health profile. For healthy 1099 contractors above the ACA subsidy threshold, private PPO plans often offer lower premiums, broader nationwide networks, and more flexible coverage structures."}
+        },
+        {
+          "@type": "Question",
+          "name": "When can a 1099 contractor enroll in health insurance in Tennessee?",
+          "acceptedAnswer": {"@type": "Answer", "text": "ACA marketplace plans are available during open enrollment (typically November through January) and during Special Enrollment Periods triggered by qualifying life events such as losing prior coverage or starting a new business. Private medically underwritten plans can generally be applied for at any time of year and do not follow the ACA enrollment calendar."}
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my 1099 income fluctuates and I over-estimated my subsidy?",
+          "acceptedAnswer": {"@type": "Answer", "text": "If you receive ACA premium tax credits and your actual annual income comes in higher than projected, you may have to repay a portion of those credits when you file your taxes. For 1099 contractors with variable income, accurate income projection is an important part of the enrollment process. An independent agent can help you think through how to estimate income conservatively to reduce clawback risk."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do 1099 contractors in Tennessee need a referral to see a specialist?",
+          "acceptedAnswer": {"@type": "Answer", "text": "It depends on the plan. Many ACA marketplace plans in Tennessee use HMO or EPO structures that require referrals and restrict coverage to a defined provider network. Private medically underwritten PPO plans typically allow you to see any in-network specialist directly without a referral and often provide coverage nationwide — an important distinction for contractors who travel or work in multiple states."}
+        },
+        {
+          "@type": "Question",
+          "name": "How do I find a health insurance agent for 1099 contractors in Tennessee?",
+          "acceptedAnswer": {"@type": "Answer", "text": "DC Insurance is an independent health insurance agency based in Middle Tennessee, serving 1099 contractors, freelancers, and self-employed professionals across the Nashville metro area and surrounding counties. We compare options across the ACA marketplace and the private market and offer free 15-minute consultations with no obligation. Call 615-513-0313 or book online at dcinsuranceagency.com."}
+        }
+      ]
     }
   ]
 }
@@ -170,7 +241,7 @@
     <div class="container content-narrow">
 
       <h2>Why 1099 Workers Have More Options Than They Think</h2>
-      <p>If you're a 1099 contractor in Tennessee — gig worker, consultant, real estate professional, tradesperson, freelancer — you don't have the employer safety net. But that doesn't mean your only option is the ACA marketplace, and it doesn't mean you have to overpay.</p>
+      <p>If you're a 1099 contractor in Tennessee — gig worker, consultant, real estate professional, tradesperson, freelancer, or owner-operator — you don't have the employer safety net. But that doesn't mean your only option is the ACA marketplace, and it doesn't mean you have to overpay.</p>
       <p>The health insurance market has three distinct lanes for people in your situation, and which one makes the most sense depends on your income, your health history, and what you actually want coverage to do for you.</p>
       <p>DC Insurance works with 1099 workers throughout <a href="nashville-insurance">Nashville</a>, <a href="murfreesboro-insurance">Murfreesboro</a>, <a href="franklin-insurance">Franklin</a>, and Middle Tennessee. We compare all three options and give you a straight answer — not a sales pitch.</p>
 
@@ -199,12 +270,72 @@
         <li><strong>Real estate agents and brokers</strong> — active throughout Williamson, Rutherford, and Davidson counties, often with fluctuating commission income</li>
         <li><strong>Construction and trades</strong> — electricians, plumbers, HVAC techs, and general contractors who work project-to-project</li>
         <li><strong>Healthcare professionals</strong> — travel nurses, locum tenens physicians, and per diem staff working outside traditional employment</li>
-        <li><strong>Truckers and owner-operators</strong> — especially in the I-24 and I-65 corridors, frequently working across state lines</li>
+        <li><strong>Truckers and owner-operators</strong> — especially in the I-24 and I-65 corridors, frequently working across state lines. <a href="dc-insurance-blog/f/health-insurance-for-1099-truck-drivers-tennessee">See our dedicated guide for 1099 truck drivers.</a></li>
         <li><strong>Musicians and creative professionals</strong> — Nashville's core industry, with irregular income and no employer benefits</li>
         <li><strong>Technology and remote consultants</strong> — engineers, project managers, and developers working on contract</li>
         <li><strong>Mortgage and financial services</strong> — loan officers and advisors paid on commission or 1099 basis</li>
       </ul>
       <p>Each of these groups has different income patterns, different health risk profiles, and different priorities when it comes to coverage. The right approach for a travel nurse looks different than the right approach for an owner-operator. That specificity is what a review is actually for.</p>
+
+      <h2>Understanding When You Can Enroll</h2>
+      <p>Enrollment timing is one of the most common points of confusion for 1099 contractors. Here's how it actually works across both markets.</p>
+      <p>On the <strong>ACA marketplace</strong>, there is an annual open enrollment window — typically November 1 through January 15 in Tennessee. Outside of that window, you can only enroll if you experience a qualifying life event. Common qualifying events for 1099 workers include losing prior coverage (such as leaving an employer plan or aging off a parent's plan), getting married, having or adopting a child, or relocating to a new coverage area. Starting a business on its own does not automatically trigger a special enrollment period, but losing prior coverage in connection with that transition often does.</p>
+      <p>On the <strong>private medically underwritten market</strong>, there is no enrollment calendar. You can apply at any point during the year. Coverage typically begins within a few weeks of approval. This flexibility is a meaningful practical advantage for 1099 contractors who find themselves without coverage outside the ACA open enrollment window.</p>
+      <p>If you're between jobs, wrapping up a project, or just getting started as an independent contractor, the private market may give you options the ACA calendar won't. It's worth knowing both paths before you're in a time-sensitive situation.</p>
+
+      <h2>What to Evaluate Before You Pick a Plan</h2>
+      <p>For 1099 contractors, the premium is the number that shows up first — but it's rarely the most important one. Before you commit to any plan, make sure you understand four things:</p>
+      <ul style="margin:1rem 0 1.5rem 1.5rem;line-height:2.2;">
+        <li><strong>Deductible:</strong> What you pay out of pocket before coverage shares costs. A low-premium plan often carries a high deductible — which matters a lot if you actually use your insurance.</li>
+        <li><strong>Out-of-pocket maximum:</strong> The most you will pay in a single year before coverage picks up 100% of costs. This is your worst-case financial exposure and varies dramatically between plans with similar premiums.</li>
+        <li><strong>Network:</strong> Which providers, hospitals, and specialists are covered — and whether your coverage works outside of Middle Tennessee. For contractors who travel or work across state lines, this is a non-negotiable detail.</li>
+        <li><strong>Enrollment flexibility:</strong> Whether the plan allows you to enroll year-round or only during specific windows. Private PPO plans offer this flexibility; ACA plans generally do not.</li>
+      </ul>
+      <p>Two plans priced identically can perform very differently when something actually happens. The review process exists to show you that difference before you're in the middle of a claim.</p>
+
+      <h2>The Income Variability Problem — and How to Handle It</h2>
+      <p>1099 income doesn't run on a predictable schedule. A strong Q3 can look very different from a slow Q1. This creates a specific challenge for contractors considering ACA marketplace plans with premium tax credits.</p>
+      <p>ACA subsidies are based on your projected annual income. If your actual income comes in significantly higher than you projected, you may owe a portion of those credits back when you file your taxes. For contractors with genuinely variable income — commission-based realtors, project-based consultants, seasonal tradespeople — this is a real risk worth planning around.</p>
+      <p>There are a few ways to manage it. One is to project income conservatively, accepting a smaller subsidy upfront to reduce clawback exposure. Another is to look at whether a private medically underwritten plan makes more sense for your income range — since private plan premiums are not tied to income at all, there's no subsidy math to track and no year-end reconciliation risk.</p>
+      <p>The right approach depends on your income range and how predictable that income actually is. It's worth running through the comparison before you enroll rather than after.</p>
+
+      <h2>Supplemental Coverage for 1099 Contractors</h2>
+      <p>Many 1099 contractors pair a primary health plan with <a href="supplemental-health-insurance-tennessee">supplemental coverage</a> — specifically accident insurance, hospital indemnity, or critical illness coverage. Here's why that combination makes sense for independent workers.</p>
+      <p>When you're self-employed, a health event doesn't just affect your medical expenses — it affects your income. A week in the hospital or a month of recovery doesn't come with paid sick leave. Supplemental plans are designed to pay cash benefits directly to you when a covered event occurs, giving you liquidity to cover both your deductible and the income disruption that often comes with it.</p>
+      <p>For 1099 contractors operating without an employer safety net, supplemental coverage can function as a meaningful financial buffer. It's not a replacement for a solid primary health plan — it's a layer that addresses the gaps a primary plan leaves open. Our <a href="dc-insurance-blog/f/supplemental-health-insurance-tennessee">supplemental coverage guide</a> walks through each type in detail.</p>
+
+      <h2>Frequently Asked Questions — 1099 Health Insurance in Tennessee</h2>
+
+      <div style="margin-top:1.5rem;">
+        <details style="border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:0.75rem;">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;font-size:1rem;">Can 1099 contractors get health insurance in Tennessee?</summary>
+          <p style="margin-top:1rem;color:var(--gray-dark);line-height:1.7;">Yes. As a 1099 contractor in Tennessee, you have access to individual health coverage through the ACA marketplace, through the private medically underwritten market, or — if a spouse has employer coverage — through a group plan. Which option makes the most sense depends on your income, health history, and coverage priorities.</p>
+        </details>
+        <details style="border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:0.75rem;">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;font-size:1rem;">Is health insurance tax deductible for 1099 workers in Tennessee?</summary>
+          <p style="margin-top:1rem;color:var(--gray-dark);line-height:1.7;">In many cases, yes. Self-employed individuals and 1099 contractors who pay for their own health coverage and are not eligible for employer-sponsored coverage through a spouse may be able to deduct 100% of their premiums as an above-the-line deduction on their federal taxes. This applies to both ACA plans and private plans. Confirm the specifics with your CPA — it's one of the most commonly missed deductions in the self-employed world.</p>
+        </details>
+        <details style="border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:0.75rem;">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;font-size:1rem;">What's the difference between an ACA plan and a private PPO plan for a 1099 contractor?</summary>
+          <p style="margin-top:1rem;color:var(--gray-dark);line-height:1.7;">ACA marketplace plans are guaranteed-issue — you cannot be declined based on health history — and are priced based on your income and age. <a href="private-ppo-health-insurance-tennessee">Private medically underwritten PPO plans</a> are priced based on your health profile. For healthy 1099 contractors above the ACA subsidy threshold, private PPO plans often offer lower premiums, broader nationwide networks, and more flexible coverage structures.</p>
+        </details>
+        <details style="border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:0.75rem;">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;font-size:1rem;">When can a 1099 contractor enroll in health insurance in Tennessee?</summary>
+          <p style="margin-top:1rem;color:var(--gray-dark);line-height:1.7;">ACA marketplace plans are available during open enrollment (typically November through January) and during Special Enrollment Periods triggered by qualifying life events such as losing prior coverage or relocating. Private medically underwritten plans can be applied for at any time of year — a practical advantage for contractors who need coverage outside the open enrollment window.</p>
+        </details>
+        <details style="border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:0.75rem;">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;font-size:1rem;">What happens if my 1099 income fluctuates and I over-estimated my subsidy?</summary>
+          <p style="margin-top:1rem;color:var(--gray-dark);line-height:1.7;">If you receive ACA premium tax credits and your actual annual income comes in higher than projected, you may have to repay a portion of those credits when you file your taxes. For 1099 contractors with variable income, accurate income projection matters. An independent agent can help you think through how to estimate income conservatively to reduce year-end clawback risk.</p>
+        </details>
+        <details style="border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:0.75rem;">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;font-size:1rem;">Do 1099 contractors in Tennessee need a referral to see a specialist?</summary>
+          <p style="margin-top:1rem;color:var(--gray-dark);line-height:1.7;">It depends on the plan. Many ACA marketplace plans in Tennessee use HMO or EPO structures that require referrals and restrict coverage to a defined network. Private medically underwritten PPO plans typically allow you to see any in-network specialist without a referral and often provide coverage nationwide — a meaningful difference for contractors who travel or work across state lines.</p>
+        </details>
+        <details style="border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:0.75rem;">
+          <summary style="font-weight:700;color:var(--navy);cursor:pointer;font-size:1rem;">Should I stay on COBRA after leaving an employer or find my own coverage?</summary>
+          <p style="margin-top:1rem;color:var(--gray-dark);line-height:1.7;">COBRA lets you keep your former employer's health plan for up to 18 months, but you pay the full premium — what you paid plus what your employer covered — which is often significantly higher than alternatives. For healthy individuals, a private PPO plan is frequently more cost-effective than COBRA. For those with ongoing health needs, COBRA may provide continuity worth the cost. It's worth comparing both options before defaulting to COBRA.</p>
+        </details>
+      </div>
 
       <div style="background:var(--navy);border-radius:var(--radius-lg);padding:2.5rem;margin-top:3rem;text-align:center;">
         <h3 style="color:var(--white);margin-bottom:0.75rem;">Let's Figure Out Your Best Option</h3>
@@ -267,7 +398,7 @@
             <li><a href="mailto:denton@dcinsuranceagency.com">denton@dcinsuranceagency.com</a></li>
             <li><a href="https://calendly.com/denton-casey-dcinsurance/intro-call" target="_blank" rel="noopener noreferrer">Book a Free Appointment</a></li>
             <li><a href="privacy-page" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Privacy Policy</a></li>
-            <li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon–Fri 8am–5pm · Sat 9am–2pm</li>
+            <li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon&ndash;Fri 8am&ndash;5pm &middot; Sat 9am&ndash;2pm</li>
           </ul>
           <div class="social-links" style="margin-top:1.25rem;">
             <a href="https://www.facebook.com/dcinsurance/" class="social-link fb" aria-label="Facebook" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>

@@ -44,15 +44,43 @@
       "@type": ["LocalBusiness","InsuranceAgency"],
       "@id": "https://dcinsuranceagency.com/#business",
       "name": "DC Insurance",
-      "description": "Independent health insurance agent comparing ACA marketplace and private PPO options for Tennessee residents.",
+      "description": "Independent health insurance agent comparing ACA marketplace and private PPO options for self-employed individuals and small business owners in Middle Tennessee.",
       "url": "https://dcinsuranceagency.com",
       "telephone": "+1-615-513-0313",
       "email": "denton@dcinsuranceagency.com",
       "priceRange": "Free Consultation",
       "image": "https://dcinsuranceagency.com/logo.jpeg",
       "founder": {"@type": "Person","name": "Denton Casey"},
-      "address": {"@type": "PostalAddress","addressRegion": "TN","addressCountry": "US"},
-      "areaServed": {"@type": "AdministrativeArea","name": "Middle Tennessee"},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1500 Medical Center Pkwy Ste 1G",
+        "addressLocality": "Smyrna",
+        "addressRegion": "TN",
+        "postalCode": "37167",
+        "addressCountry": "US"
+      },
+      "openingHours": ["Mo-Fr 08:00-17:00","Sa 09:00-14:00"],
+      "areaServed": [
+        {"@type": "City","name": "Nashville","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Franklin","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Brentwood","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Nolensville","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Murfreesboro","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Smyrna","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Spring Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Hendersonville","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Mt. Juliet","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Belle Meade","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Green Hills","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Donelson","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Bellevue","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Shelbyville","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Chapel Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "College Grove","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Christiana","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Manchester","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Tullahoma","containedInPlace": {"@type": "State","name": "Tennessee"}}
+      ],
       "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "14"}
     },
     {
@@ -61,6 +89,67 @@
       "url": "https://dcinsuranceagency.com/aca-vs-private-health-insurance-tennessee",
       "name": "ACA vs. Private Health Insurance in Tennessee | DC Insurance",
       "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who benefits most from ACA marketplace plans in Tennessee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ACA marketplace plans are typically the best fit for people with significant pre-existing conditions (since coverage is guaranteed issue and premiums can\u2019t be based on health history), and for people whose household income qualifies them for meaningful subsidies. If you\u2019re below the subsidy threshold and in good health, the ACA math often doesn\u2019t work in your favor at full price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who benefits most from private market PPO plans in Tennessee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Private PPO plans tend to work well for self-employed individuals and 1099 contractors who are generally healthy, earn above the ACA subsidy threshold, and want nationwide network access with no referral requirements. Because private plans are medically underwritten, healthier applicants often access more favorable rates than the ACA community rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the ACA subsidy income threshold in Tennessee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ACA subsidies are based on modified adjusted gross income (MAGI) relative to the federal poverty level. Eligibility and subsidy amounts change annually and vary by household size. The key point: once your income exceeds the subsidy range, you pay full unsubsidized ACA premiums, which in Tennessee are often significantly higher than what a healthy individual can access in the private market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch from ACA to a private plan at any time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Private market plans can be purchased year-round \u2014 there\u2019s no enrollment window. ACA marketplace plans require enrollment during the annual Open Enrollment Period (typically November through January) unless you qualify for a Special Enrollment Period due to a qualifying life event such as losing employer coverage, getting married, or having a child."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What pre-existing conditions affect private health insurance in Tennessee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Private market plans in Tennessee use medical underwriting, which means the carrier reviews your health history before issuing a policy. Common conditions that can affect approval, pricing, or result in exclusion riders include: recent cancer treatment, heart disease, diabetes, COPD, and other ongoing conditions. Minor or resolved health history may have no impact. Every applicant is reviewed individually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do ACA plans cover the same doctors as private PPO plans in Tennessee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. Many ACA plans in Tennessee use HMO or EPO network structures with regional provider networks. Private PPO plans typically offer access to a national network with no referral requirements, which matters if you travel frequently, see specialists, or want flexibility to choose any provider without prior authorization."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know which plan is actually cheaper for me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The monthly premium is only one number. The real cost comparison involves deductibles, coinsurance rates, out-of-pocket maximums, and how each plan behaves for the specific healthcare you actually use. A free 15-minute review with DC Insurance walks through both options for your specific income, health profile, and priorities \u2014 no pressure, just a real comparison."
+          }
+        }
+      ]
     }
   ]
 }
@@ -171,17 +260,17 @@
 
       <h2>The Core Difference</h2>
       <p>ACA marketplace plans and private market health insurance serve different populations well. Understanding which one fits your situation starts with two questions: What is your income? And what does your health history look like?</p>
-      <p>Those two factors drive almost every meaningful difference between the two options.</p>
+      <p>Those two factors drive almost every meaningful difference between the two options. Get both of them right and you can make a confident, informed decision. Ignore one and you may end up in the wrong lane paying more than you should — or worse, underinsured when you actually need care.</p>
 
       <h2>ACA Marketplace Plans: When They Win</h2>
       <p>ACA plans are <a href="health-insurance-glossary.html#community-rating">community-rated</a> and <a href="health-insurance-glossary.html#guaranteed-issue">guaranteed issue</a> — meaning you can't be denied coverage or priced based on your health history. That guarantee matters if you have <a href="health-insurance-glossary.html#pre-existing-condition">pre-existing conditions</a> that would be excluded or rated up on a private plan.</p>
-      <p>ACA plans also come with income-based <a href="health-insurance-glossary.html#subsidy">subsidies</a> that can dramatically reduce monthly <a href="health-insurance-glossary.html#premium">premiums</a> for people below certain income thresholds. If your household income falls in the right range, a subsidized ACA plan can be genuinely competitive.</p>
-      <p>The downside: unsubsidized ACA premiums in Tennessee are high for what you get. And many Tennessee ACA plans use HMO or EPO network structures with regional restrictions — limiting which doctors and hospitals are in-network.</p>
+      <p>ACA plans also come with income-based <a href="health-insurance-glossary.html#subsidy">subsidies</a> that can dramatically reduce monthly <a href="health-insurance-glossary.html#premium">premiums</a> for people below certain income thresholds. If your household income falls in the right range, a subsidized ACA plan can be genuinely competitive — sometimes the best value on the table.</p>
+      <p>The downside: unsubsidized ACA premiums in Tennessee are high for what you get. And many Tennessee ACA plans use HMO or EPO network structures with regional restrictions — limiting which doctors and hospitals are in-network and requiring referrals to see specialists. If you're paying full price and not using subsidies, you're often getting less coverage flexibility than what the private market can offer.</p>
 
       <h2>Private Market PPO Plans: When They Win</h2>
       <p><a href="private-ppo-health-insurance-tennessee">Private PPO plans</a> are medically underwritten, meaning healthy individuals can access lower premiums and more favorable cost-sharing than the ACA community rate. For someone in good health who earns above the subsidy range, private market coverage often provides better protection per dollar.</p>
-      <p>Private PPO plans typically offer nationwide networks with no referral requirements, which matters for people who travel, see specialists frequently, or simply want the flexibility to use any doctor they choose.</p>
-      <p>The downside: if you have significant pre-existing conditions, you may face rate-ups, exclusion <a href="health-insurance-glossary.html#rider">riders</a>, or outright denial. Private plans are not for everyone — and we won't pretend otherwise.</p>
+      <p>Private PPO plans typically offer nationwide networks with no referral requirements, which matters for people who travel, see specialists frequently, or simply want the flexibility to use any doctor they choose. You can see a specialist in Boston or a surgeon in Houston with the same coverage you'd use in Nashville. That's a real difference from a regionally-constrained marketplace plan.</p>
+      <p>The downside: if you have significant pre-existing conditions, you may face rate-ups, exclusion <a href="health-insurance-glossary.html#rider">riders</a>, or outright denial on a private plan. Private plans are not for everyone — and we won't pretend otherwise. The ACA's guaranteed-issue protection exists for good reason, and if you need it, it's important to know it's there.</p>
 
       <h2>Side-by-Side Comparison</h2>
       <div style="overflow-x:auto;margin:2rem 0;">
@@ -211,36 +300,121 @@
             </tr>
             <tr style="background:var(--off-white);border-bottom:1px solid var(--gray-light);">
               <td style="padding:0.85rem 1rem;font-weight:600;">Best for pre-existing conditions</td>
-              <td style="padding:0.85rem 1rem;text-align:center;">✓ Yes</td>
+              <td style="padding:0.85rem 1rem;text-align:center;">&#10003; Yes</td>
               <td style="padding:0.85rem 1rem;text-align:center;">Depends on condition</td>
             </tr>
             <tr style="border-bottom:1px solid var(--gray-light);">
               <td style="padding:0.85rem 1rem;font-weight:600;">Best for healthy individuals</td>
               <td style="padding:0.85rem 1rem;text-align:center;">If subsidized</td>
-              <td style="padding:0.85rem 1rem;text-align:center;">✓ Often yes</td>
+              <td style="padding:0.85rem 1rem;text-align:center;">&#10003; Often yes</td>
             </tr>
-            <tr style="background:var(--off-white);">
+            <tr style="background:var(--off-white);border-bottom:1px solid var(--gray-light);">
               <td style="padding:0.85rem 1rem;font-weight:600;">Enrollment timing</td>
               <td style="padding:0.85rem 1rem;text-align:center;">Open enrollment window</td>
               <td style="padding:0.85rem 1rem;text-align:center;">Anytime</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-light);">
+              <td style="padding:0.85rem 1rem;font-weight:600;">Specialist access</td>
+              <td style="padding:0.85rem 1rem;text-align:center;">Often requires referral</td>
+              <td style="padding:0.85rem 1rem;text-align:center;">No referral needed</td>
+            </tr>
+            <tr style="background:var(--off-white);">
+              <td style="padding:0.85rem 1rem;font-weight:600;">Out-of-state coverage</td>
+              <td style="padding:0.85rem 1rem;text-align:center;">Emergency only (many plans)</td>
+              <td style="padding:0.85rem 1rem;text-align:center;">Full nationwide coverage</td>
             </tr>
           </tbody>
         </table>
       </div>
 
+      <h2>How the ACA Subsidy Threshold Works in Tennessee</h2>
+      <p>The ACA uses your Modified Adjusted Gross Income (MAGI) relative to the federal poverty level to determine whether you qualify for a subsidy — and how much. The structure is designed to help middle-income households afford coverage, but it creates some specific dynamics for self-employed people in Tennessee worth understanding.</p>
+      <p>First, Tennessee did not expand Medicaid under the ACA. This means there's a real coverage gap at the lower end: if your income falls below the federal poverty level, you may not qualify for Medicaid and your income may be too low to qualify for a marketplace subsidy. Self-employed individuals with a low-income year can find themselves in this gap, which is another reason understanding your options before you have a gap matters.</p>
+      <p>At the upper end, many households in Middle Tennessee's higher-income corridors — Brentwood, Franklin, Belle Meade, Green Hills, College Grove — are above the subsidy threshold. For these households, the marketplace offers no income-based relief. They're paying the full community-rated premium with regional network limitations. That's exactly the scenario where a private market comparison makes sense: the subsidy that would have made the ACA compelling simply isn't there, and the private market is priced around your health rather than the community rate.</p>
+      <p>The math shifts significantly depending on where you fall. That's why the first step in any honest comparison is establishing your income picture and your subsidy eligibility before talking about plan options.</p>
+
+      <h2>What Medical Underwriting Actually Reviews</h2>
+      <p>A lot of people hear "medical underwriting" and assume it means automatic rejection for anything in their health history. That's not accurate. What underwriting actually does is review your health history to determine whether to offer coverage, at what rate, and with what terms.</p>
+      <p>Minor or resolved health history often has no meaningful impact on approval or pricing. A broken wrist from ten years ago, a sinus infection last year, or a past prescription for a common antibiotic — these kinds of items rarely affect underwriting outcomes.</p>
+      <p>Conditions that can affect private market underwriting include ongoing managed conditions (like hypertension or type 2 diabetes), recent treatment for more serious diagnoses (cancer, heart disease), and certain mental health histories. The outcome isn't always a denial — it might be a rate adjustment, a temporary exclusion rider for a specific condition, or full approval depending on the severity and recency.</p>
+      <p>The only way to know where you'd land is to run an application. What I do before we go that far is have a direct conversation about your health history so you understand what to expect before anything gets submitted. There's no reason to apply to a market that isn't going to work for you — and there's no reason to default to the ACA because you assumed private coverage wasn't an option when it actually is.</p>
+
+      <h2>The Network Difference: Regional vs. Nationwide</h2>
+      <p>Network design is one of the least-discussed dimensions of plan selection, and it's one that bites people in specific and predictable ways. Understanding what type of network you're buying before you need it is part of making an informed decision.</p>
+      <p>Most ACA plans in Tennessee operate on HMO or EPO network structures. An HMO requires you to choose a primary care physician who coordinates your care and provides referrals to specialists. An EPO gives you more flexibility within the network but generally offers no coverage for out-of-network care except in emergencies. Both structures are regionally anchored — they work well in Middle Tennessee but may leave you with emergency-only coverage the moment you travel.</p>
+      <p>Private PPO plans offer a different model entirely. A nationwide PPO network means your coverage works the same way whether you're in Nashville or New York. You can see any doctor who participates in the network — and that network typically spans the country — without a referral and without prior authorization for routine specialist visits. If you're a business owner who travels regularly, a contractor who works across state lines, or simply someone who wants genuine flexibility in your healthcare, that distinction matters.</p>
+      <p>Neither network structure is automatically better. But you should know which one you're buying, and you should understand how it will behave in the scenarios that actually apply to your life.</p>
+
+      <h2>How to Read the Full Cost Picture</h2>
+      <p>The monthly premium is the number everyone focuses on, and it's also the least complete measure of what a plan actually costs you. Two plans with identical premiums can have dramatically different financial exposure when you actually use them.</p>
+      <p>The four numbers that complete the picture are your <a href="health-insurance-glossary.html#deductible">deductible</a>, your <a href="health-insurance-glossary.html#coinsurance">coinsurance</a> percentage, your <a href="health-insurance-glossary.html#copay">copays</a>, and your <a href="health-insurance-glossary.html#moop">out-of-pocket maximum</a>. The out-of-pocket maximum is the one most people overlook — it's your worst-case annual exposure before the plan covers 100% of costs. It can vary by thousands of dollars between plans with the same monthly premium.</p>
+      <p>When I compare ACA and private options for a client, I run the full cost picture across both — monthly premium, expected annual out-of-pocket based on actual usage, and worst-case maximum exposure. A plan with a higher premium but a significantly lower out-of-pocket maximum can be cheaper in a bad year than a plan with a lower premium and a higher exposure ceiling. The comparison only makes sense when you look at both sides of the equation.</p>
+      <p>That's especially true for <a href="self-employed-health-insurance-tennessee">self-employed workers</a> and <a href="1099-health-insurance-tennessee">1099 contractors</a>, where the self-employed health insurance tax deduction applies to premiums paid — which changes the net cost calculation and sometimes shifts which plan actually wins on total dollar basis.</p>
+
+      <h2>Enrollment Timing: What the Calendar Means for You</h2>
+      <p>One practical difference between ACA and private plans that doesn't get enough attention is when you can actually enroll.</p>
+      <p>The ACA marketplace has a fixed annual Open Enrollment Period, typically running from November 1 through January 15 (dates can vary by year). Outside of that window, you can only enroll if you experience a qualifying life event — losing employer coverage, getting married, having a child, moving to a new coverage area, and a handful of others. Miss the window without a qualifying event and you're waiting until next November.</p>
+      <p>Private market plans have no such restriction. You can apply, get approved, and start coverage any time of year. For someone starting a business mid-year, leaving a job outside of open enrollment, or simply figuring out their options in June rather than November, that flexibility alone changes what's available to them.</p>
+      <p>It's also worth noting that if you're transitioning off an employer plan, that loss of coverage is a qualifying event — meaning you have a 60-day window to enroll in an ACA plan. That same window doesn't apply to private market plans since they're available year-round. But knowing you have that window, and knowing it closes after 60 days, matters for making a timely decision.</p>
+
       <h2>The Honest Bottom Line</h2>
       <p>There's no universally "better" option. The right answer depends on your income, your health, what you actually want coverage to do, and what you're paying right now. What we do is run both scenarios side by side and show you the real numbers — not just the monthly premium, but the full cost picture including <a href="health-insurance-glossary.html#deductible">deductibles</a>, <a href="health-insurance-glossary.html#coinsurance">coinsurance</a>, and <a href="health-insurance-glossary.html#moop">out-of-pocket maximums</a>.</p>
       <p>We serve individuals, <a href="self-employed-health-insurance-tennessee">self-employed workers</a>, and <a href="1099-health-insurance-tennessee">1099 contractors</a> across <a href="nashville-insurance">Nashville</a>, <a href="franklin-insurance">Franklin</a>, <a href="murfreesboro-insurance">Murfreesboro</a>, and all of Middle Tennessee. See our full <a href="services">services overview</a> for how we approach every client conversation.</p>
 
-      
       <h2>Supplemental Coverage: The Third Layer</h2>
       <p>Whether you choose an ACA plan or a private PPO, there's a third piece worth understanding: supplemental coverage. Neither ACA plans nor private PPOs cover everything — and the gaps are specific enough that supplemental policies can close them at reasonable cost.</p>
       <p>Critical illness, accident, and hospital indemnity policies pay cash directly to you when you experience a covered event. They don't go through the claims process of your major medical plan. A cancer diagnosis, for example, triggers a lump-sum benefit that you use however you need — medical bills, mortgage, living expenses during recovery.</p>
-      <p>This kind of layered approach — a strong core plan plus targeted supplemental coverage — is often how I build the most cost-efficient overall protection. It's not about buying more coverage for the sake of it. It's about covering the specific scenarios where out-of-pocket exposure is highest.</p>
+      <p>This kind of layered approach — a strong core plan plus targeted supplemental coverage — is often how I build the most cost-efficient overall protection. It's not about buying more coverage for the sake of it. It's about covering the specific scenarios where out-of-pocket exposure is highest. Learn more about how supplemental coverage works in our <a href="dc-insurance-blog/f/supplemental-health-insurance-tennessee">supplemental health insurance guide</a>.</p>
 
       <h2>A Tennessee-Specific Reality Check</h2>
       <p>Tennessee did not expand Medicaid under the ACA, which creates a coverage gap at the lower end of the income scale. If your net income falls below the federal poverty level, you may not qualify for either Medicaid or ACA subsidies — this is a real issue for self-employed people with variable income years.</p>
-      <p>At the upper end, Tennessee's high-income corridors — Brentwood, Franklin, Belle Meade, Green Hills — are largely above the ACA subsidy threshold. For residents in these areas paying full-price marketplace premiums, private market alternatives deserve a serious look. The subsidy structure was designed for middle-income households; at higher income levels, the competitive landscape shifts.</p>
+      <p>At the upper end, Tennessee's high-income corridors — Brentwood, Franklin, Belle Meade, Green Hills — are largely above the ACA subsidy threshold. For residents in these areas paying full-price marketplace premiums, private market alternatives deserve a serious look. The subsidy structure was designed for middle-income households; at higher income levels, the competitive landscape shifts significantly.</p>
+      <p>The private market in Tennessee is active and competitive. For the right profile — healthy, above subsidy threshold, wanting nationwide access — it's a genuinely strong option. The comparison is worth running before defaulting to whatever the marketplace shows you first.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <style>
+        .faq-item { border-bottom: 1px solid var(--gray-light); }
+        .faq-item summary { cursor: pointer; padding: 1rem 0; font-weight: 600; font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 1.4rem; color: var(--sky); flex-shrink: 0; margin-left: 1rem; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item p { margin: 0 0 1rem 0; color: var(--gray-dark); line-height: 1.7; }
+      </style>
+
+      <details class="faq-item">
+        <summary>Who benefits most from ACA marketplace plans in Tennessee?</summary>
+        <p>ACA marketplace plans are typically the best fit for people with significant pre-existing conditions (since coverage is guaranteed issue and premiums can't be based on health history), and for people whose household income qualifies them for meaningful subsidies. If you're below the subsidy threshold and in good health, the ACA math often doesn't work in your favor at full unsubsidized price.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who benefits most from private market PPO plans in Tennessee?</summary>
+        <p>Private PPO plans tend to work well for self-employed individuals and 1099 contractors who are generally healthy, earn above the ACA subsidy threshold, and want nationwide network access with no referral requirements. Because private plans are medically underwritten, healthier applicants often access more favorable rates than the ACA community rate for their age and county.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the ACA subsidy income threshold in Tennessee?</summary>
+        <p>ACA subsidies are based on modified adjusted gross income (MAGI) relative to the federal poverty level. Eligibility and subsidy amounts change annually and vary by household size. The key point: once your income exceeds the subsidy range, you pay full unsubsidized ACA premiums — which in Tennessee are often significantly higher than what a healthy individual can access in the private market. Tennessee also did not expand Medicaid, so there's a gap at the lower income end worth understanding too.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I switch from ACA to a private plan at any time?</summary>
+        <p>Private market plans can be purchased year-round — there's no enrollment window. ACA marketplace plans require enrollment during the annual Open Enrollment Period (typically November through January) unless you qualify for a Special Enrollment Period due to a qualifying life event such as losing employer coverage, getting married, or having a child. If you're currently in an ACA plan and want to explore the private market, you can do so at any point during the year.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What pre-existing conditions affect private health insurance eligibility in Tennessee?</summary>
+        <p>Private market plans in Tennessee use medical underwriting, which means the carrier reviews your health history before issuing a policy. Common conditions that can affect approval, pricing, or result in exclusion riders include ongoing managed conditions like heart disease or diabetes, recent cancer treatment, and certain chronic conditions. Minor or resolved health history may have no impact at all. Every applicant is reviewed individually — the only way to know where you'd land is to have a direct conversation before anything gets submitted.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do ACA plans cover the same doctors as private PPO plans in Tennessee?</summary>
+        <p>Not necessarily. Many ACA plans in Tennessee use HMO or EPO network structures with regional provider networks. Private PPO plans typically offer access to a national network with no referral requirements — you can see a specialist in another state with the same coverage you'd use in Nashville. If you travel frequently, see multiple specialists, or simply want the flexibility to choose any doctor without prior authorization, a nationwide PPO network is a meaningful difference from a regional marketplace plan.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I know which plan is actually cheaper for my specific situation?</summary>
+        <p>The monthly premium is only one number. A complete cost comparison involves deductibles, coinsurance rates, out-of-pocket maximums, and how each plan behaves for the specific healthcare you actually use. For self-employed individuals, the self-employed health insurance tax deduction also affects the net cost of premiums — which sometimes shifts which plan wins on a total dollar basis. A free 15-minute review with DC Insurance walks through both options for your income, health profile, and priorities — no pressure, just a real comparison.</p>
+      </details>
 
       <div style="background:var(--navy);border-radius:var(--radius-lg);padding:2.5rem;margin-top:3rem;text-align:center;">
         <h3 style="color:var(--white);margin-bottom:0.75rem;">Get a Straight Comparison for Your Situation</h3>

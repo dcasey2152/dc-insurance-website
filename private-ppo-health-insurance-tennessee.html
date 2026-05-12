@@ -44,15 +44,43 @@
       "@type": ["LocalBusiness","InsuranceAgency"],
       "@id": "https://dcinsuranceagency.com/#business",
       "name": "DC Insurance",
-      "description": "Independent health insurance agent specializing in private market PPO plans for self-employed individuals and small business owners in Tennessee.",
+      "description": "Independent health insurance agent specializing in private market PPO plans for self-employed individuals and small business owners in Middle Tennessee.",
       "url": "https://dcinsuranceagency.com",
       "telephone": "+1-615-513-0313",
       "email": "denton@dcinsuranceagency.com",
       "priceRange": "Free Consultation",
       "image": "https://dcinsuranceagency.com/logo.jpeg",
       "founder": {"@type": "Person","name": "Denton Casey"},
-      "address": {"@type": "PostalAddress","addressRegion": "TN","addressCountry": "US"},
-      "areaServed": {"@type": "AdministrativeArea","name": "Middle Tennessee"},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1500 Medical Center Pkwy Ste 1G",
+        "addressLocality": "Smyrna",
+        "addressRegion": "TN",
+        "postalCode": "37167",
+        "addressCountry": "US"
+      },
+      "openingHours": ["Mo-Fr 08:00-17:00","Sa 09:00-14:00"],
+      "areaServed": [
+        {"@type": "City","name": "Nashville","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Franklin","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Brentwood","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Nolensville","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Murfreesboro","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Smyrna","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Spring Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Hendersonville","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Mt. Juliet","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Belle Meade","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Green Hills","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Donelson","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Bellevue","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Shelbyville","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Chapel Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "College Grove","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Christiana","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Manchester","containedInPlace": {"@type": "State","name": "Tennessee"}},
+        {"@type": "City","name": "Tullahoma","containedInPlace": {"@type": "State","name": "Tennessee"}}
+      ],
       "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "14"}
     },
     {
@@ -61,6 +89,67 @@
       "url": "https://dcinsuranceagency.com/private-ppo-health-insurance-tennessee",
       "name": "Private PPO Health Insurance in Tennessee | DC Insurance",
       "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I get a private PPO if I have a pre-existing condition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the condition. Minor past issues (resolved infections, old injuries) often clear underwriting without issue. Ongoing conditions like diabetes, heart disease, or recent cancer treatment are more likely to result in a denial or exclusion rider. ACA marketplace plans are guaranteed issue regardless of health \u2014 so for people with significant ongoing conditions, the marketplace is usually the right lane."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there an open enrollment period for private PPO plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. One of the advantages of private market plans is that you can apply any time of year. You don\u2019t have to wait for a qualifying life event or the ACA open enrollment window (November through January). This flexibility is especially valuable for self-employed individuals who start a business mid-year or leave an employer outside of open enrollment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I deduct private PPO premiums if I\u2019m self-employed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Self-employed individuals can generally deduct 100% of health insurance premiums paid for themselves and their families \u2014 regardless of whether the plan is through the ACA marketplace or the private market. This deduction reduces your adjusted gross income, not just your taxable income as an itemized deduction. Consult your CPA or tax advisor on specifics for your situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to get approved for a private PPO plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The underwriting timeline varies by carrier but typically runs between a few days and a few weeks. Most applications are submitted electronically. The carrier reviews your health questionnaire and medical history, and may request additional information for certain conditions. Once approved, coverage typically starts on a date you select at application."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do private PPO plans handle prescriptions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most private PPO plans include prescription drug coverage, but formularies and tier structures vary by carrier and plan. If you take ongoing medications, reviewing the formulary before selecting a plan is important \u2014 this is one of the specific comparison points covered during a free review."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a private PPO and an ACA marketplace plan in Tennessee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The two primary differences are underwriting and network structure. ACA plans are guaranteed issue with no health screening and often use regional HMO or EPO networks. Private PPO plans are medically underwritten \u2014 healthier individuals typically pay lower premiums \u2014 and offer nationwide network access with no referral requirements. For self-employed Tennesseans above the ACA subsidy threshold who are in good health, the private market often offers more coverage for the dollar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do private PPO plans cover preventive care?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Coverage varies by plan. Some private market plans include preventive services similar to ACA requirements; others have different structures. This is one of the key points reviewed during a consultation alongside deductible, out-of-pocket maximum, and network access."
+          }
+        }
+      ]
     }
   ]
 }
@@ -171,43 +260,64 @@
 
       <h2>What Is a Private PPO Health Insurance Plan?</h2>
       <p>A private market PPO plan is health insurance purchased directly from an insurance carrier — outside the ACA marketplace, outside your employer, on an individual basis. Unlike ACA plans, these are <em>medically underwritten</em>: the carrier reviews your health history before issuing coverage and pricing your policy.</p>
-      <p>That one difference — <a href="health-insurance-glossary.html#medical-underwriting">medical underwriting</a> — changes the math significantly for people in good health. When a carrier can assess your actual risk rather than pooling you with everyone else, healthy individuals typically see meaningfully lower premiums than they'd pay on the ACA marketplace at full price.</p>
+      <p>That one difference — <a href="health-insurance-glossary.html#medical-underwriting">medical underwriting</a> — changes the math significantly for people in good health. When a carrier can assess your actual risk rather than pooling you with everyone else, healthy individuals typically see meaningfully lower premiums than they'd pay on the ACA marketplace at full price. The tradeoff is real: private plans aren't guaranteed issue, and your health history matters. But for the right profile, that tradeoff works strongly in your favor.</p>
 
       <h2>Who Private PPO Plans Are Built For</h2>
-      <p>Private market PPO plans tend to work best for people who are:</p>
-      <ul style="margin:1rem 0 1.5rem 1.5rem;line-height:2;">
-        <li>In good to excellent health with no significant pre-existing conditions</li>
-        <li>Self-employed or 1099 workers earning above the ACA subsidy range</li>
-        <li>Small business owners who need individual coverage</li>
-        <li>High-income households looking for maximum flexibility and lower cost-sharing</li>
-        <li>Frequent travelers who need nationwide <a href="health-insurance-glossary.html#network">network</a> access without referrals</li>
-      </ul>
+      <p>Private market PPO plans tend to work best for people who are in good to excellent health with no significant pre-existing conditions, self-employed or 1099 workers earning above the ACA subsidy range, small business owners who need individual coverage, high-income households looking for maximum flexibility and lower cost-sharing, and frequent travelers who need nationwide <a href="health-insurance-glossary.html#network">network</a> access without referrals.</p>
+      <p>The profile that sees the clearest benefit is typically a healthy self-employed professional or contractor in their 30s, 40s, or early 50s who earns comfortably above the ACA subsidy threshold and isn't carrying any ongoing managed health conditions. That person is paying the community rate on the ACA marketplace despite being a low-risk individual — and the private market prices them differently.</p>
       <p>If you have pre-existing conditions that would affect underwriting, or if you qualify for meaningful ACA subsidies, the marketplace may still be your better lane. The honest answer depends on your actual numbers — which is exactly what a free review is for.</p>
 
       <h2>How Medical Underwriting Actually Works</h2>
       <p><a href="health-insurance-glossary.html#medical-underwriting">Medical underwriting</a> is the process where the insurance carrier evaluates your health history before approving coverage. You'll typically complete a health questionnaire covering things like recent diagnoses, medications, prior surgeries, and chronic conditions.</p>
-      <p>Depending on your answers, the carrier can do one of three things: approve you at standard rates, approve you with a <a href="health-insurance-glossary.html#rider">rider</a> that excludes a specific condition, or decline coverage. The last outcome is less common for generally healthy people — most people who apply in good health get approved.</p>
-      <p>The important tradeoff: private PPO plans do not cover pre-existing conditions the way ACA plans do. ACA plans are <a href="health-insurance-glossary.html#guaranteed-issue">guaranteed issue</a> with no underwriting. If you have a significant health condition, that's a real factor in deciding which lane makes sense. If you're healthy and paying full-price marketplace premiums, you're likely subsidizing other people's claims — which is why private plans can price more competitively for your risk profile.</p>
+      <p>Depending on your answers, the carrier can do one of three things: approve you at standard rates, approve you with a <a href="health-insurance-glossary.html#rider">rider</a> that excludes a specific condition, or decline coverage. The last outcome is less common for generally healthy people — most people who apply in good health get approved, often at standard rates without any exclusions.</p>
+      <p>The important tradeoff: private PPO plans do not cover pre-existing conditions the way ACA plans do. ACA plans are <a href="health-insurance-glossary.html#guaranteed-issue">guaranteed issue</a> with no underwriting. If you have a significant health condition, that's a real factor in deciding which lane makes sense. If you're healthy and paying full-price marketplace premiums, you're essentially subsidizing other people's claims — which is why private plans can price more competitively for your risk profile.</p>
+
+      <h2>The Underwriting Timeline: What to Expect</h2>
+      <p>One of the common concerns people have about applying for a private plan is the process — how long it takes, what gets reviewed, and what to expect at each step. In practice, the timeline is more straightforward than most people assume.</p>
+      <p>Applications are typically submitted electronically. The health questionnaire covers your medical history over the past several years — conditions, medications, surgeries, hospitalizations. The carrier reviews this alongside any prescription history they can access through standard verification systems. For straightforward applications, decisions often come back within a few business days. For applications with more complex health history, a carrier may request additional information, which can extend the timeline to a few weeks.</p>
+      <p>Once approved, you typically select a coverage start date at the time of application. Coverage can begin as soon as the first of the following month, sometimes sooner depending on the carrier. There's no artificial enrollment window — the timeline is driven by the application process itself, not a calendar restriction. For someone who needs coverage now and doesn't want to wait until November, that flexibility is meaningful.</p>
+      <p>During this process, I'm involved throughout. I help prepare clients for what's being asked, explain what the underwriting outcomes might look like based on their health history before anything gets submitted, and ensure we're applying to carriers and plans most likely to approve and price favorably for your specific situation.</p>
 
       <h2>PPO vs. EPO vs. HMO — Why the Network Type Matters</h2>
       <p>PPO stands for Preferred Provider Organization. The defining feature is flexibility: you can see any licensed provider, in-network or out, without a <a href="health-insurance-glossary.html#referral">referral</a> from a primary care physician. That matters more than most people realize until they actually need it.</p>
-      <p><a href="health-insurance-glossary.html#epo">EPO plans</a> (Exclusive Provider Organizations) require you to stay in-network except for emergencies. HMO plans add a gatekeeper — everything runs through your primary care physician. Both structures reduce premium cost but add friction when you need specialists, second opinions, or care while traveling.</p>
-      <p>For Middle Tennessee specifically: a strong PPO keeps Vanderbilt, TriStar, and other major systems accessible without referral loops. If you see multiple specialists or travel frequently for work, that access has real practical value.</p>
+      <p><a href="health-insurance-glossary.html#epo">EPO plans</a> (Exclusive Provider Organizations) require you to stay in-network except for emergencies. HMO plans add a gatekeeper — everything runs through your primary care physician who must refer you to specialists. Both structures reduce premium cost but add friction when you need specialists, second opinions, or care while traveling outside your region.</p>
+      <p>For Middle Tennessee specifically: a strong nationwide PPO keeps Vanderbilt, TriStar, and other major systems accessible without referral loops. It also means that if you're in Atlanta for a work trip, New York for a conference, or Phoenix visiting family, your coverage works the same way it does in Nashville. That nationwide consistency is one of the core value propositions of a private PPO plan that regional ACA plans simply can't match.</p>
+      <p>The referral requirement on HMO plans is the friction point most people underestimate until they experience it. Needing a specialist in a managed care plan means going through your PCP, scheduling a referral appointment, waiting for approval, then scheduling the specialist appointment. A PPO removes that entire step — you call the specialist directly.</p>
+
+      <h2>How Private PPO Plans Handle Cost-Sharing</h2>
+      <p>Understanding how cost-sharing works on a private PPO plan is essential to comparing it accurately against ACA marketplace options. The key numbers are the <a href="health-insurance-glossary.html#deductible">deductible</a>, coinsurance percentage, and <a href="health-insurance-glossary.html#moop">out-of-pocket maximum</a>.</p>
+      <p>Your deductible is the amount you pay before the plan begins sharing costs. Once you meet the deductible, coinsurance kicks in — you pay a percentage (often 20–30%) of covered costs while the carrier pays the rest. Your out-of-pocket maximum is the ceiling on what you'll pay in a given year; once you hit it, the carrier covers 100% of covered costs for the rest of the year.</p>
+      <p>One of the most important things I walk through in every review is not just the premium comparison but the total cost picture. A plan with a lower monthly premium might carry a significantly higher out-of-pocket maximum, which means in a bad year — a hospitalization, a surgery, a serious diagnosis — your exposure is much greater than the premium line suggested. Two plans can look very similar on premium while having thousands of dollars of difference in worst-case annual cost. That's the comparison that matters.</p>
+      <p>Private PPO plans can have more flexible cost-sharing structures than ACA marketplace plans, and healthier individuals often qualify for plans with more favorable cost-sharing alongside the lower premium. When I build a comparison for a client, I'm evaluating both dimensions simultaneously — what it costs in a normal year and what it costs in a worst-case year — and comparing that against the same calculation on the marketplace side.</p>
+
+      <h2>The Self-Employed Health Insurance Tax Deduction</h2>
+      <p>For self-employed individuals in Tennessee, the health insurance premium deduction is one of the most valuable tax benefits available. Self-employed people can generally deduct 100% of premiums paid for health, dental, and vision coverage for themselves and their immediate family — and this applies regardless of whether the coverage is through the ACA marketplace or a private market plan.</p>
+      <p>This deduction comes off your adjusted gross income, which means it reduces your total taxable income before you even get to itemized deductions. For someone in a higher income bracket, the after-tax cost of premiums is meaningfully lower than the sticker price — which changes the effective comparison between marketplace and private options.</p>
+      <p>One nuance worth knowing: the deduction only applies if you are not eligible for employer-sponsored coverage through a spouse's plan. If your spouse has access to coverage through an employer and you're eligible to enroll in it, the self-employed health insurance deduction may not apply to the months you were eligible for that employer plan. Your CPA or tax advisor is the right resource for specifics on your situation — this is one of the questions I encourage clients to resolve before we finalize their plan selection, because it can affect which option makes more sense on a net-cost basis.</p>
+
+      <h2>Private PPO Plans in Middle Tennessee: Who Benefits Most</h2>
+      <p>Middle Tennessee has a specific economic profile that makes private PPO plans particularly relevant for a meaningful portion of the population. The region's high concentration of self-employed professionals, independent contractors, real estate agents, consultants, and small business owners — especially in high-income communities like <a href="franklin-insurance">Franklin</a>, <a href="brentwood-insurance">Brentwood</a>, <a href="belle-meade-insurance">Belle Meade</a>, <a href="green-hills-insurance">Green Hills</a>, <a href="nolensville-insurance">Nolensville</a>, and <a href="college-grove-insurance">College Grove</a> — creates a large group of people who are above the ACA subsidy threshold and shopping entirely on their own.</p>
+      <p>For someone earning a solid income as an independent consultant in Brentwood or a contractor in Murfreesboro, the ACA community rate isn't subsidized. They're paying full price. And the full-price ACA rate is the rate the marketplace sets for the entire community pool — not the rate that reflects their own health profile. If they're healthy, the private market can price that differently.</p>
+      <p>At the same time, Middle Tennessee has a large and growing number of small employers who offer group health benefits to employees but leave business owners to find their own individual coverage. A business owner who has set up group benefits for their team often still needs to handle their own individual plan separately — and the private market is frequently the most cost-efficient option for that scenario.</p>
+      <p>We work with clients across all of Middle Tennessee — from <a href="nashville-insurance">Nashville</a> and the core metro area through <a href="murfreesboro-insurance">Murfreesboro</a>, <a href="smyrna-insurance">Smyrna</a>, <a href="hendersonville-insurance">Hendersonville</a>, <a href="mt-juliet-insurance">Mt. Juliet</a>, <a href="spring-hill-insurance">Spring Hill</a>, and out through <a href="shelbyville-insurance">Shelbyville</a>, <a href="manchester-insurance">Manchester</a>, and <a href="tullahoma-insurance">Tullahoma</a>. The private market landscape is consistent across Tennessee — the key variables are your income, health, and what you need the coverage to do.</p>
 
       <h2>Supplemental Coverage That Pairs with Private PPO Plans</h2>
-      <p>Private PPO plans cover core medical expenses — hospitalizations, surgery, physician visits, prescriptions. But there are specific gaps that supplemental coverage addresses cost-effectively:</p>
-      <ul style="margin:1rem 0 1.5rem 1.5rem;line-height:2;">
-        <li><strong>Critical Illness:</strong> A lump-sum cash benefit if you're diagnosed with cancer, heart attack, stroke, or other covered conditions. Pays directly to you — use it however needed.</li>
-        <li><strong>Accident Insurance:</strong> Covers out-of-pocket costs from accidental injuries — ER visits, fractures, dislocations, physical therapy.</li>
-        <li><strong>Hospital Indemnity:</strong> Daily cash benefit for each day you're hospitalized. Helps cover <a href="health-insurance-glossary.html#deductible">deductibles</a> and living expenses during recovery.</li>
-        <li><strong>Dental and Vision:</strong> Typically excluded from major medical plans — can be added through standalone policies at reasonable cost.</li>
-      </ul>
-      <p>Building a supplemental layer around a core PPO plan is often the most cost-efficient way to minimize true out-of-pocket exposure. This is something I walk through specifically during a review — not every plan needs every add-on.</p>
+      <p>Private PPO plans cover core medical expenses — hospitalizations, surgery, physician visits, prescriptions. But there are specific gaps that supplemental coverage addresses cost-effectively, and layering the right supplemental policies around a strong core plan is often how the most efficient overall protection gets built.</p>
+      <p>Critical illness coverage pays a lump-sum cash benefit if you're diagnosed with cancer, heart attack, stroke, or other covered conditions. The benefit goes directly to you — not to the provider — and you use it however you need: deductibles, lost income during treatment, mortgage, living expenses. It's designed specifically for the financial disruption a serious diagnosis creates that your major medical plan doesn't fully absorb.</p>
+      <p>Accident insurance covers out-of-pocket costs from accidental injuries — ER visits, fractures, dislocations, physical therapy follow-up. For self-employed individuals with high-deductible plans, accident coverage can pay directly into the gap between the incident and when the major medical deductible kicks in.</p>
+      <p>Hospital indemnity coverage pays a daily cash benefit for each day you're hospitalized. Like accident coverage, it's designed to address the out-of-pocket exposure during a hospitalization that the major medical plan doesn't cover directly.</p>
+      <p>Dental and vision coverage is typically excluded from major medical plans — private PPO or ACA — and can be added through standalone policies at reasonable cost. For clients with families, this is usually a straightforward add that rounds out the overall coverage picture. Learn more in our detailed <a href="dc-insurance-blog/f/supplemental-health-insurance-tennessee">guide to supplemental health insurance in Tennessee</a>.</p>
+
+      <h2>Common Misconceptions About Private Market Plans</h2>
+      <p><strong>Misconception: Private plans are only for people who are perfectly healthy.</strong> Not accurate. A wide range of health histories clears underwriting without exclusions or rate adjustments. The key is knowing what's in your history and understanding how carriers are likely to respond before you apply. That's part of the conversation we have upfront.</p>
+      <p><strong>Misconception: Private plans are always cheaper than ACA plans.</strong> Not necessarily. For someone who qualifies for significant ACA subsidies, the subsidized marketplace premium may be genuinely competitive or even lower than the private market. The comparison depends entirely on your income and subsidy eligibility. We run both before making a recommendation.</p>
+      <p><strong>Misconception: Private plans don't cover much.</strong> This reflects outdated thinking from pre-ACA "junk plan" concerns. Legitimate medically underwritten private PPO plans provide comprehensive major medical coverage — hospitalizations, surgeries, specialist visits, prescriptions, and more. They are not limited benefit plans or short-term coverage products.</p>
+      <p><strong>Misconception: You need to wait for open enrollment to switch to a private plan.</strong> Private market plans have no enrollment window. You can apply today and start coverage next month. The ACA's enrollment restrictions don't apply to the private market.</p>
 
       <h2>What Makes DC Insurance Different</h2>
       <p>Most agents represent one or two carriers and steer you toward what they sell. As an independent agent, I'm not tied to any carrier. I compare private PPO plans against ACA marketplace options, look at supplemental coverage combinations, and tell you which configuration actually performs best for your situation.</p>
-      <p>That means sometimes I recommend the marketplace. Sometimes it's a private PPO. Sometimes it's a hybrid approach. The goal is honest analysis, not a commission-optimized pitch.</p>
-      <p>I work primarily with self-employed individuals, 1099 contractors, and small business owners across Middle Tennessee — people who are buying coverage on their own and want someone who will actually explain what they're buying before they sign anything.</p>
+      <p>That means sometimes I recommend the marketplace. Sometimes it's a private PPO. Sometimes it's a hybrid approach — a private PPO as the core plan with supplemental coverage layered on top to close specific gaps. The goal is honest analysis, not a commission-optimized pitch.</p>
+      <p>I work primarily with self-employed individuals, <a href="1099-health-insurance-tennessee">1099 contractors</a>, and <a href="small-business-health-insurance-tennessee">small business owners</a> across Middle Tennessee — people who are buying coverage on their own and want someone who will actually explain what they're buying before they sign anything. The free review exists for exactly that reason: 15 to 20 minutes to look at your specific situation, compare both markets, and give you a clear picture of what your options actually are.</p>
 
       <div class="cta-box" style="background:var(--off-white);border-left:4px solid var(--sky);padding:2rem;border-radius:var(--radius);margin:2.5rem 0;">
         <h3 style="margin-bottom:0.75rem;">Find Out If a Private PPO Makes Sense for You</h3>
@@ -217,21 +327,49 @@
       </div>
 
       <h2>Frequently Asked Questions</h2>
+      <style>
+        .faq-item { border-bottom: 1px solid var(--gray-light); }
+        .faq-item summary { cursor: pointer; padding: 1rem 0; font-weight: 600; font-size: 1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 1.4rem; color: var(--sky); flex-shrink: 0; margin-left: 1rem; }
+        .faq-item[open] summary::after { content: "\2212"; }
+        .faq-item p { margin: 0 0 1rem 0; color: var(--gray-dark); line-height: 1.7; }
+      </style>
 
-      <h3>Can I get a private PPO if I have a pre-existing condition?</h3>
-      <p>It depends on the condition. Minor past issues (resolved infections, old injuries) often clear underwriting without issue. Ongoing conditions like diabetes, heart disease, or recent cancer treatment are more likely to result in a denial or exclusion rider. ACA marketplace plans are guaranteed issue regardless of health — so for people with significant ongoing conditions, the marketplace is usually the right lane.</p>
+      <details class="faq-item">
+        <summary>Can I get a private PPO if I have a pre-existing condition?</summary>
+        <p>It depends on the condition. Minor past issues — resolved infections, old injuries, past prescriptions for common conditions — often clear underwriting without issue. Ongoing managed conditions like diabetes, heart disease, or recent cancer treatment are more likely to result in a denial or exclusion rider. ACA marketplace plans are guaranteed issue regardless of health history, so for people with significant ongoing conditions, the marketplace is usually the right lane. The way to know where you'd land is to have a direct conversation before anything gets submitted.</p>
+      </details>
 
-      <h3>Is there an open enrollment period for private PPO plans?</h3>
-      <p>No. One of the advantages of private market plans is that you can apply any time of year. You don't have to wait for a <a href="health-insurance-glossary.html#qle">qualifying life event</a> or the ACA <a href="health-insurance-glossary.html#open-enrollment">open enrollment</a> window (November through January).</p>
+      <details class="faq-item">
+        <summary>Is there an open enrollment period for private PPO plans?</summary>
+        <p>No. One of the advantages of private market plans is that you can apply any time of year. You don't have to wait for a qualifying life event or the ACA open enrollment window (November through January). This flexibility is especially valuable for self-employed individuals who start a business mid-year, leave an employer outside of open enrollment, or simply want to shop their options without being tied to a calendar.</p>
+      </details>
 
-      <h3>Can I deduct private PPO premiums if I'm self-employed?</h3>
-      <p>Self-employed individuals can generally deduct 100% of health insurance premiums paid for themselves and their families — regardless of whether the plan is through the ACA marketplace or the private market. Consult your CPA or tax advisor on specifics for your situation.</p>
+      <details class="faq-item">
+        <summary>Can I deduct private PPO premiums if I'm self-employed?</summary>
+        <p>Self-employed individuals can generally deduct 100% of health insurance premiums paid for themselves and their families — regardless of whether the plan is through the ACA marketplace or the private market. This deduction reduces your adjusted gross income, not just as an itemized deduction. One caveat: if you're eligible for coverage through a spouse's employer plan, the deduction may not apply during months you were eligible for that plan. Consult your CPA or tax advisor on specifics for your situation.</p>
+      </details>
 
-      <h3>How do private PPO plans handle prescriptions?</h3>
-      <p>Most private PPO plans include prescription drug coverage, but formularies and tiers vary by carrier and plan. This is something I review specifically during a consultation — especially if you take ongoing medications.</p>
+      <details class="faq-item">
+        <summary>How long does it take to get approved for a private PPO plan?</summary>
+        <p>The underwriting timeline varies by carrier but typically runs between a few business days and a few weeks. For straightforward health histories, approvals often come back quickly. For more complex situations, the carrier may request additional information, which can extend the timeline. Once approved, coverage typically starts on a date you select at application — often the first of the following month.</p>
+      </details>
 
-      <h3>Do private PPO plans cover preventive care?</h3>
-      <p>Coverage varies. Some private market plans include preventive services; others have different structures. This is one of the key comparison points during a review, alongside <a href="health-insurance-glossary.html#deductible">deductible</a>, <a href="health-insurance-glossary.html#moop">out-of-pocket maximum</a>, and network access.</p>
+      <details class="faq-item">
+        <summary>How do private PPO plans handle prescriptions?</summary>
+        <p>Most private PPO plans include prescription drug coverage, but formularies and tier structures vary by carrier and plan. If you take ongoing medications, reviewing the formulary before selecting a plan is important — this is one of the specific comparison points covered during a free review. Some medications that are on a preferred tier with one carrier may be on a higher-cost tier with another, which affects your actual out-of-pocket for that prescription.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the difference between a private PPO and an ACA marketplace plan in Tennessee?</summary>
+        <p>The two primary differences are underwriting and network structure. ACA plans are guaranteed issue with no health screening and often use regional HMO or EPO networks. Private PPO plans are medically underwritten — healthier individuals typically pay lower premiums than the ACA community rate — and offer nationwide network access with no referral requirements. For self-employed Tennesseans above the ACA subsidy threshold who are in good health, the private market often offers more coverage flexibility per dollar. See the full comparison on our <a href="aca-vs-private-health-insurance-tennessee">ACA vs. Private Plans page</a>.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do private PPO plans cover preventive care?</summary>
+        <p>Coverage varies by plan and carrier. Some private market plans include preventive services comparable to ACA requirements; others have different structures. This is one of the key points reviewed during a free consultation alongside deductible levels, out-of-pocket maximum, and network access — it's part of the full picture, not just the premium comparison.</p>
+      </details>
 
     </div>
   </section>

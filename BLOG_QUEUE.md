@@ -16,6 +16,7 @@
 | 4 | The Four Numbers That Actually Define Your Health Insurance Coverage | `the-4-numbers-that-actually-define-your-health-insurance-coverage.html` |
 | 5 | PPO vs. EPO Health Insurance in Tennessee | `ppo-vs-epo-what-tennessees-self-employed-need-to-know.html` |
 | 6 | Supplemental Health Insurance in Tennessee: Accident, Hospital Indemnity, and Critical Illness | `supplemental-health-insurance-tennessee.html` — formatted May 11, 2026 |
+| 7 | Health Insurance for Small Business Owners in Middle Tennessee | `health-insurance-small-business-owners-middle-tennessee.html` — formatted May 12, 2026 |
 
 ---
 
@@ -23,8 +24,7 @@
 
 | # | Title | Target Date | Status |
 |---|-------|-------------|--------|
-| 7 | Health Insurance for Small Business Owners in Middle Tennessee | Thu May 14 | **NEXT** |
-| 8 | Spring Health Insurance Review: Is Your Current Plan Still the Right Fit? | Tue May 19 | Queued |
+| 8 | Spring Health Insurance Review: Is Your Current Plan Still the Right Fit? | Tue May 19 | **NEXT** |
 | 9 | COBRA Insurance in Tennessee: What It Costs, How Long It Lasts, and What to Consider Instead | Thu May 21 | Queued |
 | 10 | How Income Affects Your Health Insurance Premium in Tennessee — And When It Doesn't | Tue May 26 | Queued |
 | 11 | Disability Insurance for Self-Employed Tennesseans: Protecting the Income That Drives Everything | Thu May 28 | Queued |
@@ -36,9 +36,21 @@
 
 ---
 
+## 💡 Blog Ideas — Queries Spotted in GSC
+
+| Query | Position | Why It Matters | Suggested Title |
+|-------|----------|----------------|-----------------|
+| "health insurance for 1099 truck drivers" | 46 | Niche but unchallenged. Strong trucking presence in Middle TN (I-24, I-65, I-40 corridor) | *Health Insurance for 1099 Truck Drivers in Tennessee* |
+| "private health insurance in tennessee" | 99 | New, brand new appearance — will climb. High-volume head term | Covered by existing PPO page; monitor for blog angle |
+| "small business health insurance tn" | — | New variation of core keyword | Covered by small business page; monitor |
+
+---
+
 ## 📝 Notes
 
 - Mark a post as ✅ Published by moving it to the top table once the HTML file is live on Vercel
 - Source content is in `DC_Insurance_Blog_Posts_Apr_May_2026.md`
 - Each post gets: formatted HTML file + Facebook boost copy + deployment email to denton@dcinsuranceagency.com
 - Pre-existing post (not from this queue): `cheap-affordable-health-insurance-tennessee.html`
+- GSC `.html` URL impressions: handled by `cleanUrls: true` in vercel.json — these will drop off as Google recrawls
+- `/m/login` impressions: 301 redirect to `/contact` already in vercel.json
