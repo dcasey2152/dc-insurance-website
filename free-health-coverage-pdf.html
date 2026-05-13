@@ -23,29 +23,180 @@
   gtag('js', new Date());
   gtag('config', 'G-SX5340TR64');
   </script>
-  <!-- End Google Analytics --><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Health Insurance Guide for Tennessee | DC Insurance</title>
-  <meta name="description" content="Download DC Insurance's free health coverage guide: a plain-language overview of your options in Tennessee — ACA marketplace, private PPO plans, and more." />
+  <!-- End Google Analytics -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Guide: Health Insurance for the Self-Employed in Tennessee | DC Insurance</title>
+  <meta name="description" content="Download DC Insurance's free 9-page guide to health insurance for self-employed Tennesseans — ACA marketplace, private PPO plans, the 4 numbers that define your coverage, and what to watch out for." />
   <link rel="canonical" href="https://dcinsuranceagency.com/free-health-coverage-pdf" />
-  <meta property="og:type" content="website" /><meta property="og:title" content="Free Health Insurance Guide | DC Insurance" /><meta property="og:url" content="https://dcinsuranceagency.com/free-health-coverage-pdf" /><meta property="og:site_name" content="DC Insurance" /><meta property="og:image" content="https://dcinsuranceagency.com/logo.jpeg" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Guide: Health Insurance for the Self-Employed in Tennessee | DC Insurance" />
+  <meta property="og:url" content="https://dcinsuranceagency.com/free-health-coverage-pdf" />
+  <meta property="og:site_name" content="DC Insurance" />
+  <meta property="og:image" content="https://dcinsuranceagency.com/logo.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <link rel="stylesheet" href="styles.css?v=2" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    .pdf-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .pdf-preview { background: linear-gradient(135deg, var(--navy) 0%, #122847 100%); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/5; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2.5rem; text-align: center; }
-    .pdf-preview h3 { color: var(--white); font-size: 1.6rem; margin-bottom: 0.75rem; }
-    .pdf-preview p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
-    .pdf-preview .pdf-icon { font-size: 4rem; margin-bottom: 1.5rem; }
-    .pdf-cover-line { width: 60%; height: 3px; background: var(--sky); margin: 1.25rem auto 0; border-radius: 2px; }
-    .pdf-body h2 { font-size: 1.6rem; margin-bottom: 0.75rem; }
-    .pdf-body .section-label { margin-bottom: 0.75rem; }
-    .pdf-body > p { margin-bottom: 1.75rem; color: var(--gray-dark); line-height: 1.75; }
+    /* ── Layout ── */
+    .pdf-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    @media (max-width: 900px) { .pdf-layout { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+    /* ── Mock cover card ── */
+    .pdf-cover-card {
+      background: linear-gradient(160deg, var(--navy) 0%, #0d2a50 100%);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 2.5rem 2rem 2rem;
+      color: var(--white);
+      text-align: center;
+      position: sticky;
+      top: 1.5rem;
+    }
+    .pdf-cover-card .guide-badge {
+      display: inline-block;
+      background: var(--sky);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 20px;
+      padding: 0.25rem 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .pdf-cover-card h3 {
+      font-size: 1.3rem;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+      color: var(--white);
+    }
+    .pdf-cover-card .sub {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1.5rem;
+    }
+    .pdf-divider { width: 50%; height: 2px; background: var(--sky); margin: 0 auto 1.5rem; border-radius: 2px; }
+    .pdf-toc { list-style: none; padding: 0; margin: 0 0 1.75rem; text-align: left; }
+    .pdf-toc li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .pdf-toc li:last-child { border-bottom: none; }
+    .pdf-toc li i { color: var(--sky); font-size: 0.75rem; flex-shrink: 0; }
+    .pdf-page-count {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.5rem;
+    }
+
+    /* ── Right column: body ── */
+    .pdf-body h2 { font-size: 1.65rem; margin-bottom: 0.75rem; }
+    .pdf-body > .lead { color: var(--gray-dark); line-height: 1.75; margin-bottom: 1.5rem; font-size: 1.02rem; }
+
+    /* ── Who it's for chips ── */
+    .who-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .who-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.82rem;
+      color: var(--gray-dark);
+    }
+    .who-chip i { color: var(--teal); font-size: 0.75rem; }
+
+    /* ── What's inside list ── */
+    .pdf-inside-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 0.75rem;
+    }
     .pdf-what-inside { list-style: none; margin: 0 0 2rem; padding: 0; }
-    .pdf-what-inside li { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 0.85rem; font-size: 0.95rem; color: var(--gray-dark); line-height: 1.5; }
+    .pdf-what-inside li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+      color: var(--gray-dark);
+      line-height: 1.5;
+    }
     .pdf-what-inside li i { color: var(--teal); margin-top: 0.2rem; flex-shrink: 0; }
-    .pdf-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .pdf-note { font-size: 0.82rem; color: var(--gray); margin-top: 1rem; }
-    @media (max-width: 900px) { .pdf-layout { grid-template-columns: 1fr; } .pdf-preview { aspect-ratio: 3/2; min-height: 220px; } }
+
+    /* ── Form / CTA box ── */
+    .pdf-gate-box {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .pdf-gate-box h4 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    .pdf-gate-box p {
+      font-size: 0.9rem;
+      color: var(--gray-dark);
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+    /* JotForm iframe container */
+    .jotform-wrap {
+      width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .jotform-wrap iframe {
+      width: 100%;
+      min-height: 360px;
+      border: none;
+      display: block;
+    }
+
+    /* ── Direct download link (below form) ── */
+    .pdf-direct-link {
+      font-size: 0.82rem;
+      color: var(--gray);
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+    .pdf-direct-link a { color: var(--teal); }
+
+    /* ── Social proof strip ── */
+    .proof-strip {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--gray-dark);
+    }
+    .proof-item i { color: var(--teal); }
   </style>
 </head>
 <body>
@@ -53,7 +204,7 @@
   <nav class="nav" id="mainNav">
     <div class="container nav-inner">
       <a href="index" class="nav-logo"><img src="logo.jpeg" alt="DC Insurance" style="height:46px;width:auto;" /></a>
-            <ul class="nav-links">
+      <ul class="nav-links">
         <li><a href="index">Home</a></li>
         <li><a href="about-us">About</a></li>
         <li class="nav-dropdown">
@@ -138,8 +289,8 @@
   <section class="page-hero">
     <div class="container">
       <span class="section-label" style="color:rgba(255,255,255,0.5);">Free Resource</span>
-      <h1>What to Know Before You Make a Decision</h1>
-      <p>A free guide to health insurance in plain language — no jargon, no sales pitch. Just a clear picture of your options so you can walk into any conversation prepared.</p>
+      <h1>The Self-Employed Person's Guide to Health Insurance in Tennessee</h1>
+      <p>9 pages. Plain language. No jargon, no sales pitch. Everything you need to understand your real options before you talk to anyone.</p>
     </div>
   </section>
 
@@ -147,52 +298,99 @@
     <div class="container">
       <div class="pdf-layout">
 
-        <div class="pdf-preview">
-          <div class="pdf-icon">📋</div>
-          <h3>Health Insurance Made Simple</h3>
-          <p>Your guide to understanding health insurance basics without the confusion or jargon.</p>
-          <div class="pdf-cover-line"></div>
-          <p style="margin-top:1.25rem;font-size:0.82rem;color:rgba(255,255,255,0.5);">DC Insurance · Middle Tennessee</p>
+        <!-- LEFT: Mock cover + TOC -->
+        <div>
+          <div class="pdf-cover-card">
+            <span class="guide-badge">Free Guide &mdash; 9 Pages</span>
+            <h3>The Self-Employed Person's Guide to Health Insurance in Tennessee</h3>
+            <p class="sub">DC Insurance &middot; Smyrna, TN &middot; dcinsuranceagency.com</p>
+            <div class="pdf-divider"></div>
+            <ul class="pdf-toc">
+              <li><i class="fa-solid fa-circle-dot"></i> Introduction: Why This Guide Exists</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Who We Help Most</li>
+              <li><i class="fa-solid fa-circle-dot"></i> The Three Lanes of Coverage</li>
+              <li><i class="fa-solid fa-circle-dot"></i> The 4 Numbers That Define Your Plan</li>
+              <li><i class="fa-solid fa-circle-dot"></i> 5 Mistakes We See Every Year</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Is a Private PPO Right for You?</li>
+              <li><i class="fa-solid fa-circle-dot"></i> What to Expect Working With Us</li>
+            </ul>
+            <p class="pdf-page-count"><i class="fa-regular fa-file-pdf" style="margin-right:0.3rem;"></i>PDF &middot; 9 pages &middot; Free</p>
+          </div>
         </div>
 
+        <!-- RIGHT: Body + form -->
         <div class="pdf-body">
           <span class="section-label">Free Download</span>
-          <h2>Health Insurance Made Simple</h2>
-          <p>Most people don't fully understand what they're buying until they need to use it. This guide walks through the basics — premiums, deductibles, networks, and the difference between your coverage options — so you can make an informed decision before you talk to anyone.</p>
+          <h2>Stop Guessing. Start Understanding.</h2>
+          <p class="lead">Most self-employed people in Tennessee are either overpaying for a plan they don't fully understand, or underinsured because they didn't know better options existed. This guide closes that gap.</p>
 
+          <p class="pdf-inside-label">Who this guide is built for:</p>
+          <div class="who-chips">
+            <span class="who-chip"><i class="fa-solid fa-check"></i> Freelancers &amp; consultants</span>
+            <span class="who-chip"><i class="fa-solid fa-check"></i> 1099 contractors</span>
+            <span class="who-chip"><i class="fa-solid fa-check"></i> Small business owners</span>
+            <span class="who-chip"><i class="fa-solid fa-check"></i> Realtors &amp; agents</span>
+            <span class="who-chip"><i class="fa-solid fa-check"></i> Owner-operators &amp; truckers</span>
+            <span class="who-chip"><i class="fa-solid fa-check"></i> Tradespeople</span>
+            <span class="who-chip"><i class="fa-solid fa-check"></i> Healthcare professionals</span>
+            <span class="who-chip"><i class="fa-solid fa-check"></i> Recently left W-2 employment</span>
+          </div>
+
+          <p class="pdf-inside-label">What's inside:</p>
           <ul class="pdf-what-inside">
-            <li><i class="fa-solid fa-circle-check"></i><span>How premiums, deductibles, coinsurance, and out-of-pocket maximums work together</span></li>
-            <li><i class="fa-solid fa-circle-check"></i><span>The difference between ACA marketplace plans and private PPO plans</span></li>
-            <li><i class="fa-solid fa-circle-check"></i><span>What EPO, PPO, and HMO networks mean in practice</span></li>
-            <li><i class="fa-solid fa-circle-check"></i><span>How medical underwriting works and when it works in your favor</span></li>
-            <li><i class="fa-solid fa-circle-check"></i><span>Questions to ask before enrolling in any plan</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span><strong>The Three Lanes</strong> — ACA marketplace, employer options, and medically underwritten private PPO plans. What each one is, who it's right for, and when to use it.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span><strong>The 4 Numbers that define every plan</strong> — premium, deductible, coinsurance, and out-of-pocket maximum. How they work together, and what to compare first.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span><strong>5 mistakes we see every year</strong> — including why some people pay full ACA price when they don't have to, and why "cheap" plans often cost more in practice.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span><strong>A private PPO comparison</strong> — plain-language side-by-side of what private PPO plans offer versus ACA plans: networks, underwriting, premiums, flexibility.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span><strong>What to expect working with us</strong> — exactly how a review call works, what we compare, and what you walk away with.</span></li>
           </ul>
 
-          <div class="pdf-cta-row">
-            <a href="https://img1.wsimg.com/blobby/go/792008c8-c3e9-4326-9d5a-2c60d0c914f9/Health-Insurance-Simplified%20(1).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-              <i class="fa-solid fa-file-pdf"></i>&nbsp; Download Free Guide
-            </a>
-            <a href="contact" class="btn btn-outline btn-lg">Book a Free Review Instead</a>
+          <!-- FORM GATE BOX -->
+          <div class="pdf-gate-box">
+            <h4>Get the Free Guide</h4>
+            <p>Enter your name and email below — we'll send you the download link directly. No spam. No follow-up calls unless you ask for one.</p>
+
+            <!-- JotForm embed — form ID 252305376507052 -->
+            <div class="jotform-wrap" style="min-height:300px;">
+              <script type="text/javascript" src="https://form.jotform.com/jsform/261326847315055"></script>
+            </div>
+            <!-- END JOTFORM EMBED -->
+
           </div>
-          <p class="pdf-note"><i class="fa-solid fa-lock" style="color:var(--teal);margin-right:0.3rem;"></i>No email required. No opt-in. Just a free resource.</p>
+
+          <!-- Direct download fallback -->
+          <p class="pdf-direct-link">
+            <i class="fa-solid fa-file-arrow-down" style="margin-right:0.3rem;"></i>
+            Prefer to skip the form?
+            <a href="dc-insurance-self-employed-guide.pdf" target="_blank" rel="noopener noreferrer">Download the PDF directly</a>.
+          </p>
+
+          <!-- Trust signals -->
+          <div class="proof-strip">
+            <span class="proof-item"><i class="fa-solid fa-shield-halved"></i> No spam, ever</span>
+            <span class="proof-item"><i class="fa-solid fa-star"></i> 15 Google Reviews</span>
+            <span class="proof-item"><i class="fa-solid fa-location-dot"></i> Smyrna, TN &mdash; serving Middle Tennessee</span>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- What happens after section -->
   <section class="section" style="background:var(--off-white);padding-top:3rem;padding-bottom:3rem;">
     <div class="container">
-      <div style="text-align:center;max-width:600px;margin:0 auto;">
-        <h2 style="font-size:1.5rem;margin-bottom:0.75rem;">Rather Just Talk Through It?</h2>
-        <p style="color:var(--gray-dark);margin-bottom:1.75rem;">Guides are helpful — but a 20-minute conversation with someone who knows the market is usually more useful than any PDF. No pressure, no scripts. Just a straight look at your situation.</p>
+      <div style="max-width:700px;margin:0 auto;text-align:center;">
+        <span class="section-label">After the Download</span>
+        <h2 style="font-size:1.5rem;margin-bottom:0.75rem;">A Guide Is a Start. A Conversation Closes the Gap.</h2>
+        <p style="color:var(--gray-dark);margin-bottom:1.75rem;line-height:1.75;">The guide gives you the framework. A 20-minute call gives you the answer for your specific situation — your income, your health history, and what's actually available in your area right now. No pressure. No scripts. Just a straight look at what makes sense for you.</p>
         <a href="contact" class="btn btn-primary btn-lg"><i class="fa-regular fa-calendar-check"></i>&nbsp; Book a Free Appointment</a>
-        <p style="margin-top:1rem;font-size:0.88rem;color:var(--gray);"><a href="tel:6155130313" style="color:var(--teal);">615-513-0313</a> &nbsp;·&nbsp; Mon–Fri 8am–5pm · Sat 9am–2pm</p>
+        <p style="margin-top:1rem;font-size:0.88rem;color:var(--gray);"><a href="tel:6155130313" style="color:var(--teal);">615-513-0313</a> &nbsp;&middot;&nbsp; Mon&ndash;Fri 8am&ndash;5pm &middot; Sat 9am&ndash;2pm</p>
       </div>
     </div>
   </section>
 
-    <footer>
+  <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -244,7 +442,7 @@
             <li><a href="mailto:denton@dcinsuranceagency.com">denton@dcinsuranceagency.com</a></li>
             <li><a href="https://calendly.com/denton-casey-dcinsurance/intro-call" target="_blank" rel="noopener noreferrer">Book a Free Appointment</a></li>
             <li><a href="privacy-page" rel="nofollow" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Privacy Policy</a></li>
-            <li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon–Fri 8am–5pm · Sat 9am–2pm</li>
+            <li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon&ndash;Fri 8am&ndash;5pm &middot; Sat 9am&ndash;2pm</li>
           </ul>
           <div class="social-links" style="margin-top:1.25rem;">
             <a href="https://www.facebook.com/dcinsurance/" class="social-link fb" aria-label="Facebook" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
@@ -269,46 +467,49 @@
       </div>
     </div>
   </footer>
+
   <a href="https://wa.me/16155130313" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-<script>
-(function(){
-  var burger = document.getElementById('hamburger');
-  var mobileNav = document.getElementById('navMobile');
-  if(burger && mobileNav){
-    burger.addEventListener('click', function(){
-      burger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
-    mobileNav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        burger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
+
+  <script>
+  (function(){
+    var burger = document.getElementById('hamburger');
+    var mobileNav = document.getElementById('navMobile');
+    if(burger && mobileNav){
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('open');
+        mobileNav.classList.toggle('open');
+        document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+      });
+      mobileNav.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){
+          burger.classList.remove('open');
+          mobileNav.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+    document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+      toggle.addEventListener('click', function(e){
+        var li = this.closest('.nav-dropdown');
+        if(!li) return;
+        if(window.innerWidth < 900){
+          e.preventDefault();
+          li.classList.toggle('open');
+          document.querySelectorAll('.nav-dropdown').forEach(function(other){
+            if(other !== li) other.classList.remove('open');
+          });
+        }
       });
     });
-  }
-  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
-    toggle.addEventListener('click', function(e){
-      var li = this.closest('.nav-dropdown');
-      if(!li) return;
-      if(window.innerWidth < 900){
-        e.preventDefault();
-        li.classList.toggle('open');
-        document.querySelectorAll('.nav-dropdown').forEach(function(other){
-          if(other !== li) other.classList.remove('open');
-        });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.nav-dropdown')){
+        document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
       }
     });
-  });
-  document.addEventListener('click', function(e){
-    if(!e.target.closest('.nav-dropdown')){
-      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
-    }
-  });
-})();
-</script>
+  })();
+  </script>
+
 </body>
 </html>
