@@ -886,12 +886,4 @@ footer {
   .nav-hamburger { display: flex; }
   .hero { padding: 7rem 0 4rem; }
   .section { padding: 3.5rem 0; }
-  .hero-btns { flex-direction: column; }
-  .hero-btns .btn { justify-content: center; }
-  .cta-btns { flex-direction: column; align-items: center; }
-}
-@media (max-width: 480px) {
-  .page-hero { padding: 6rem 0 3rem; }
-  h1 { font-size: 1.9rem; }
-  h2 { font-size: 1.5rem; }
-}
+  .hero-btns { flex-di
