@@ -646,10 +646,129 @@
 </section>
 <!-- FOOTER -->
 <footer>
-<div class="container">
-<div class="footer-grid">
-<div class="footer-brand">
-<a href="index" style="display:inline-block;margin-bottom:1rem;">
-<img alt="DC Insurance" src="logo.jpeg" style="height:52px;width:auto;">
-</img></a>
-<p>Tennessee's independent health insurance specialist. Private PPO plans, supplemental coverag
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index" style="display:inline-block;margin-bottom:1rem;">
+          <img src="logo.jpeg" alt="DC Insurance" style="height:52px;width:auto;" />
+        </a>
+        <p>Tennessee's independent health insurance specialist. Private PPO plans, supplemental coverage, and honest comparisons for self-employed individuals and small business owners.</p>
+        <p class="footer-disclaimer" style="margin-top:1rem;">Licensed health insurance agent. Coverage availability and eligibility vary by state and individual circumstances.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index">Home</a></li>
+          <li><a href="about-us">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="dc-insurance-blog">Blog</a></li>
+          <li><a href="health-insurance-glossary">Glossary</a></li>
+          <li><a href="community">Community</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="free-health-coverage-pdf">Free Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="nashville-insurance">Nashville</a></li>
+          <li><a href="brentwood-insurance">Brentwood</a></li>
+          <li><a href="franklin-insurance">Franklin</a></li>
+          <li><a href="murfreesboro-insurance">Murfreesboro</a></li>
+          <li><a href="nolensville-insurance">Nolensville</a></li>
+          <li><a href="smyrna-insurance">Smyrna</a></li>
+          <li><a href="belle-meade-insurance">Belle Meade</a></li>
+          <li><a href="green-hills-insurance">Green Hills</a></li>
+          <li><a href="bellevue-insurance">Bellevue</a></li>
+          <li><a href="mt-juliet-insurance">Mt. Juliet</a></li>
+          <li><a href="hendersonville-insurance">Hendersonville</a></li>
+          <li><a href="spring-hill-insurance">Spring Hill</a></li>
+          <li><a href="donelson-insurance">Donelson</a></li>
+          <li><a href="shelbyville-insurance">Shelbyville</a></li>
+          <li><a href="chapel-hill-insurance">Chapel Hill</a></li>
+          <li><a href="college-grove-insurance">College Grove</a></li>
+          <li><a href="christiana-insurance">Christiana</a></li>
+          <li><a href="manchester-insurance">Manchester</a></li>
+          <li><a href="tullahoma-insurance">Tullahoma</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6155130313"><i class="fa-solid fa-phone" style="color:var(--sky);margin-right:0.4rem;"></i>615-513-0313</a></li>
+          <li><a href="mailto:denton@dcinsuranceagency.com">denton@dcinsuranceagency.com</a></li>
+          <li><a href="https://tidycal.com/denton/intro-call" target="_blank" rel="noopener noreferrer">Book a Free Appointment</a></li>
+          <li><a href="privacy-page" rel="nofollow" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Privacy Policy</a></li>
+          <li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon&ndash;Fri 8am&ndash;5pm &middot; Sat 9am&ndash;2pm</li>
+        </ul>
+        <div class="social-links" style="margin-top:1.25rem;">
+          <a href="https://www.facebook.com/dcinsurance/" class="social-link fb" aria-label="Facebook" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/dcinsurance2152/" class="social-link ig" aria-label="Instagram" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/dentoncasey/" class="social-link li" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Who We Help</h4>
+        <ul>
+          <li><a href="self-employed-health-insurance-tennessee">Self-Employed</a></li>
+          <li><a href="1099-health-insurance-tennessee">1099 Contractors</a></li>
+          <li><a href="small-business-health-insurance-tennessee">Small Business Owners</a></li>
+          <li><a href="private-ppo-health-insurance-tennessee">Private PPO Plans</a></li>
+          <li><a href="aca-vs-private-health-insurance-tennessee">ACA vs. Private</a></li>
+          <li><a href="above-aca-subsidy-health-insurance-tennessee">Above Subsidy Threshold</a></li>
+          <li><a href="real-estate-agent-health-insurance-tennessee">Real Estate Agents</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 DC Insurance &middot; Denton Casey &middot; Middle Tennessee</span>
+      <span>Independent Health Insurance Specialist &middot; 615-513-0313</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/16155130313" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('navMobile');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      if(window.innerWidth < 900){
+        e.preventDefault();
+        li.classList.toggle('open');
+        document.querySelectorAll('.nav-dropdown').forEach(function(other){
+          if(other !== li) other.classList.remove('open');
+        });
+      }
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
