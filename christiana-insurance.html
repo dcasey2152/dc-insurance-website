@@ -178,7 +178,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "14"
+        "reviewCount": "20"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -252,93 +252,6 @@
   </script>
 <link href="styles.css?v=3" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-<style>
-    .city-layout {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-    .city-sidebar { position: sticky; top: 90px; }
-    .city-photo {
-      width: 100%;
-      aspect-ratio: 4/3;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: linear-gradient(135deg, var(--navy) 0%, #122847 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 4rem;
-      color: rgba(255,255,255,0.15);
-      margin-bottom: 1.5rem;
-    }
-    .city-photo img {
-      width: 100%; height: 100%; object-fit: cover;
-    }
-    .info-card {
-      background: var(--white);
-      border: 1px solid var(--gray-light);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
-      box-shadow: var(--shadow);
-      margin-bottom: 1.25rem;
-    }
-    .info-card h4 {
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 0.75rem;
-    }
-    .zip-list {
-      font-size: 0.82rem;
-      color: var(--gray-dark);
-      line-height: 1.8;
-    }
-    .plan-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--gray-light);
-    }
-    .plan-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-    .plan-item i { color: var(--sky); margin-top: 0.2rem; flex-shrink: 0; }
-    .plan-item h4 { font-size: 1rem; margin-bottom: 0.2rem; }
-    .plan-item p  { font-size: 0.88rem; }
-    .who-chip {
-      display: flex; align-items: center; gap: 0.6rem;
-      background: var(--off-white);
-      border: 1px solid var(--gray-light);
-      border-radius: var(--radius);
-      padding: 0.75rem 1rem;
-      margin-bottom: 0.75rem;
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--navy);
-    }
-    .who-chip i { color: var(--teal); width: 16px; }
-    .city-cities-nav {
-      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;
-    }
-    .city-link {
-      background: var(--sky-light);
-      color: var(--teal);
-      border-radius: 100px;
-      padding: 0.3rem 0.9rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .city-link:hover { background: var(--sky); color: white; }
-    .city-link.current { background: var(--navy); color: white; }
-    @media (max-width: 900px) {
-      .city-layout { grid-template-columns: 1fr; }
-      .city-sidebar { position: static; }
-    }
-  </style>
 </head>
 <body>
 <!-- NAV -->
