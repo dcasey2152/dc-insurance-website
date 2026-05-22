@@ -243,6 +243,11 @@
       "permanent": true
     },
     {
+      "source": "/owner-operator",
+      "destination": "/owner-operator-health-insurance-tennessee",
+      "permanent": true
+    },
+    {
       "source": "/nationwide-insurance",
       "destination": "/private-ppo-health-insurance-tennessee",
       "permanent": true
