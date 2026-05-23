@@ -486,4 +486,10 @@ window.addEventListener('message', function(e) {
   });
   document.addEventListener('click', function(e){
     if(!e.target.closest('.nav-dropdown')){
-      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('ope
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+})();
+</script>
+</body>
+</html>
