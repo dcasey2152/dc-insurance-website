@@ -418,6 +418,19 @@
           <div class="blog-grid">
 
             <div class="blog-card">
+              <div class="blog-card-img" style="background:linear-gradient(135deg,#7c3aed,#4f46e5);">💰</div>
+              <div class="blog-card-body">
+                <span class="blog-tag">Income &amp; Premiums</span>
+                <h3>How Income Affects Your Health Insurance Premium in Tennessee — And When It Doesn't</h3>
+                <p>On ACA marketplace plans, your income determines your subsidy — and your net premium. On private market plans, it doesn't matter at all. Understanding which lane you're in changes how you plan for coverage costs.</p>
+                <div class="blog-card-meta">
+                  <span><i class="fa-regular fa-clock"></i> May 21, 2026</span>
+                  <a href="f/how-income-affects-health-insurance-premium-tennessee" class="read-link">Read More →</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-card">
               <div class="blog-card-img" style="background:linear-gradient(135deg,#1e3a5f,#2563eb);">📋</div>
               <div class="blog-card-body">
                 <span class="blog-tag">Job Transition</span>
@@ -720,33 +733,4 @@
         document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
       });
       mobileNav.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          burger.classList.remove('open');
-          mobileNav.classList.remove('open');
-          document.body.style.overflow = '';
-        });
-      });
-    }
-    document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
-      toggle.addEventListener('click', function(e){
-        var li = this.closest('.nav-dropdown');
-        if(!li) return;
-        if(window.innerWidth < 900){
-          e.preventDefault();
-          li.classList.toggle('open');
-          document.querySelectorAll('.nav-dropdown').forEach(function(other){
-            if(other !== li) other.classList.remove('open');
-          });
-        }
-      });
-    });
-    document.addEventListener('click', function(e){
-      if(!e.target.closest('.nav-dropdown')){
-        document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
-      }
-    });
-  })();
-  </script>
-
-</body>
-</html>
+        a.addEventListener('click', fu
