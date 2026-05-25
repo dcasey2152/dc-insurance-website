@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://connect.facebook.net" />
   <link rel="preconnect" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="denton-hero.webp" />
   <!-- Meta Pixel -->
   <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -261,7 +262,7 @@
   <nav class="nav" id="mainNav">
     <div class="container nav-inner">
       <a href="index" class="nav-logo">
-        <img src="logo.jpeg" alt="DC Insurance" width="48" height="46" />
+        <img src="logo.webp" alt="DC Insurance" width="48" height="46" />
       </a>
             <ul class="nav-links">
         <li><a href="index">Home</a></li>
@@ -374,7 +375,7 @@
             <img src="denton-hero.webp"
                  alt="Denton Casey — DC Insurance"
                  width="800" height="979"
-                 loading="lazy"
+                 fetchpriority="high"
                  style="width:100%;height:100%;object-fit:cover;object-position:top;"
                  onerror="this.style.display='none';document.querySelector('.about-photo-placeholder').style.display='flex';" />
             <div class="about-photo-placeholder" style="display:none;">
@@ -497,7 +498,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index" style="display:inline-block;margin-bottom:1rem;">
-            <img src="logo.jpeg" alt="DC Insurance" width="55" height="52" />
+            <img src="logo.webp" alt="DC Insurance" width="55" height="52" />
           </a>
           <p>Tennessee's independent health insurance specialist. Private PPO plans, supplemental coverage, and honest comparisons for self-employed individuals and small business owners.</p>
           <p class="footer-disclaimer" style="margin-top:1rem;">Licensed health insurance agent. Coverage availability and eligibility vary by state and individual circumstances. TN Insurance License #3002519070 | NPN: 20716644</p>
