@@ -20,6 +20,8 @@
 | 8 | Spring Health Insurance Review: Is Your Current Plan Still the Right Fit? | `spring-health-insurance-review-tennessee.html` — formatted May 14, 2026 |
 | 9 | COBRA Insurance in Tennessee: What It Costs, How Long It Lasts, and What to Consider Instead | `cobra-insurance-tennessee.html` — formatted May 19, 2026 |
 | 10 | How Income Affects Your Health Insurance Premium in Tennessee — And When It Doesn't | `how-income-affects-health-insurance-premium-tennessee.html` — formatted May 21, 2026 |
+| 11 | Disability Insurance for Self-Employed Tennesseans: Protecting the Income That Drives Everything | `disability-insurance-self-employed-tennessee.html` — formatted May 26, 2026 |
+| 12 | Special Enrollment Periods in Tennessee: When You Don't Have to Wait for Open Enrollment | `special-enrollment-periods-tennessee.html` — formatted May 28, 2026 |
 
 ---
 
@@ -27,9 +29,7 @@
 
 | # | Title | Target Date | Status |
 |---|-------|-------------|--------|
-| 11 | Disability Insurance for Self-Employed Tennesseans: Protecting the Income That Drives Everything | Thu May 28 | **NEXT** |
-| 12 | Special Enrollment Periods in Tennessee: When You Don't Have to Wait for Open Enrollment | Tue Jun 3 | Queued |
-| 13 | Understanding Accident Insurance and Hospital Indemnity in Tennessee | Thu Jun 5 | Queued |
+| 13 | Understanding Accident Insurance and Hospital Indemnity in Tennessee | Thu Jun 5 | **NEXT** |
 | 14 | The Real Cost of Cheap Health Insurance in Tennessee | Tue Jun 10 | Queued |
 | 15 | Critical Illness Insurance in Tennessee: A Financial Safety Net When the Diagnosis Is Serious | Thu Jun 12 | Queued |
 | 16 | How to Compare Health Insurance Plans in Tennessee: A Practical Step-by-Step Guide | Tue Jun 17 | Queued |
