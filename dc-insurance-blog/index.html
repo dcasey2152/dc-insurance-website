@@ -405,17 +405,30 @@
 
           <!-- Featured -->
           <div class="blog-featured">
-            <div class="blog-featured-img">🛡️</div>
+            <div class="blog-featured-img">📅</div>
             <div class="blog-featured-body">
               <span class="blog-tag">Latest Post</span>
-              <h2>Disability Insurance for Self-Employed Tennesseans: Protecting the Income That Drives Everything</h2>
-              <p>When you're self-employed and can't work, the income stops. There's no employer paycheck keeping the lights on. Here's how disability insurance works and what Tennessee's self-employed need to know.</p>
-              <a href="/dc-insurance-blog/f/disability-insurance-self-employed-tennessee" class="btn btn-primary">Read the Full Post</a>
+              <h2>Special Enrollment Periods in Tennessee: When You Don't Have to Wait for Open Enrollment</h2>
+              <p>Most Tennesseans believe open enrollment is the only window to change health coverage. That's only partially true. Here's when qualifying life events open a Special Enrollment Period — and what private market options are available year-round.</p>
+              <a href="/dc-insurance-blog/f/special-enrollment-periods-tennessee" class="btn btn-primary">Read the Full Post</a>
             </div>
           </div>
 
           <!-- Posts Grid — Real Posts -->
           <div class="blog-grid">
+
+            <div class="blog-card">
+              <div class="blog-card-img" style="background:linear-gradient(135deg,#0891b2,#1e3a5f);">📅</div>
+              <div class="blog-card-body">
+                <span class="blog-tag">Enrollment</span>
+                <h3>Special Enrollment Periods in Tennessee: When You Don't Have to Wait for Open Enrollment</h3>
+                <p>Qualifying life events open a 60-day window to change coverage mid-year. Private market plans have no enrollment window at all. Here's what Tennessee residents need to know about both.</p>
+                <div class="blog-card-meta">
+                  <span><i class="fa-regular fa-clock"></i> May 28, 2026</span>
+                  <a href="/dc-insurance-blog/f/special-enrollment-periods-tennessee" class="read-link">Read More →</a>
+                </div>
+              </div>
+            </div>
 
             <div class="blog-card">
               <div class="blog-card-img" style="background:linear-gradient(135deg,#0d9488,#1e3a5f);">🛡️</div>
@@ -746,32 +759,4 @@
         document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
       });
       mobileNav.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          burger.classList.remove('open');
-          mobileNav.classList.remove('open');
-          document.body.style.overflow = '';
-        });
-      });
-    }
-    document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
-      toggle.addEventListener('click', function(e){
-        var li = this.closest('.nav-dropdown');
-        if(!li) return;
-        if(window.innerWidth < 900){
-          e.preventDefault();
-          li.classList.toggle('open');
-          document.querySelectorAll('.nav-dropdown').forEach(function(other){
-            if(other !== li) other.classList.remove('open');
-          });
-        }
-      });
-    });
-    document.addEventListener('click', function(e){
-      if(!e.target.closest('.nav-dropdown')){
-        document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
-      }
-    });
-  })();
-  </script>
-</body>
-</html>
+        a.addEventListener('click', function()
