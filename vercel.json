@@ -248,6 +248,11 @@
       "permanent": true
     },
     {
+      "source": "/f/health-insurance-for-self-employed-tennesseans-complete-guide",
+      "destination": "/free-health-coverage-pdf",
+      "permanent": true
+    },
+    {
       "source": "/nationwide-insurance",
       "destination": "/private-ppo-health-insurance-tennessee",
       "permanent": true
@@ -304,13 +309,4 @@
       ]
     },
     {
-      "source": "/:path.(webp|jpeg|jpg|png|svg|pdf)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=2592000"
-        }
-      ]
-    }
-  ]
-}
+      "source": "/:p
