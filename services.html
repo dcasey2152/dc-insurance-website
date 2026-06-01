@@ -877,6 +877,20 @@ function toggleFaq(btn){
 }
 </script>
 <script>
+function toggleFaq(btn){
+  var item = btn.closest('.faq-item');
+  var answer = item ? item.querySelector('.faq-answer') : null;
+  if(!item || !answer) return;
+  var isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-question.open').forEach(function(b){
+    b.classList.remove('open');
+    var a = b.closest('.faq-item');
+    if(a){ var ans = a.querySelector('.faq-answer'); if(ans) ans.classList.remove('open'); }
+  });
+  if(!isOpen){ btn.classList.add('open'); answer.classList.add('open'); }
+}
+</script>
+<script>
 (function(){
   var burger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('navMobile');
@@ -896,4 +910,23 @@ function toggleFaq(btn){
   }
   document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
     toggle.addEventListener('click', function(e){
-      var li = this.closest('.nav-dro
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      if(window.innerWidth < 900){
+        e.preventDefault();
+        li.classList.toggle('open');
+        document.querySelectorAll('.nav-dropdown').forEach(function(other){
+          if(other !== li) other.classList.remove('open');
+        });
+      }
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+})();
+</script>
+</body>
+</html>
