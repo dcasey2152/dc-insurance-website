@@ -561,29 +561,44 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <script>
-  (function(){
-    var burger = document.getElementById('hamburger');
-    var mobileNav = document.getElementById('navMobile');
-    if(burger && mobileNav){
-      burger.addEventListener('click', function(){
-        burger.classList.toggle('open');
-        mobileNav.classList.toggle('open');
-        document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  
+<script>
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('navMobile');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
       });
-      mobileNav.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          burger.classList.remove('open');
-          mobileNav.classList.remove('open');
-          document.body.style.overflow = '';
+    });
+  }
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      if(window.innerWidth < 900){
+        e.preventDefault();
+        li.classList.toggle('open');
+        document.querySelectorAll('.nav-dropdown').forEach(function(other){
+          if(other !== li) other.classList.remove('open');
         });
-      });
+      }
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
     }
-    document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
-      toggle.addEventListener('click', function(e){
-        var li = this.closest('.nav-dropdown');
-        if(!li) return;
-        if(window.innerWidth < 900){
-          e.preventDefault();
-          li.classList.toggle('open');
-          document.querySelec
+  });
+})();
+</script>
+</body>
+</html>
