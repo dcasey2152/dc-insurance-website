@@ -17,7 +17,7 @@
   fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=2111055412751447&ev=PageView&noscript=1"/></noscript>
+  src="https://www.facebook.com/tr?id=2111055412751447&amp;ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel -->
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX5340TR64"></script>
@@ -29,11 +29,11 @@
   </script>
   <!-- End Google Analytics -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tennessee Health Insurance Broker | DC Insurance Agency</title>
+  <title>Private Health Insurance Tennessee | DC Insurance</title>
   <meta name="description" content="DC Insurance helps self-employed individuals, small business owners, and families in Middle Tennessee compare ACA marketplace, private PPO, and supplemental health coverage. Independent health insurance expert. Call 615-513-0313." />
   <link rel="canonical" href="https://dcinsuranceagency.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Tennessee Health Insurance Broker | DC Insurance Agency" />
+  <meta property="og:title" content="Private Health Insurance Tennessee | DC Insurance" />
   <meta property="og:description" content="DC Insurance helps self-employed individuals, small business owners, and families in Middle Tennessee compare ACA marketplace, private PPO, and supplemental health coverage. Independent agent. Call 615-513-0313." />
   <meta property="og:image" content="https://dcinsuranceagency.com/dc-insurance-social-card.jpg" />
   <meta property="og:image:alt" content="DC Insurance — Denton Casey, Independent Health Insurance Agent, Middle Tennessee" />
@@ -132,7 +132,18 @@
         "@id": "https://dcinsuranceagency.com/#business"
       }
     },
-    {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com/"}]}
+    {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com/"}]},
+    {
+      "@type": "HowTo",
+      "name": "How to Get Health Insurance in Tennessee as a Self-Employed Professional",
+      "description": "A simple 4-step process to compare and select the right health insurance plan for self-employed individuals and small business owners in Tennessee.",
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Book a Free 15-Minute Call", "text": "No forms required. We talk through your situation — income, household size, what you're currently paying."},
+        {"@type": "HowToStep", "position": 2, "name": "Compare All Available Lanes", "text": "ACA marketplace, employer options, and private PPO plans are all pulled and laid side by side with real quotes."},
+        {"@type": "HowToStep", "position": 3, "name": "Walk Through the Options Together", "text": "Every plan is explained clearly so you understand exactly what you're buying before making a decision."},
+        {"@type": "HowToStep", "position": 4, "name": "Decide With Zero Pressure", "text": "If the comparison makes sense for your situation, we move forward. If it doesn't, we'll tell you honestly."}
+      ]
+    }
   ]
 }
   </script>
@@ -302,6 +313,8 @@
             <li><a href="christiana-insurance">Christiana</a></li>
             <li><a href="manchester-insurance">Manchester</a></li>
             <li><a href="tullahoma-insurance">Tullahoma</a></li>
+<li><a href="lewisburg-insurance">Lewisburg</a></li>
+<li><a href="columbia-insurance">Columbia</a></li>
           </ul>
         </li>
         <li><a href="contact">Contact</a></li>
@@ -427,7 +440,7 @@
   </div>
 
   <!-- ===================== WHO I HELP ===================== -->
-  <section class="section who-section">
+  <section class="section who-section" id="who">
     <div class="container">
       <div class="who-layout">
         <div>
@@ -473,7 +486,7 @@
   </section>
 
   <!-- ===================== THE 3 LANES ===================== -->
-  <section class="section lane-overview">
+  <section class="section lane-overview" id="services">
     <div class="container">
       <div class="text-center" style="max-width:620px;margin:0 auto 3rem;">
         <span class="section-label">The Three Lanes</span>
@@ -521,7 +534,7 @@
   </section>
 
   <!-- ===================== HOW IT WORKS ===================== -->
-  <section class="section how-section" style="background:var(--off-white);">
+  <section class="section how-section" id="how-it-works" style="background:var(--off-white);">
     <div class="container">
       <div class="how-layout">
         <div>
@@ -579,7 +592,7 @@
   </section>
 
   <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="section testimonials-section">
+  <section class="section testimonials-section" id="testimonials">
     <div class="container">
       <div class="text-center" style="margin-bottom:2.5rem;">
         <span class="section-label">What Clients Say</span>
@@ -748,39 +761,4 @@
 (function(){
   var burger = document.getElementById('hamburger');
   var mobileNav = document.getElementById('navMobile');
-  if(burger && mobileNav){
-    burger.addEventListener('click', function(){
-      burger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
-    mobileNav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        burger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-  }
-  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
-    toggle.addEventListener('click', function(e){
-      var li = this.closest('.nav-dropdown');
-      if(!li) return;
-      if(window.innerWidth < 900){
-        e.preventDefault();
-        li.classList.toggle('open');
-        document.querySelectorAll('.nav-dropdown').forEach(function(other){
-          if(other !== li) other.classList.remove('open');
-        });
-      }
-    });
-  });
-  document.addEventListener('click', function(e){
-    if(!e.target.closest('.nav-dropdown')){
-      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
-    }
-  });
-})();
-</script>
-</body>
-</html>
+  if(burger && mobileNa

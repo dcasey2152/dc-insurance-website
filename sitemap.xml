@@ -142,6 +142,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/lewisburg-insurance</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dcinsuranceagency.com/columbia-insurance</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Topic / money pages -->
   <url>
@@ -297,17 +309,4 @@
   </url>
 
   <url>
-    <loc>https://dcinsuranceagency.com/dc-insurance-blog/f/disability-insurance-self-employed-tennessee</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://dcinsuranceagency.com/dc-insurance-blog/f/special-enrollment-periods-tennessee</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-</urlset>
+    <loc>https://dcinsuranceagency.com/dc-insurance-blog/f/disability-insurance-self-em
