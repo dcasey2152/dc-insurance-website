@@ -378,3 +378,20 @@
       var li = this.closest('.nav-dropdown');
       if(!li) return;
       if(window.innerWidth < 900)
+          e.preventDefault();
+          li.classList.toggle('open');
+          document.querySelectorAll('.nav-dropdown').forEach(function(other){
+            if(other !== li) other.classList.remove('open');
+          });
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.nav-dropdown')){
+        document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
