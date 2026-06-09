@@ -152,50 +152,37 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     /* Home-specific styles */
-    .hero-split {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    .hero-graphic {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    .hero-centered {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
       position: relative;
       z-index: 1;
     }
-    .hero-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
-      padding: 1.25rem 1.5rem;
-      backdrop-filter: blur(8px);
-      transition: transform 0.3s ease;
+    .hero-sub {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.78);
+      max-width: 580px;
+      margin: 0 auto 2.25rem;
+      line-height: 1.65;
     }
-    .hero-card:hover { transform: translateX(6px); }
-    .hero-card-head {
+    .hero-trust {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.5rem;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
     }
-    .hero-card-icon {
-      width: 36px; height: 36px;
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-      flex-shrink: 0;
+    .hero-phone {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
     }
-    .hero-card-icon.t { background: rgba(41,171,226,0.25); color: var(--sky); }
-    .hero-card-icon.r { background: rgba(229,57,53,0.2); color: #ef9a9a; }
-    .hero-card-icon.g { background: rgba(22,163,74,0.2); color: #4ade80; }
-    .hero-card h4 { color: var(--white); font-size: 0.95rem; font-family: var(--font-body); font-weight: 600; }
-    .hero-card p  { color: rgba(255,255,255,0.62); font-size: 0.82rem; line-height: 1.4; }
-    .hero-card.featured {
-      background: rgba(41,171,226,0.15);
-      border-color: rgba(41,171,226,0.35);
-    }
+    .hero-phone:hover { color: var(--sky); }
 
     /* Who section */
     .who-section { background: var(--off-white); }
@@ -374,52 +361,25 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="container">
-      <div class="hero-split">
-        <div class="hero-content">
+      <div class="hero-centered">
           <span class="section-label">Middle Tennessee's Independent Health Insurance Specialist</span>
           <h1>Private Health Insurance for Self-Employed Workers in Middle Tennessee</h1>
-          <p class="hero-tagline"><em>Health Insurance Made Personal.</em></p>
-          <p>We specialize in <a href="services" style="color:var(--sky);text-decoration:underline;">private PPO health plans</a> and supplemental coverage for self-employed individuals, 1099 contractors, and small business owners across <a href="nashville-insurance" style="color:var(--sky);text-decoration:underline;">Nashville</a> and Middle Tennessee. We build coverage bundles that work the way employer plans do, without requiring an employer.</p>
-          <div class="hero-btns">
+          <p class="hero-sub">We compare every lane — ACA marketplace, employer plans, and private PPO — then build the strongest protection for your dollar.</p>
+          <div class="hero-btns" style="justify-content:center;">
             <a href="contact" class="btn btn-primary btn-lg">
-              <i class="fa-regular fa-calendar-check"></i> Start Your Free Quote
+              <i class="fa-regular fa-calendar-check"></i> Book a Free 15-Minute Call
             </a>
-            <a href="services" class="btn btn-outline btn-lg">See How It Works</a>
           </div>
-          <div style="display:flex;align-items:center;gap:1.25rem;margin-top:2rem;flex-wrap:wrap;">
+          <div class="hero-trust">
             <div class="google-badge">
               <div class="g-icon">G</div>
               <span class="stars">★★★★★</span>
               <span>5.0 · 20+ Google Reviews</span>
             </div>
-            <a href="tel:6155130313" style="color:rgba(255,255,255,0.8);font-size:0.95rem;display:flex;align-items:center;gap:0.4rem;">
+            <a href="tel:6155130313" class="hero-phone">
               <i class="fa-solid fa-phone" style="color:var(--sky);"></i> 615-513-0313
             </a>
           </div>
-        </div>
-        <div class="hero-graphic">
-          <div class="hero-card featured">
-            <div class="hero-card-head">
-              <div class="hero-card-icon t"><i class="fa-solid fa-shield-halved"></i></div>
-              <h4>Private Market PPO</h4>
-            </div>
-            <p>Nationwide coverage. No referrals. No network restrictions. Built for the self-employed and business owners who need real protection.</p>
-          </div>
-          <div class="hero-card">
-            <div class="hero-card-head">
-              <div class="hero-card-icon r"><i class="fa-solid fa-triangle-exclamation"></i></div>
-              <h4>ACA Marketplace Plans</h4>
-            </div>
-            <p>Can work great at certain income levels, but often leave high-income earners overpaying and undercovered.</p>
-          </div>
-          <div class="hero-card">
-            <div class="hero-card-head">
-              <div class="hero-card-icon g"><i class="fa-solid fa-building"></i></div>
-              <h4>Employer Coverage Review</h4>
-            </div>
-            <p>Your group plan might not be the best deal. I'll help you compare and decide what actually makes sense.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -658,6 +618,11 @@
           <h3>ACA vs. Private Plans</h3>
           <p>A straight comparison, no spin in either direction, so you can decide what fits your situation.</p>
         </a>
+        <a href="above-aca-subsidy-health-insurance-tennessee" class="who-help-card">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <h3>Above Subsidy Threshold</h3>
+          <p>Earning too much for ACA subsidies? Private market plans often deliver stronger coverage at a better price.</p>
+        </a>
       </div>
     </div>
   </section>
@@ -731,29 +696,35 @@
             <li><a href="free-health-coverage-pdf">Free Guide</a></li>
           </ul>
         </div>
-        <div class="footer-col">
+        <div class="footer-col footer-col-cities">
           <h4>Service Areas</h4>
-          <ul>
-            <li><a href="nashville-insurance">Nashville</a></li>
-            <li><a href="brentwood-insurance">Brentwood</a></li>
-            <li><a href="franklin-insurance">Franklin</a></li>
-            <li><a href="murfreesboro-insurance">Murfreesboro</a></li>
-            <li><a href="nolensville-insurance">Nolensville</a></li>
-            <li><a href="smyrna-insurance">Smyrna</a></li>
-            <li><a href="belle-meade-insurance">Belle Meade</a></li>
-            <li><a href="green-hills-insurance">Green Hills</a></li>
-            <li><a href="bellevue-insurance">Bellevue</a></li>
-            <li><a href="mt-juliet-insurance">Mt. Juliet</a></li>
-            <li><a href="hendersonville-insurance">Hendersonville</a></li>
-            <li><a href="spring-hill-insurance">Spring Hill</a></li>
-            <li><a href="donelson-insurance">Donelson</a></li>
-            <li><a href="shelbyville-insurance">Shelbyville</a></li>
-            <li><a href="chapel-hill-insurance">Chapel Hill</a></li>
-            <li><a href="college-grove-insurance">College Grove</a></li>
-            <li><a href="christiana-insurance">Christiana</a></li>
-            <li><a href="manchester-insurance">Manchester</a></li>
-            <li><a href="tullahoma-insurance">Tullahoma</a></li>
-          </ul>
+          <div class="footer-cities-2col">
+            <ul>
+              <li><a href="nashville-insurance">Nashville</a></li>
+              <li><a href="brentwood-insurance">Brentwood</a></li>
+              <li><a href="franklin-insurance">Franklin</a></li>
+              <li><a href="murfreesboro-insurance">Murfreesboro</a></li>
+              <li><a href="nolensville-insurance">Nolensville</a></li>
+              <li><a href="smyrna-insurance">Smyrna</a></li>
+              <li><a href="belle-meade-insurance">Belle Meade</a></li>
+              <li><a href="green-hills-insurance">Green Hills</a></li>
+              <li><a href="bellevue-insurance">Bellevue</a></li>
+              <li><a href="mt-juliet-insurance">Mt. Juliet</a></li>
+              <li><a href="hendersonville-insurance">Hendersonville</a></li>
+            </ul>
+            <ul>
+              <li><a href="spring-hill-insurance">Spring Hill</a></li>
+              <li><a href="donelson-insurance">Donelson</a></li>
+              <li><a href="shelbyville-insurance">Shelbyville</a></li>
+              <li><a href="chapel-hill-insurance">Chapel Hill</a></li>
+              <li><a href="college-grove-insurance">College Grove</a></li>
+              <li><a href="christiana-insurance">Christiana</a></li>
+              <li><a href="manchester-insurance">Manchester</a></li>
+              <li><a href="tullahoma-insurance">Tullahoma</a></li>
+              <li><a href="lewisburg-insurance">Lewisburg</a></li>
+              <li><a href="columbia-insurance">Columbia</a></li>
+            </ul>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
@@ -832,5 +803,6 @@
   });
 })();
 </script>
+  <script src="/animations.js" defer></script>
 </body>
 </html>
