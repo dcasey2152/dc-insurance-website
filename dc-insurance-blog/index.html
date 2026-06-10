@@ -158,10 +158,17 @@
     }
     .blog-card-img {
       height: 180px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 2.5rem;
+    }
+    .blog-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .blog-card-body {
       padding: 1.5rem;
@@ -221,12 +228,18 @@
       margin-bottom: 3rem;
     }
     .blog-featured-img {
-      background: linear-gradient(135deg, var(--navy) 0%, #122847 100%);
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 5rem;
       min-height: 280px;
+    }
+    .blog-featured-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .blog-featured-body {
       padding: 2.5rem;
@@ -409,7 +422,7 @@
 
           <!-- Featured -->
           <div class="blog-featured">
-            <div class="blog-featured-img">🫀</div>
+            <div class="blog-featured-img"><img src="../blog-images/critical-illness-card.png" alt="Critical Illness Insurance Tennessee" loading="lazy" /></div>
             <div class="blog-featured-body">
               <span class="blog-tag">Latest Post</span>
               <h2>Critical Illness Insurance in Tennessee: A Financial Safety Net When the Diagnosis Is Serious</h2>
@@ -422,7 +435,7 @@
           <div class="blog-grid">
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#dc2626,#1e3a5f);">🫀</div>
+              <div class="blog-card-img"><img src="../blog-images/critical-illness-card.png" alt="Critical Illness Insurance Tennessee" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Critical Illness</span>
                 <h3>Critical Illness Insurance in Tennessee: A Financial Safety Net</h3>
@@ -435,7 +448,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#0891b2,#0d9488);">📋</div>
+              <div class="blog-card-img"><img src="../blog-images/compare-plans-card.png" alt="How to Compare Health Insurance Plans" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Comparison Guide</span>
                 <h3>How to Compare Health Insurance Plans in Tennessee: A Practical Step-by-Step Guide</h3>
@@ -448,7 +461,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#d97706,#1e3a5f);">💸</div>
+              <div class="blog-card-img"><img src="../blog-images/real-cost-cheap-insurance-card.png" alt="The Real Cost of Cheap Health Insurance" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">True Cost</span>
                 <h3>The Real Cost of Cheap Health Insurance in Tennessee</h3>
@@ -461,7 +474,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#be185d,#1e3a5f);">🏥</div>
+              <div class="blog-card-img"><img src="../blog-images/accident-hospital-indemnity-card.png" alt="Accident and Hospital Indemnity Insurance" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Supplemental</span>
                 <h3>Accident Insurance &amp; Hospital Indemnity in Tennessee: What They Cover and Why They Matter</h3>
@@ -474,7 +487,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#0891b2,#1e3a5f);">📅</div>
+              <div class="blog-card-img"><img src="../blog-images/special-enrollment-card.png" alt="Special Enrollment Periods Tennessee" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Enrollment</span>
                 <h3>Special Enrollment Periods in Tennessee: When You Don't Have to Wait for Open Enrollment</h3>
@@ -487,7 +500,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#0d9488,#1e3a5f);">🛡️</div>
+              <div class="blog-card-img"><img src="../blog-images/disability-insurance-card.png" alt="Disability Insurance for Self-Employed Tennesseans" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Income Protection</span>
                 <h3>Disability Insurance for Self-Employed Tennesseans: Protecting the Income That Drives Everything</h3>
@@ -500,7 +513,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#7c3aed,#4f46e5);">💰</div>
+              <div class="blog-card-img"><img src="../blog-images/income-affects-premium-card.png" alt="How Income Affects Your Health Insurance Premium" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Income &amp; Premiums</span>
                 <h3>How Income Affects Your Health Insurance Premium in Tennessee — And When It Doesn't</h3>
@@ -513,7 +526,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#1e3a5f,#2563eb);">📋</div>
+              <div class="blog-card-img"><img src="../blog-images/cobra-insurance-card.png" alt="COBRA Insurance Tennessee" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Job Transition</span>
                 <h3>COBRA Insurance in Tennessee: What It Costs, How Long It Lasts, and What to Consider Instead</h3>
@@ -539,7 +552,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#0B1F3A,#1e40af);">🏢</div>
+              <div class="blog-card-img"><img src="../blog-images/small-business-insurance-card.png" alt="Health Insurance for Small Business Owners" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Small Business</span>
                 <h3>Health Insurance for Small Business Owners in Middle Tennessee</h3>
@@ -552,7 +565,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#7c3aed,#4f46e5);">🛡️</div>
+              <div class="blog-card-img"><img src="../blog-images/supplemental-insurance-card.png" alt="Supplemental Health Insurance Tennessee" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Supplemental</span>
                 <h3>Supplemental Health Insurance in Tennessee: Accident, Hospital Indemnity, and Critical Illness</h3>
@@ -565,7 +578,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#0B1F3A,#1A9BC3);">🔄</div>
+              <div class="blog-card-img"><img src="../blog-images/ppo-vs-epo-card.png" alt="PPO vs EPO Tennessee Self-Employed" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Networks</span>
                 <h3>PPO vs. EPO: What Tennessee's Self-Employed Need to Know</h3>
@@ -578,7 +591,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#0B1F3A,#122847);">📊</div>
+              <div class="blog-card-img"><img src="../blog-images/4-numbers-coverage-card.png" alt="4 Numbers That Define Your Health Insurance Coverage" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Education</span>
                 <h3>The 4 Numbers That Actually Define Your Health Insurance Coverage</h3>
@@ -591,7 +604,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#1A9BC3,#0B1F3A);">🔬</div>
+              <div class="blog-card-img"><img src="../blog-images/medical-underwriting-card.png" alt="What Is Medical Underwriting" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Private PPO</span>
                 <h3>What is Medical Underwriting? Does it Matter?</h3>
@@ -617,7 +630,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#0B1F3A,#1A9BC3);">💼</div>
+              <div class="blog-card-img"><img src="../blog-images/self-employed-guide-card.png" alt="Health Insurance for Self-Employed Tennesseans Complete Guide" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Self-Employed</span>
                 <h3>Health Insurance for Self-Employed Tennesseans: Complete Guide</h3>
@@ -630,7 +643,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#b45309,#d97706);">💰</div>
+              <div class="blog-card-img"><img src="../blog-images/cheap-vs-affordable-card.png" alt="Cheap vs Affordable Health Insurance Tennessee" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Cost & Value</span>
                 <h3>Cheap Health Insurance in Tennessee: Why the Lowest Premium Isn't the Lowest Cost</h3>
@@ -812,37 +825,4 @@
   if(burger && mobileNav){
     burger.addEventListener('click', function(){
       burger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-    });
-    mobileNav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        burger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
-  }
-  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
-    toggle.addEventListener('click', function(e){
-      var li = this.closest('.nav-dropdown');
-      if(!li) return;
-      if(window.innerWidth < 900)
-          e.preventDefault();
-          li.classList.toggle('open');
-          document.querySelectorAll('.nav-dropdown').forEach(function(other){
-            if(other !== li) other.classList.remove('open');
-          });
-        }
-      });
-    });
-    document.addEventListener('click', function(e){
-      if(!e.target.closest('.nav-dropdown')){
-        document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
-      }
-    });
-  })();
-  </script>
-  <script src="/animations.js" defer></script>
-</body>
-</html>
+      mobileNav.cl
