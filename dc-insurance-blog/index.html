@@ -539,7 +539,20 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#065f46,#059669);">🌿</div>
+              <div class="blog-card-img"><img src="../blog-images/truck-driver-insurance-card.png" alt="Health Insurance for 1099 Truck Drivers Tennessee" loading="lazy" /></div>
+              <div class="blog-card-body">
+                <span class="blog-tag">1099 Workers</span>
+                <h3>Health Insurance for 1099 Truck Drivers in Tennessee</h3>
+                <p>Owner-operators and independent drivers don't get employer coverage. Here's how ACA marketplace plans and private PPO stack up for life on the road.</p>
+                <div class="blog-card-meta">
+                  <span><i class="fa-regular fa-clock"></i> May 15, 2026</span>
+                  <a href="/dc-insurance-blog/f/health-insurance-for-1099-truck-drivers-tennessee" class="read-link">Read More →</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-card">
+              <div class="blog-card-img"><img src="../blog-images/spring-health-review-card.png" alt="Spring Health Insurance Review Tennessee" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">Plan Review</span>
                 <h3>Spring Health Insurance Review: Is Your Current Plan Still the Right Fit?</h3>
@@ -617,7 +630,7 @@
             </div>
 
             <div class="blog-card">
-              <div class="blog-card-img" style="background:linear-gradient(135deg,#15803d,#16a34a);">⚖️</div>
+              <div class="blog-card-img"><img src="../blog-images/aca-marketplace-vs-ppo-card.png" alt="ACA Marketplace vs Medically Underwritten Private PPO Plans" loading="lazy" /></div>
               <div class="blog-card-body">
                 <span class="blog-tag">ACA vs. Private</span>
                 <h3>ACA Marketplace vs. Medically Underwritten Private PPO Plans</h3>
@@ -812,8 +825,8 @@
           </ul>
         </div>
       </div>
-            <div class="footer-bottom">
-        <span>&copy; 2026 DC Insurance &middot; Denton Casey &middot; Middle Te        <span>&copy; 2026 DC Insurance &middot; Denton Casey &middot; Middle Tennessee</span>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DC Insurance &middot; Denton Casey &middot; Middle Tennessee</span>
         <span>Independent Health Insurance Specialist &middot; 615-513-0313</span>
       </div>
     </div>
@@ -825,4 +838,37 @@
   if(burger && mobileNav){
     burger.addEventListener('click', function(){
       burger.classList.toggle('open');
-      mobileNav.cl
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      if(window.innerWidth < 900){
+        e.preventDefault();
+        li.classList.toggle('open');
+        document.querySelectorAll('.nav-dropdown').forEach(function(other){
+          if(other !== li) other.classList.remove('open');
+        });
+      }
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+})();
+</script>
+  <script src="/animations.js" defer></script>
+</body>
+</html>
