@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://connect.facebook.net" />
   <link rel="preconnect" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preload" as="image" href="denton-hero.webp" />
   <!-- Meta Pixel -->
   <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -152,27 +153,35 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     /* Home-specific styles */
-    .hero-centered {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
       position: relative;
       z-index: 1;
+    }
+    .hero-photo img {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.12);
     }
     .hero-sub {
       font-size: 1.2rem;
       color: rgba(255,255,255,0.78);
       max-width: 580px;
-      margin: 0 auto 1.5rem;
+      margin: 0 0 1.5rem;
       line-height: 1.65;
     }
     .hero-proof {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 1.6rem;
       flex-wrap: wrap;
-      margin: 0 auto 2.25rem;
+      margin: 0 0 2.25rem;
     }
     .hero-proof span {
       display: inline-flex;
@@ -187,7 +196,6 @@
     .hero-trust {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 1.5rem;
       margin-top: 2rem;
       flex-wrap: wrap;
@@ -379,7 +387,8 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero">
     <div class="container">
-      <div class="hero-centered">
+      <div class="hero-split">
+        <div class="hero-left">
           <span class="section-label">Middle Tennessee's Independent Health Insurance Specialist</span>
           <h1>Private Health Insurance for Self-Employed Workers in Middle Tennessee</h1>
           <p class="hero-sub">Stronger protection for your dollar. We compare every lane, including the ACA marketplace, employer plans, and private PPO, and most people who switch report savings.</p>
@@ -388,7 +397,7 @@
             <span><i class="fa-solid fa-check"></i> Every lane compared</span>
             <span><i class="fa-solid fa-check"></i> Year-round options</span>
           </div>
-          <div class="hero-btns" style="justify-content:center;">
+          <div class="hero-btns">
             <a href="contact" class="btn btn-primary btn-lg">
               <i class="fa-regular fa-calendar-check"></i> Book a Free 15-Minute Call
             </a>
@@ -403,6 +412,10 @@
               <span>5.0 · 20+ Google Reviews</span>
             </div>
           </div>
+        </div>
+        <div class="hero-photo">
+          <img src="denton-hero.webp" alt="Denton Casey, licensed independent health insurance agent in Middle Tennessee" width="800" height="979" fetchpriority="high" />
+        </div>
       </div>
     </div>
   </section>
