@@ -739,7 +739,7 @@
         <span class="section-label">Dig Deeper</span>
         <h2>Find Your Situation</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.1rem;">
+      <div class="situation-grid">
         <a href="self-employed-health-insurance-tennessee" class="who-help-card">
           <i class="fa-solid fa-briefcase"></i>
           <h3>Self-Employed</h3>
@@ -764,6 +764,21 @@
           <i class="fa-solid fa-scale-balanced"></i>
           <h3>ACA vs. Private Plans</h3>
           <p>Side-by-side comparison, no spin, just the real tradeoffs.</p>
+        </a>
+        <a href="owner-operator-health-insurance-tennessee" class="who-help-card">
+          <i class="fa-solid fa-truck"></i>
+          <h3>Owner-Operators</h3>
+          <p>Truckers and owner-operators, coverage built to travel with you.</p>
+        </a>
+        <a href="real-estate-agent-health-insurance-tennessee" class="who-help-card">
+          <i class="fa-solid fa-house-chimney"></i>
+          <h3>Real Estate Agents</h3>
+          <p>Commission-based income? Here's how to cover the gaps on your terms.</p>
+        </a>
+        <a href="above-aca-subsidy-health-insurance-tennessee" class="who-help-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Above the ACA Subsidy</h3>
+          <p>Earning too much for subsidies? See what private plans actually offer.</p>
         </a>
       </div>
     </div>
@@ -875,6 +890,20 @@
   <a href="https://wa.me/16155130313" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+<script>
+function toggleFaq(btn){
+  var item = btn.closest('.faq-item');
+  var answer = item ? item.querySelector('.faq-answer') : null;
+  if(!item || !answer) return;
+  var isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-question.open').forEach(function(b){
+    b.classList.remove('open');
+    var a = b.closest('.faq-item');
+    if(a){ var ans = a.querySelector('.faq-answer'); if(ans) ans.classList.remove('open'); }
+  });
+  if(!isOpen){ btn.classList.add('open'); answer.classList.add('open'); }
+}
+</script>
 <script>
 function toggleFaq(btn){
   var item = btn.closest('.faq-item');

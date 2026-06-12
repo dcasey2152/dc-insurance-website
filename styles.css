@@ -13,6 +13,11 @@
 .anim-delay-2{transition-delay:0.2s}
 .anim-delay-3{transition-delay:0.3s}
 
+/* ── Find Your Situation grid: equal-width cards, centered wrap (no orphan) ── */
+.situation-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1.1rem}
+.situation-grid .who-help-card{flex:1 1 220px;max-width:300px}
+@media(max-width:560px){.situation-grid .who-help-card{flex:1 1 100%;max-width:none}}
+
 /* ── Enhanced card hover micro-movements ── */
 .who-help-card{transition:box-shadow 0.25s ease,transform 0.25s ease,border-color 0.25s ease}
 .who-help-card:hover{transform:translateY(-5px);box-shadow:0 12px 36px rgba(11,31,58,0.14);border-color:var(--sky)}
