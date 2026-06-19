@@ -3,54 +3,64 @@
 **Cadence:** Tuesday & Thursday each week  
 **Blog directory:** `dc-insurance-blog/f/`  
 **Source file:** `DC_Insurance_Blog_Posts_Apr_May_2026.md`
+**Last reconciled:** 2026-06-18 — all queued posts (#1-16) are LIVE; queue exhausted.
 
 ---
 
-## ✅ Published
+## Published (18 posts live)
 
 | Post | Title | File |
 |------|-------|------|
 | 1 | Health Insurance for Self-Employed Tennesseans: Your Complete Guide | `health-insurance-for-self-employed-tennesseans-complete-guide.html` |
 | 2 | ACA Marketplace vs. Medically Underwritten Private PPO Plans | `aca-marketplace-vs-medically-underwritten-private-ppo-plans.html` |
-| 3 | What Medical Underwriting Means — And Why It Matters for Healthy Tennesseans | `what-is-medical-underwriting-does-it-matter.html` |
+| 3 | What Medical Underwriting Means - And Why It Matters for Healthy Tennesseans | `what-is-medical-underwriting-does-it-matter.html` |
 | 4 | The Four Numbers That Actually Define Your Health Insurance Coverage | `the-4-numbers-that-actually-define-your-health-insurance-coverage.html` |
 | 5 | PPO vs. EPO Health Insurance in Tennessee | `ppo-vs-epo-what-tennessees-self-employed-need-to-know.html` |
-| 6 | Supplemental Health Insurance in Tennessee: Accident, Hospital Indemnity, and Critical Illness | `supplemental-health-insurance-tennessee.html` — formatted May 11, 2026 |
-| 7 | Health Insurance for Small Business Owners in Middle Tennessee | `health-insurance-small-business-owners-middle-tennessee.html` — formatted May 12, 2026 |
-| 8 | Spring Health Insurance Review: Is Your Current Plan Still the Right Fit? | `spring-health-insurance-review-tennessee.html` — formatted May 14, 2026 |
-| 9 | COBRA Insurance in Tennessee: What It Costs, How Long It Lasts, and What to Consider Instead | `cobra-insurance-tennessee.html` — formatted May 19, 2026 |
-| 10 | How Income Affects Your Health Insurance Premium in Tennessee — And When It Doesn't | `how-income-affects-health-insurance-premium-tennessee.html` — formatted May 21, 2026 |
-| 11 | Disability Insurance for Self-Employed Tennesseans: Protecting the Income That Drives Everything | `disability-insurance-self-employed-tennessee.html` — formatted May 26, 2026 |
-| 12 | Special Enrollment Periods in Tennessee: When You Don't Have to Wait for Open Enrollment | `special-enrollment-periods-tennessee.html` — formatted May 28, 2026 |
+| 6 | Supplemental Health Insurance in Tennessee | `supplemental-health-insurance-tennessee.html` |
+| 7 | Health Insurance for Small Business Owners in Middle Tennessee | `health-insurance-small-business-owners-middle-tennessee.html` |
+| 8 | Spring Health Insurance Review | `spring-health-insurance-review-tennessee.html` |
+| 9 | COBRA Insurance in Tennessee | `cobra-insurance-tennessee.html` |
+| 10 | How Income Affects Your Health Insurance Premium in Tennessee | `how-income-affects-health-insurance-premium-tennessee.html` |
+| 11 | Disability Insurance for Self-Employed Tennesseans | `disability-insurance-self-employed-tennessee.html` |
+| 12 | Special Enrollment Periods in Tennessee | `special-enrollment-periods-tennessee.html` |
+| 13 | Understanding Accident Insurance and Hospital Indemnity in Tennessee | `understanding-accident-hospital-indemnity-insurance-tennessee.html` |
+| 14 | The Real Cost of Cheap Health Insurance in Tennessee | `the-real-cost-of-cheap-health-insurance-tennessee.html` |
+| 15 | Critical Illness Insurance in Tennessee | `critical-illness-insurance-tennessee.html` |
+| 16 | How to Compare Health Insurance Plans in Tennessee | `how-to-compare-health-insurance-plans-tennessee.html` |
+| GSC | Health Insurance for 1099 Truck Drivers in Tennessee | `health-insurance-for-1099-truck-drivers-tennessee.html` |
+| Pre | Cheap and Affordable Health Insurance in Tennessee (pre-queue) | `cheap-affordable-health-insurance-tennessee.html` |
 
 ---
 
-## 🔜 Up Next (in order)
+## Up Next
+
+**Queue is exhausted - no post #17 defined yet.** Decision pending with Denton on topic + sourcing.
+
+Data-driven recommendation (from the 2026-06-18 GSC pull): a **real estate agent companion blog post**. The `real-estate-agent-health-insurance-tennessee` page is the single biggest zero-click opportunity on the site (865 impressions, avg position ~44, 0 clicks). Unlike the owner-operator page - which has the truck-driver blog feeding internal links into it - the real estate page has **no companion blog post**. A post would build the internal-link cluster around that page and give the query group ("health insurance for real estate agents," "do realtors get health insurance," etc., all stuck at position 45-70) a second ranking surface.
+
+Alternatives considered:
+- A Nashville "health insurance companies / broker" post (head-term queries at position 58-74, no dedicated content yet).
+- A second trucker-angle post to reinforce the owner-operator cluster.
 
 | # | Title | Target Date | Status |
 |---|-------|-------------|--------|
-| 13 | Understanding Accident Insurance and Hospital Indemnity in Tennessee | Thu Jun 5 | **NEXT** |
-| 14 | The Real Cost of Cheap Health Insurance in Tennessee | Tue Jun 10 | Queued |
-| 15 | Critical Illness Insurance in Tennessee: A Financial Safety Net When the Diagnosis Is Serious | Thu Jun 12 | Queued |
-| 16 | How to Compare Health Insurance Plans in Tennessee: A Practical Step-by-Step Guide | Tue Jun 17 | Queued |
+| 17 | TBD - recommend *Health Insurance for Real Estate Agents in Tennessee* | TBD | **Awaiting Denton's decision** |
 
 ---
 
-## 💡 Blog Ideas — Queries Spotted in GSC
+## Blog Ideas - Queries Spotted in GSC (2026-06-18 refresh)
 
-| Query | Position | Why It Matters | Suggested Title |
-|-------|----------|----------------|-----------------|
-| "health insurance for 1099 truck drivers" | 46 | Niche but unchallenged. Strong trucking presence in Middle TN (I-24, I-65, I-40 corridor) | *Health Insurance for 1099 Truck Drivers in Tennessee* |
-| "private health insurance in tennessee" | 99 | New, brand new appearance — will climb. High-volume head term | Covered by existing PPO page; monitor for blog angle |
-| "small business health insurance tn" | — | New variation of core keyword | Covered by small business page; monitor |
+| Query cluster | Best Position | Why It Matters | Suggested Title |
+|---------------|---------------|----------------|-----------------|
+| "health insurance for real estate agents" / "do realtors get health insurance" | 31-70 | Largest unrealized cluster - 500+ combined impressions, page exists but no blog support | *Health Insurance for Real Estate Agents in Tennessee* |
+| "health insurance for truck drivers" / "owner operator medical insurance" | 34-54 | Big trucker cluster; owner-operator page + truck-driver blog both stuck on page 4 | Second trucker angle, or page depth work |
+| "nashville health insurance company / broker" | 43-74 | Head-term Nashville queries, no dedicated content | *Choosing a Health Insurance Broker in Nashville* |
 
 ---
 
-## 📝 Notes
+## Notes
 
-- Mark a post as ✅ Published by moving it to the top table once the HTML file is live on Vercel
-- Source content is in `DC_Insurance_Blog_Posts_Apr_May_2026.md`
-- Each post gets: formatted HTML file + Facebook boost copy + deployment email to denton@dcinsuranceagency.com
-- Pre-existing post (not from this queue): `cheap-affordable-health-insurance-tennessee.html`
-- GSC `.html` URL impressions: handled by `cleanUrls: true` in vercel.json — these will drop off as Google recrawls
-- `/m/login` impressions: 301 redirect to `/contact` already in vercel.json
+- Mark a post Published by moving it to the top table once the HTML file is live on Vercel.
+- Source content is in `DC_Insurance_Blog_Posts_Apr_May_2026.md` (NOT in the repo - lives in the parent Claude Context folder).
+- GSC `.html` URL impressions: handled by `cleanUrls: true` in vercel.json - will drop off as Google recrawls.
+- `/m/*` impressions: 301 redirects to `/contact` already in vercel.json.
