@@ -7,7 +7,7 @@
 
 ---
 
-## Published (18 posts live)
+## Published (19 posts live)
 
 | Post | Title | File |
 |------|-------|------|
@@ -29,12 +29,13 @@
 | 16 | How to Compare Health Insurance Plans in Tennessee | `how-to-compare-health-insurance-plans-tennessee.html` |
 | GSC | Health Insurance for 1099 Truck Drivers in Tennessee | `health-insurance-for-1099-truck-drivers-tennessee.html` |
 | Pre | Cheap and Affordable Health Insurance in Tennessee (pre-queue) | `cheap-affordable-health-insurance-tennessee.html` |
+| 17 | Health Insurance for Real Estate Agents in Tennessee | `health-insurance-for-real-estate-agents-tennessee.html` |
 
 ---
 
 ## Up Next
 
-**Queue is exhausted - no post #17 defined yet.** Decision pending with Denton on topic + sourcing.
+**Post #17 (real estate agents) is LIVE as of 2026-06-18.** Queue is otherwise empty; #18 not yet defined.
 
 Data-driven recommendation (from the 2026-06-18 GSC pull): a **real estate agent companion blog post**. The `real-estate-agent-health-insurance-tennessee` page is the single biggest zero-click opportunity on the site (865 impressions, avg position ~44, 0 clicks). Unlike the owner-operator page - which has the truck-driver blog feeding internal links into it - the real estate page has **no companion blog post**. A post would build the internal-link cluster around that page and give the query group ("health insurance for real estate agents," "do realtors get health insurance," etc., all stuck at position 45-70) a second ranking surface.
 
@@ -44,7 +45,7 @@ Alternatives considered:
 
 | # | Title | Target Date | Status |
 |---|-------|-------------|--------|
-| 17 | TBD - recommend *Health Insurance for Real Estate Agents in Tennessee* | TBD | **Awaiting Denton's decision** |
+| 18 | TBD - real-estate PAGE depth pass, or trucker cluster, or Nashville broker post | TBD | Open |
 
 ---
 
