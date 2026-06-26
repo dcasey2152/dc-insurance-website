@@ -7,7 +7,8 @@
   <link rel="preconnect" href="https://connect.facebook.net" />
   <link rel="preconnect" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="preload" as="image" href="denton-hero.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="denton-hero-mobile.webp" media="(max-width:700px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="denton-hero.webp" media="(min-width:701px)" fetchpriority="high" />
   <!-- Meta Pixel -->
   <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -419,7 +420,7 @@
           </div>
         </div>
         <div class="hero-photo">
-          <img src="denton-hero.webp" alt="Denton Casey, licensed independent health insurance agent in Middle Tennessee" width="800" height="979" fetchpriority="high" />
+          <picture><source media="(max-width:700px)" srcset="denton-hero-mobile.webp" width="640" height="783" /><img src="denton-hero.webp" alt="Denton Casey, licensed independent health insurance agent in Middle Tennessee" width="800" height="979" fetchpriority="high" /></picture>
         </div>
       </div>
     </div>
