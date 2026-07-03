@@ -267,6 +267,16 @@
       ],
       "destination": "https://dcinsuranceagency.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/columbia",
+      "destination": "/columbia-insurance",
+      "permanent": true
+    },
+    {
+      "source": "/lewisburg",
+      "destination": "/lewisburg-insurance",
+      "permanent": true
     }
   ],
   "headers": [
