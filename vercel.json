@@ -277,6 +277,11 @@
       "source": "/lewisburg",
       "destination": "/lewisburg-insurance",
       "permanent": true
+    },
+    {
+      "source": "/dc-insurance-blog/f/cheap-affordable-health-insurance-tennessee",
+      "destination": "/dc-insurance-blog/f/the-real-cost-of-cheap-health-insurance-tennessee",
+      "permanent": true
     }
   ],
   "headers": [
