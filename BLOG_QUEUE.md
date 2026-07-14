@@ -7,7 +7,7 @@
 
 ---
 
-## Published (19 posts live)
+## Published (21 posts live)
 
 | Post | Title | File |
 |------|-------|------|
@@ -35,17 +35,14 @@
 
 ## Up Next
 
-**Post #17 (real estate agents) is LIVE as of 2026-06-18.** Queue is otherwise empty; #18 not yet defined.
-
-Data-driven recommendation (from the 2026-06-18 GSC pull): a **real estate agent companion blog post**. The `real-estate-agent-health-insurance-tennessee` page is the single biggest zero-click opportunity on the site (865 impressions, avg position ~44, 0 clicks). Unlike the owner-operator page - which has the truck-driver blog feeding internal links into it - the real estate page has **no companion blog post**. A post would build the internal-link cluster around that page and give the query group ("health insurance for real estate agents," "do realtors get health insurance," etc., all stuck at position 45-70) a second ranking surface.
-
-Alternatives considered:
-- A Nashville "health insurance companies / broker" post (head-term queries at position 58-74, no dedicated content yet).
-- A second trucker-angle post to reinforce the owner-operator cluster.
+**Post #17 (real estate agents) is LIVE as of 2026-06-18.** Batch 2 topic plan (`BLOG_PLAN_batch2.md`, posts #18-32) drafted 2026-07-02. Posts #18-19 (Tier 1) are now drafted in `DC_Insurance_Blog_Posts_Apr_May_2026.md` and ready for HTML formatting + publishing.
 
 | # | Title | Target Date | Status |
 |---|-------|-------------|--------|
-| 18 | TBD - real-estate PAGE depth pass, or trucker cluster, or Nashville broker post | TBD | Open |
+| 18 | Choosing a Health Insurance Broker in Nashville | Tue, Jul 7, 2026 | ✅ LIVE 2026-07-07 (commit c7bd50a) |
+| 19 | Owner-Operator Health Insurance in Tennessee (2nd trucker angle) | Thu, Jul 9, 2026 | ✅ LIVE 2026-07-10 (commit 71c8586) |
+| 20 | Health Insurance for Working Musicians in Tennessee (musician-page companion, GSC-driven) | Tue, Jul 14, 2026 | ✅ LIVE 2026-07-14 |
+| 21-32 | See BLOG_PLAN_batch2.md (Tiers 2-5; original #20-32 renumbered) | TBD | Not yet drafted |
 
 ---
 
