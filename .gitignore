@@ -1,0 +1,13 @@
+# OS / filesystem junk
+.fuse_hidden*
+.DS_Store
+Thumbs.db
+*.tmp
+*~
+
+# local image-processing scratch (never deploy)
+_webp_tmp/
+
+# unoptimized photo sources kept locally only (webp versions are authoritative)
+blog-images/*.jpg
+blog-images/pexels-*.jpg
