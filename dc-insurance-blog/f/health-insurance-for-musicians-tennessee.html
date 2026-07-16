@@ -377,7 +377,7 @@
     toggle.addEventListener('click', function(e){
       var li = this.closest('.nav-dropdown');
       if(!li) return;
-      if(window.innerWidth < 900)
+      if(window.innerWidth < 900){
           e.preventDefault();
           li.classList.toggle('open');
           document.querySelectorAll('.nav-dropdown').forEach(function(other){
