@@ -42,7 +42,8 @@
 | 18 | Choosing a Health Insurance Broker in Nashville | Tue, Jul 7, 2026 | ✅ LIVE 2026-07-07 (commit c7bd50a) |
 | 19 | Owner-Operator Health Insurance in Tennessee (2nd trucker angle) | Thu, Jul 9, 2026 | ✅ LIVE 2026-07-10 (commit 71c8586) |
 | 20 | Health Insurance for Working Musicians in Tennessee (musician-page companion, GSC-driven) | Tue, Jul 14, 2026 | ✅ LIVE 2026-07-14 |
-| 21-32 | See BLOG_PLAN_batch2.md (Tiers 2-5; original #20-32 renumbered) | TBD | Not yet drafted |
+| 21 | Health Insurance for Independent Contractors & Tradespeople in Tennessee | Thu, Jul 16, 2026 | ✅ LIVE 2026-07-17 (`health-insurance-for-contractors-tradespeople-tennessee.html`) |
+| 22-32 | See BLOG_PLAN_batch2.md (Tiers 2-5; original #20-32 renumbered) | TBD | Not yet drafted |
 
 ---
 
