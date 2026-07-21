@@ -279,12 +279,12 @@
           if(success) success.style.display = 'block';
           if(typeof fbq === 'function'){ fbq('track', 'Lead'); }
         } else {
-          alert('Something went wrong — please call or email directly: 615-513-0313');
+          alert('Something went wrong, please call or email directly: 615-513-0313');
           if(btn){ btn.disabled = false; btn.textContent = orig; }
         }
       })
       .catch(function(){
-        alert('Network error — please call or email directly: 615-513-0313');
+        alert('Network error, please call or email directly: 615-513-0313');
         if(btn){ btn.disabled = false; btn.textContent = orig; }
       });
     }
@@ -467,22 +467,22 @@
                     <option>Self-employed / 1099 contractor</option>
                     <option>Small business owner</option>
                     <option>High-income household</option>
-                    <option>Currently on ACA plan — reviewing options</option>
-                    <option>Currently on employer plan — reviewing options</option>
+                    <option>Currently on ACA plan, reviewing options</option>
+                    <option>Currently on employer plan, reviewing options</option>
                     <option>Just moved or lost coverage</option>
                     <option>Other / Not sure</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="message">What are you trying to figure out?</label>
-                  <textarea id="message" name="message" placeholder="Tell me what's on your mind — what you're paying now, what's not working, what you're trying to solve. The more context, the better."></textarea>
+                  <textarea id="message" name="message" placeholder="Tell me what's on your mind, what you're paying now, what's not working, what you're trying to solve. The more context, the better."></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:1.05rem;">
                   <i class="fa-solid fa-paper-plane"></i>&nbsp; Send Message
                 </button>
                 <p class="form-note">By submitting this form, you're reaching out to Denton Casey at DC Insurance. I don't sell your information. See our <a href="privacy-page" rel="nofollow" style="color:var(--teal);">Privacy Policy</a>. Coverage options discussed are subject to availability and individual eligibility.</p>
                 <div class="form-success" id="formSuccess" style="display:none;padding:1.5rem;background:rgba(26,168,192,0.1);border:1px solid var(--sky);border-radius:var(--radius);text-align:center;color:var(--navy);font-weight:600;margin-top:1rem;">
-                  <i class="fa-solid fa-circle-check" style="color:var(--sky);margin-right:0.5rem;"></i> Message sent — I'll be in touch within one business day.
+                  <i class="fa-solid fa-circle-check" style="color:var(--sky);margin-right:0.5rem;"></i> Message sent, I'll be in touch within one business day.
                 </div>
               </form>
             </div>
