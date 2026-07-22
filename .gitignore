@@ -1,13 +1,13 @@
-# OS / filesystem junk
+# Internal dev / planning docs — never publish
+DC_Insurance_Master_Log.md
+DC_Insurance_Site_Audit_*.md
+BLOG_QUEUE.md
+BLOG_PLAN*.md
+*-PREV-backup.pdf
+
+# Local scripts, logs, temp/OS artifacts
+*.bat
+git-push-log.txt
+_webp_tmp/
 .fuse_hidden*
 .DS_Store
-Thumbs.db
-*.tmp
-*~
-
-# local image-processing scratch (never deploy)
-_webp_tmp/
-
-# unoptimized photo sources kept locally only (webp versions are authoritative)
-blog-images/*.jpg
-blog-images/pexels-*.jpg
