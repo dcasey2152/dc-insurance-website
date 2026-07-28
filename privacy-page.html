@@ -26,6 +26,22 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-SX5340TR64');
+  /* Conversion event tracking (CP92). Delegated so it survives markup variation. */
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(!t || typeof t.closest !== 'function'){ return; }
+    var a = t.closest('a[href]');
+    if(!a){ return; }
+    var h = a.getAttribute('href') || '';
+    var label = (a.textContent || '').replace(/\s+/g,' ').trim().slice(0,80);
+    if(h.indexOf('tidycal.com') !== -1){
+      gtag('event','book_call_click',{link_url:h, link_text:label});
+    } else if(h.indexOf('tel:') === 0){
+      gtag('event','phone_click',{link_url:h, link_text:label});
+    } else if(h.indexOf('mailto:') === 0){
+      gtag('event','email_click',{link_url:h, link_text:label});
+    }
+  }, true);
   </script>
   <!-- End Google Analytics -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
