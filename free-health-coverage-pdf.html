@@ -592,18 +592,26 @@
   </script>
 
   <script>
-  /* CP92: JotForm lead magnet submission. Page had no submission event on either platform. */
+/* CP108: Jotform submission bridge. Jotform posts plain colon-delimited strings
+   (setDeviceType:desktop:, setHeight:640:ID, formSettled, submission-completed),
+   never JSON. The previous JSON.parse gate threw on every message, so this
+   never fired once. Format verified live 2026-08-01 by capturing the iframe
+   handshake. Handles both string and object payloads so a Jotform change
+   cannot silently break it again. */
+(function(){
+  var fired = false;
   window.addEventListener('message', function(e) {
-    if (typeof e.origin === 'string' && e.origin.indexOf('jotform') !== -1) {
-      var data = {};
-      try { data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch(err) {}
-      if (data && data.action === 'submission-completed') {
-        if (typeof gtag === 'function') { gtag('event','generate_lead',{lead_type:'pdf_download'}); }
-        if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-      }
-    }
+    if (typeof e.origin !== 'string' || e.origin.indexOf('jotform') === -1) { return; }
+    var d = e.data, hit = false;
+    if (typeof d === 'string') { hit = d.indexOf('submission-completed') !== -1; }
+    else if (d && typeof d === 'object') { hit = d.action === 'submission-completed'; }
+    if (!hit || fired) { return; }
+    fired = true;
+    if (typeof gtag === 'function') { gtag('event','generate_lead',{lead_type:'pdf_download'}); }
+    if (typeof fbq === 'function') { fbq('track','Lead',{content_name:'Free health coverage guide'}); }
   });
-  </script>
+})();
+</script>
 
   <script src="/animations.js" defer></script>
 </body>
