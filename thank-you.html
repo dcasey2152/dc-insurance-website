@@ -579,6 +579,31 @@
   });
 })();
 </script>
+  <script>
+  /* CP109: lead conversion. Both Jotform forms redirect the top window here on
+     completion (verified live 2026-08-01: referrer https://submit.jotform.com/).
+     Prefers the ?src= param because document.referrer is stripped by some
+     browsers and privacy settings; falls back to the referrer so this still
+     fires if a redirect URL is ever saved without the param. sessionStorage
+     guard stops a refresh or back-navigation from double counting. */
+  (function(){
+    var src = null;
+    try { src = new URLSearchParams(window.location.search).get('src'); } catch(err) {}
+    var fromJotform = (document.referrer || '').indexOf('jotform') !== -1;
+    if (!src && !fromJotform) { return; }
+    var type = src === 'intake' ? 'intake_form'
+             : src === 'pdf'    ? 'pdf_download'
+             : 'jotform_unspecified';
+    try {
+      var k = 'dc_lead_' + type;
+      if (sessionStorage.getItem(k)) { return; }
+      sessionStorage.setItem(k, '1');
+    } catch(err) {}
+    if (typeof gtag === 'function') { gtag('event','generate_lead',{lead_type:type}); }
+    if (typeof fbq === 'function') { fbq('track','Lead',{content_name:type}); }
+  })();
+  </script>
+
   <script src="/animations.js" defer></script>
 </body>
 </html>
