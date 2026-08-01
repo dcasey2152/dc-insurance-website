@@ -607,6 +607,13 @@
     else if (d && typeof d === 'object') { hit = d.action === 'submission-completed'; }
     if (!hit || fired) { return; }
     fired = true;
+    /* CP110: shares the sessionStorage key /thank-you uses, so a form that both
+       posts submission-completed AND redirects cannot double count. */
+    try {
+      var k = 'dc_lead_pdf_download';
+      if (sessionStorage.getItem(k)) { return; }
+      sessionStorage.setItem(k, '1');
+    } catch(err) {}
     if (typeof gtag === 'function') { gtag('event','generate_lead',{lead_type:'pdf_download'}); }
     if (typeof fbq === 'function') { fbq('track','Lead',{content_name:'Free health coverage guide'}); }
   });
