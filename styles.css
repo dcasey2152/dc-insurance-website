@@ -24,3 +24,11 @@
 .lane-card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(11,31,58,0.16)}
 .testimonial-mini{transition:transform 0.25s ease,box-shadow 0.25s ease}
 .testimonial-mini:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(11,31,58,0.12)}
+
+/* ── Mobile above-fold reclaim on article pages ── */
+@media (max-width:768px){
+.section[style*="padding-top:7rem"]{padding-top:5.25rem!important}
+.article-header{margin-bottom:1.25rem;padding-bottom:1rem}
+.article-header .blog-tag{display:none}
+.blog-cta-box .btn{width:100%;justify-content:center}
+}
