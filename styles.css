@@ -3,7 +3,7 @@
 .footer-col-cities{grid-column:span 1}
 .footer-cities-2col{display:grid;grid-template-columns:1fr 1fr;gap:0 0.25rem}
 .footer-cities-2col ul li{margin-bottom:0.45rem}
-.footer-grid{grid-template-columns:2fr 1fr 1.4fr 1fr 1fr}
+@media (min-width:901px){.footer-grid{grid-template-columns:2fr 1fr 1.4fr 1fr 1fr}}
 
 /* ── Scroll-triggered fade-in animations ── */
 @keyframes fadeInUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
