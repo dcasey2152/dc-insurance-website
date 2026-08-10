@@ -32,3 +32,17 @@
 .article-header .blog-tag{display:none}
 .blog-cta-box .btn{width:100%;justify-content:center}
 }
+
+/* ── CP125: mobile sticky CTA bar. New class names only, so nothing above can be overridden. ── */
+@media (max-width:768px){
+.mobile-cta-bar{position:fixed;left:0;right:0;bottom:0;z-index:1001;display:flex;gap:0.5rem;padding:0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));background:rgba(11,31,58,0.97);border-top:1px solid rgba(255,255,255,0.12);box-shadow:0 -4px 20px rgba(0,0,0,0.28)}
+.mobile-cta-bar a{flex:1 1 0;display:flex;align-items:center;justify-content:center;gap:0.4rem;padding:0.8rem 0.5rem;border-radius:var(--radius);font-family:var(--font-body);font-size:0.95rem;font-weight:600;white-space:nowrap;text-decoration:none;border:2px solid transparent}
+.mobile-cta-bar .mcb-book{flex:1.5 1 0;background:var(--sky);color:#FFFFFF;border-color:var(--sky)}
+.mobile-cta-bar .mcb-call{flex:1 1 0;background:transparent;color:#FFFFFF;border-color:rgba(255,255,255,0.45)}
+body.has-mobile-cta{padding-bottom:76px}
+body.has-mobile-cta .whatsapp-float{bottom:calc(76px + env(safe-area-inset-bottom))}
+}
+@media (min-width:769px){.mobile-cta-bar{display:none}}
+@media (max-width:359px){
+.mobile-cta-bar a{font-size:0.82rem;padding-left:0.3rem;padding-right:0.3rem;gap:0.3rem}
+}

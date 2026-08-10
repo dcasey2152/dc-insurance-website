@@ -29,6 +29,60 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-SX5340TR64');
+  /* ── CP125: lead source capture. First-touch + last-touch, localStorage, 90 days. ── */
+  var DCAttr = (function(){
+    var KEY_FIRST = 'dc_attr_first', KEY_LAST = 'dc_attr_last', TTL = 90*24*60*60*1000;
+    var AI = ['chatgpt.com','chat.openai.com','openai.com','perplexity.ai','claude.ai','gemini.google.com','copilot.microsoft.com','you.com'];
+    var SEARCH = ['google.','bing.com','duckduckgo.com','search.yahoo.','ecosia.org','brave.com'];
+    var SOCIAL = ['facebook.com','fb.com','instagram.com','l.facebook.com','lm.facebook.com','linkedin.com','lnkd.in','t.co','x.com','twitter.com','youtube.com','nextdoor.com'];
+    function host(u){ try { return new URL(u).hostname.replace(/^www\./,''); } catch(e){ return ''; } }
+    function anyMatch(h, list){ for(var i=0;i<list.length;i++){ if(h.indexOf(list[i]) !== -1) return true; } return false; }
+    function read(){
+      var q = {}, s = window.location.search.replace(/^\?/,'');
+      if(s){ s.split('&').forEach(function(p){ var kv = p.split('='); if(kv[0]) { try { q[decodeURIComponent(kv[0]).toLowerCase()] = decodeURIComponent((kv[1]||'').replace(/\+/g,' ')); } catch(e){} } }); }
+      return q;
+    }
+    function classify(){
+      var q = read(), ref = document.referrer || '', rh = host(ref), src, med = q.utm_medium || '', camp = q.utm_campaign || '', cont = q.utm_content || '';
+      if(q.utm_source){ src = q.utm_source; }
+      else if(q.fbclid){ src = 'facebook'; med = med || 'paid-untagged'; }
+      else if(q.gclid){ src = 'google'; med = med || 'cpc-untagged'; }
+      else if(q.msclkid){ src = 'bing'; med = med || 'cpc-untagged'; }
+      else if(rh && anyMatch(rh, AI)){ src = rh; med = 'ai-assistant'; }
+      else if(rh && anyMatch(rh, SEARCH)){ src = rh; med = 'organic-search'; }
+      else if(rh && anyMatch(rh, SOCIAL)){ src = rh; med = 'social'; }
+      else if(rh && rh !== window.location.hostname.replace(/^www\./,'')){ src = rh; med = 'referral'; }
+      else { src = 'direct'; med = 'none'; }
+      var d = new Date(), stamp = d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+      return { source: src, medium: med, campaign: camp, content: cont, landing: window.location.pathname, referrer: rh, date: stamp, ts: d.getTime() };
+    }
+    function label(o){
+      if(!o) return 'unknown';
+      var s = o.source + (o.medium && o.medium !== 'none' ? ' / ' + o.medium : '');
+      if(o.campaign) s += ' / ' + o.campaign;
+      return s + ' | ' + o.date + ' | ' + o.landing;
+    }
+    function get(k){ try { var v = JSON.parse(localStorage.getItem(k) || 'null'); if(v && v.ts && (Date.now() - v.ts) < TTL) return v; } catch(e){} return null; }
+    function set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+    var now = classify(), first = get(KEY_FIRST);
+    /* Only overwrite last-touch on a genuinely new external entry, so internal clicks don't flatten it to "direct". */
+    var isEntry = (now.medium !== 'none') || !get(KEY_LAST);
+    if(!first){ first = now; set(KEY_FIRST, now); }
+    if(isEntry){ set(KEY_LAST, now); }
+    return {
+      first: function(){ return get(KEY_FIRST) || now; },
+      last: function(){ return get(KEY_LAST) || now; },
+      firstLabel: function(){ return label(get(KEY_FIRST) || now); },
+      lastLabel: function(){ return label(get(KEY_LAST) || now); },
+      shortSource: function(){ var o = get(KEY_LAST) || now; return o.source + (o.medium && o.medium !== 'none' ? '/' + o.medium : ''); },
+      params: function(){
+        var f = get(KEY_FIRST) || now, l = get(KEY_LAST) || now;
+        return { lead_source: label(l), lead_source_first: label(f), landing_page: f.landing, referrer_host: l.referrer || 'none' };
+      }
+    };
+  })();
+  window.DCAttr = DCAttr;
+  function dcSrc(){ try { return DCAttr.shortSource(); } catch(e){ return 'unknown'; } }
   /* Conversion event tracking (CP92). Delegated so it survives markup variation. */
   document.addEventListener('click', function(e){
     var t = e.target;
@@ -38,16 +92,16 @@
     var h = a.getAttribute('href') || '';
     var label = ((a.textContent || '').trim() || a.getAttribute('aria-label') || '').replace(/\s+/g,' ').trim().slice(0,80);
     if(h.indexOf('tidycal.com') !== -1){
-      gtag('event','book_call_click',{link_url:h, link_text:label});
+      gtag('event','book_call_click',{link_url:h, link_text:label, lead_source:dcSrc()});
       if(typeof fbq === 'function'){ fbq('track','Schedule',{content_name:'TidyCal intro call'}); }
     } else if(h.indexOf('tel:') === 0){
-      gtag('event','phone_click',{link_url:h, link_text:label});
+      gtag('event','phone_click',{link_url:h, link_text:label, lead_source:dcSrc()});
       if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'phone'}); }
     } else if(h.indexOf('mailto:') === 0){
-      gtag('event','email_click',{link_url:h, link_text:label});
+      gtag('event','email_click',{link_url:h, link_text:label, lead_source:dcSrc()});
       if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'email'}); }
     } else if(h.indexOf('wa.me') !== -1){
-      gtag('event','whatsapp_click',{link_url:h, link_text:label});
+      gtag('event','whatsapp_click',{link_url:h, link_text:label, lead_source:dcSrc()});
       if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'whatsapp'}); }
     }
   }, true);
