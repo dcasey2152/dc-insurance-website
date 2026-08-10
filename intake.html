@@ -540,15 +540,17 @@
    cannot silently break it again. */
 (function(){
   /* CP125: pass the lead source into JotForm via prefill params. Requires hidden
-     fields named leadSource / firstTouch / landingPage on the JotForm itself. */
+     fields whose JotForm unique names are leadsource / firsttouch / landingpage.
+     Lowercase is required: JotForm matches the unique name exactly and silently
+     ignores a camelCase parameter. Verified against the live form 2026-08-09. */
   try {
     var fr = document.getElementById('JotFormIFrame');
     if (fr && window.DCAttr) {
       var p = DCAttr.params();
       var base = fr.getAttribute('data-dc-base') || fr.src;
-      fr.src = base + '?leadSource=' + encodeURIComponent(p.lead_source)
-                    + '&firstTouch=' + encodeURIComponent(p.lead_source_first)
-                    + '&landingPage=' + encodeURIComponent(p.landing_page);
+      fr.src = base + '?leadsource=' + encodeURIComponent(p.lead_source)
+                    + '&firsttouch=' + encodeURIComponent(p.lead_source_first)
+                    + '&landingpage=' + encodeURIComponent(p.landing_page);
     }
   } catch(err) {}
 })();
