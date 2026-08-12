@@ -139,9 +139,363 @@
       "@id": "https://dcinsuranceagency.com/health-insurance-glossary",
       "url": "https://dcinsuranceagency.com/health-insurance-glossary",
       "name": "Health Insurance Glossary | DC Insurance",
-      "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+      "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"},
+      "mainEntity": {"@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"}
     },
-    {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com"}, {"@type": "ListItem", "position": 2, "name": "Health Insurance Glossary", "item": "https://dcinsuranceagency.com/health-insurance-glossary"}]}
+    {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com"}, {"@type": "ListItem", "position": 2, "name": "Health Insurance Glossary", "item": "https://dcinsuranceagency.com/health-insurance-glossary"}]},
+    {
+          "@type": "DefinedTermSet",
+          "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary",
+          "name": "Health Insurance Glossary",
+          "description": "Plain-English definitions of the health insurance terms Tennessee individuals and self-employed buyers encounter when comparing coverage.",
+          "url": "https://dcinsuranceagency.com/health-insurance-glossary",
+          "inLanguage": "en-US",
+          "publisher": {
+                "@id": "https://dcinsuranceagency.com/#business"
+          },
+          "hasDefinedTerm": [
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#aca",
+                      "name": "ACA (Affordable Care Act)",
+                      "description": "Federal law passed in 2010 that created the health insurance marketplace, established guaranteed issue requirements, and introduced income-based premium subsidies. ACA plans are sold during open enrollment and qualifying life events. Tennessee operates through the federal marketplace at healthcare.gov. See our full breakdown on the ACA vs. private health insurance page.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#aca",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#allowed-amount",
+                      "name": "Allowed Amount",
+                      "description": "The maximum amount an insurer will pay for a covered service from a specific provider. If a provider charges more than the allowed amount and is out-of-network, you may be responsible for the difference — this is called balance billing. In-network providers have agreed to accept the allowed amount as payment in full.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#allowed-amount",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#aptc",
+                      "name": "APTC (Advance Premium Tax Credit)",
+                      "description": "The ACA subsidy paid directly to your insurance carrier each month to lower your premium. The amount is based on your estimated annual income relative to the federal poverty level. If your actual income ends up higher than estimated, you may owe some of it back at tax time. If lower, you may receive additional credit. For self-employed individuals with variable income, this reconciliation at tax time is an important detail to plan for.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#aptc",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#cobra",
+                      "name": "COBRA",
+                      "description": "A federal law that allows you to continue your employer-sponsored health coverage after leaving a job, for up to 18 months (sometimes longer). You pay the full premium — both what you paid and what your employer covered — plus an administrative fee. COBRA is often more expensive than other options and is worth comparing against ACA marketplace plans and private coverage before assuming it’s the right move.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#cobra",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#coinsurance",
+                      "name": "Coinsurance",
+                      "description": "The percentage of costs you pay after meeting your deductible. If your plan has 20% coinsurance and a covered procedure costs $1,000 after your deductible is met, you pay $200 and the insurer pays $800. Coinsurance continues until you hit your out-of-pocket maximum. It’s one of the four cost-sharing numbers worth understanding alongside premium, deductible, and out-of-pocket max.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#coinsurance",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#community-rating",
+                      "name": "Community Rating",
+                      "description": "A pricing rule that prevents insurers from charging different premiums based on an individual’s health history. ACA marketplace plans use community rating — everyone in your age bracket in a given area pays essentially the same rate regardless of medical history. Private underwritten plans do not use community rating; they price based on your individual health profile. This distinction is central to the ACA vs. private plan comparison.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#community-rating",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#copay",
+                      "name": "Copay (Copayment)",
+                      "description": "A fixed dollar amount you pay for a specific service — a primary care visit, specialist visit, or prescription fill. Copays are usually due at the time of service and may or may not count toward your deductible depending on the plan. Some plans have copays only after the deductible is met; others apply copays from day one. Read the plan documents to know which applies.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#copay",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#critical-illness",
+                      "name": "Critical Illness Insurance",
+                      "description": "A supplemental policy that pays a lump sum directly to you if you’re diagnosed with a covered condition — typically cancer, heart attack, stroke, or organ failure. The money can be used however you need: living expenses, deductibles, treatment not covered by your main plan, or anything else. Often paired with a private PPO or high-deductible plan to fill the gap between what insurance pays and what a serious diagnosis actually costs.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#critical-illness",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#deductible",
+                      "name": "Deductible",
+                      "description": "The amount you pay out of pocket each year before your insurance starts sharing costs. If your deductible is $3,000, you pay the first $3,000 of covered medical expenses yourself — then coinsurance or copays kick in. Premiums, and some preventive services, typically don’t count toward your deductible. A lower deductible usually means a higher premium; a higher deductible usually means a lower premium. The right tradeoff depends on how much care you typically use. See our breakdown of the 4 numbers that define your coverage.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#deductible",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#eob",
+                      "name": "EOB (Explanation of Benefits)",
+                      "description": "A document your insurer sends after a claim is processed. It shows what was billed, what the insurer’s allowed amount was, what the insurance paid, and what you owe. An EOB is not a bill — it’s a statement of how a claim was handled. If the numbers don’t match what you expected based on your plan, it’s worth reviewing before paying any provider invoice.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#eob",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#epo",
+                      "name": "EPO (Exclusive Provider Organization)",
+                      "description": "A plan type that requires you to use in-network providers for all non-emergency care. EPOs typically don’t require a referral to see a specialist, but if you go out-of-network for anything other than an emergency, you pay the full cost. EPOs are often less expensive than PPOs for the same coverage level, but the network restriction is real. For self-employed individuals who travel or want provider flexibility, that trade-off matters. See our PPO vs. EPO breakdown.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#epo",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#formulary",
+                      "name": "Formulary",
+                      "description": "The list of prescription drugs covered by a health plan, organized into tiers that determine your cost-sharing. Tier 1 is typically generics (lowest cost); higher tiers are brand-name and specialty drugs (higher cost). If a medication you take regularly isn’t on a plan’s formulary, or is on a high-cost tier, that’s a meaningful plan comparison factor that often gets overlooked when people focus only on premiums.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#formulary",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#guaranteed-issue",
+                      "name": "Guaranteed Issue",
+                      "description": "A requirement that an insurer must offer coverage to anyone who applies, regardless of health history. ACA marketplace plans are guaranteed issue during open enrollment and qualifying life events — you cannot be denied or charged more for a pre-existing condition. Private market plans are not guaranteed issue; they use medical underwriting and can decline applicants or exclude certain conditions. This is one of the most important structural differences between the two types of coverage.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#guaranteed-issue",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#hmo",
+                      "name": "HMO (Health Maintenance Organization)",
+                      "description": "A plan type that restricts coverage to a specific network of providers and typically requires you to select a primary care physician (PCP) who coordinates your care and issues referrals to specialists. Going outside the HMO network usually means no coverage except in emergencies. HMOs tend to have lower premiums and out-of-pocket costs, but the network and referral requirements make them a poor fit for anyone who wants provider flexibility.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#hmo",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#hospital-indemnity",
+                      "name": "Hospital Indemnity Insurance",
+                      "description": "A supplemental policy that pays a fixed daily or per-admission benefit when you’re hospitalized. The payment is made directly to you, regardless of what your main health plan covers, and can be used for anything — your deductible, copays, lost income, or household expenses while you recover. Often used alongside a high-deductible plan or a private PPO to address the cost of an unexpected inpatient stay.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#hospital-indemnity",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#ichra",
+                      "name": "ICHRA (Individual Coverage HRA)",
+                      "description": "A Health Reimbursement Arrangement that lets employers reimburse employees tax-free for individual health insurance premiums and qualified medical expenses. Unlike traditional group health insurance, there are no minimum participation requirements and no contribution limits tied to group plan rules. An ICHRA allows employees to choose their own individual coverage while the employer sets the reimbursement amount. We cover this in more detail on our small business health insurance page.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#ichra",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#in-network",
+                      "name": "In-Network / Out-of-Network",
+                      "description": "In-network providers have a contract with your insurer to accept negotiated rates. When you use in-network providers, your insurer pays their share of the negotiated rate and you pay yours. Out-of-network means no contract — the provider can charge whatever they want, your insurer may pay little or nothing depending on your plan type, and you could be balance billed for the difference. PPO plans offer some out-of-network coverage; HMO and EPO plans generally do not.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#in-network",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#medicaid",
+                      "name": "Medicaid / TennCare",
+                      "description": "A joint federal-state program providing health coverage for individuals and families who meet income and eligibility requirements. In Tennessee, the program is called TennCare. Tennessee did not expand Medicaid under the ACA, so the income threshold for TennCare eligibility is lower than in expansion states — creating a coverage gap for individuals who earn too much for TennCare but not enough to qualify for meaningful ACA subsidies.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#medicaid",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#medical-underwriting",
+                      "name": "Medical Underwriting",
+                      "description": "The process an insurance carrier uses to evaluate an applicant’s health history before issuing a private market policy. The carrier reviews your medical records, prescription history, and health questionnaire to determine whether to offer coverage, at what price, and whether to exclude any pre-existing conditions. Healthy applicants often benefit from underwriting because their premium reflects their individual risk rather than a community average. ACA marketplace plans do not use medical underwriting. Read our full explainer: What Is Medical Underwriting?",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#medical-underwriting",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#moop",
+                      "name": "MOOP / Out-of-Pocket Maximum",
+                      "description": "The most you’ll pay for covered in-network services in a plan year. After you hit your out-of-pocket maximum, the insurance covers 100% of covered in-network costs for the rest of the year. Deductibles, copays, and coinsurance all count toward the MOOP. Premiums do not. The out-of-pocket maximum is arguably the most important number on a health plan for catastrophic protection — it defines your worst-case financial exposure in a bad year.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#moop",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#network",
+                      "name": "Network",
+                      "description": "The group of doctors, hospitals, specialists, and other healthcare providers that have contracted with an insurer to provide services at negotiated rates. Network size and composition vary significantly by plan type and carrier. A plan’s network determines which providers you can see at the lower in-network cost-sharing level. For people in Middle Tennessee, network breadth matters — some plans have strong local networks but limited access if you receive care outside the area.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#network",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#open-enrollment",
+                      "name": "Open Enrollment",
+                      "description": "The annual window during which you can enroll in or change ACA marketplace health insurance plans. For Tennessee, open enrollment typically runs November 1 through January 15, with coverage starting the following month. Outside of open enrollment, you generally need a qualifying life event to enroll. Private market plans do not have an enrollment window — you can apply at any time of year, though medical underwriting applies.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#open-enrollment",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#ppo",
+                      "name": "PPO (Preferred Provider Organization)",
+                      "description": "A plan type that allows you to see in-network providers at lower cost-sharing and out-of-network providers at higher cost-sharing, without needing a referral. PPOs offer the most provider flexibility of any plan type — you can self-refer to specialists, see providers in different states, and maintain access to a wide range of facilities. Private market PPO plans typically offer nationwide networks, making them particularly useful for self-employed individuals who travel or want maximum provider choice.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#ppo",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#pre-existing-condition",
+                      "name": "Pre-Existing Condition",
+                      "description": "A health condition that existed before your insurance coverage began. ACA marketplace plans are prohibited from denying coverage, charging higher premiums, or excluding benefits based on pre-existing conditions. Private market plans may decline coverage, apply a rider that excludes a specific condition from coverage, or charge a higher premium based on health history. If you have a significant pre-existing condition, the ACA marketplace is almost always the appropriate starting point.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#pre-existing-condition",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#premium",
+                      "name": "Premium",
+                      "description": "The monthly amount you pay to maintain health insurance coverage, regardless of whether you use any medical services that month. Premiums do not count toward your deductible or out-of-pocket maximum. On the ACA marketplace, premium tax credits can reduce your monthly premium based on income. For private market plans, the premium is set based on your age, location, plan design, and underwriting result. A lower premium often means higher cost-sharing when you use care — the tradeoff is rarely as simple as it looks on the plan comparison page.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#premium",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#prior-auth",
+                      "name": "Prior Authorization",
+                      "description": "A requirement that your doctor obtain approval from your insurer before performing certain procedures, prescribing certain medications, or referring you to certain specialists. Prior auth is used to control costs by ensuring certain services meet the insurer’s criteria for medical necessity. Failing to get required prior authorization can result in the insurer denying the claim entirely, leaving you responsible for the full cost. Knowing which services require it — and navigating the process — is one of the more frustrating aspects of using health insurance.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#prior-auth",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#qle",
+                      "name": "Qualifying Life Event (QLE)",
+                      "description": "A change in your life circumstances that makes you eligible for a Special Enrollment Period outside of open enrollment. Common qualifying events include losing employer coverage, getting married, having or adopting a child, moving to a new coverage area, or losing eligibility for Medicaid. You typically have 60 days from the event to enroll. Leaving a job to go self-employed is one of the most common triggering events for people seeking individual coverage.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#qle",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#qsehra",
+                      "name": "QSEHRA (Qualified Small Employer HRA)",
+                      "description": "A Health Reimbursement Arrangement for employers with fewer than 50 full-time employees. Allows small employers to reimburse employees tax-free for individual health insurance premiums and qualified medical expenses, without the complexity of a group health plan. Contribution limits apply annually and are set by the IRS. Similar in concept to an ICHRA but with stricter eligibility rules and lower contribution caps. See our small business health insurance page for more context.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#qsehra",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#referral",
+                      "name": "Referral",
+                      "description": "A written order from your primary care physician authorizing you to see a specialist. HMO plans almost always require referrals. PPO and EPO plans generally do not. The referral requirement adds a step — and sometimes a delay — to getting specialty care. For people who see specialists regularly or want direct access without gatekeeper approval, PPO plans are usually the more practical choice.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#referral",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#rider",
+                      "name": "Rider / Exclusion Rider",
+                      "description": "An amendment to a private market insurance policy that modifies coverage for a specific condition or body part. An exclusion rider removes a pre-existing condition from coverage entirely — the plan covers everything else, but the excluded condition is your financial responsibility. A benefit rider can add coverage that isn’t in the base plan. Riders are only found in medically underwritten private market plans; ACA marketplace plans cannot use exclusion riders.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#rider",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#sep",
+                      "name": "SEP (Special Enrollment Period)",
+                      "description": "A time-limited window outside of open enrollment during which you can sign up for or change marketplace health insurance because of a qualifying life event. SEPs typically last 60 days from the triggering event. If you miss the SEP window without enrolling, you may not be able to get marketplace coverage until the next open enrollment period — making private market plans the only individual option available.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#sep",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#subsidy",
+                      "name": "Subsidy (Premium Tax Credit)",
+                      "description": "Financial assistance provided through the ACA to reduce the cost of marketplace health insurance premiums. The amount is based on your household income relative to the federal poverty level and the cost of plans in your area. Subsidies are paid directly to your insurance company and reduce what you pay each month. If your income changes during the year, your subsidy eligibility may change — updating your marketplace account with income changes helps avoid surprises at tax time.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#subsidy",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#supplemental",
+                      "name": "Supplemental Insurance",
+                      "description": "Coverage designed to layer on top of your primary health insurance to address specific gaps — deductibles, copays, or costs the main plan doesn’t cover. Common types include critical illness, accident, hospital indemnity, and dental/vision. Supplemental policies pay directly to you, not to providers, giving you flexibility in how the money is used. Most useful when paired with a plan that has high cost-sharing or limited benefits in specific areas.",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#supplemental",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                },
+                {
+                      "@type": "DefinedTerm",
+                      "@id": "https://dcinsuranceagency.com/health-insurance-glossary#underwriting",
+                      "name": "Underwriting",
+                      "description": "The process an insurer uses to evaluate risk before issuing a policy. In health insurance, medical underwriting reviews your health history to determine whether to offer coverage, at what premium, and whether to exclude any conditions. Private market individual health plans use medical underwriting. ACA marketplace plans do not — they must accept all applicants during open enrollment regardless of health status. Understanding how underwriting works is foundational to comparing your actual options as a self-employed individual. Full explainer: What Is Medical Underwriting and Does It Matter?",
+                      "url": "https://dcinsuranceagency.com/health-insurance-glossary#underwriting",
+                      "inDefinedTermSet": {
+                            "@id": "https://dcinsuranceagency.com/health-insurance-glossary#glossary"
+                      }
+                }
+          ]
+    }
   ]
 }
   </script>
