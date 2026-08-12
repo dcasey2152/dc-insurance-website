@@ -11,3 +11,8 @@ git-push-log.txt
 _webp_tmp/
 .fuse_hidden*
 .DS_Store
+
+# Archived logs and backups - internal only, never publish
+log-archive/
+DC_Insurance_Master_Log*.md
+DC-Insurance-Development-Master-Log.md
