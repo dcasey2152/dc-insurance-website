@@ -16,3 +16,22 @@ _webp_tmp/
 log-archive/
 DC_Insurance_Master_Log*.md
 DC-Insurance-Development-Master-Log.md
+
+# Credentials - NEVER commit. Added CP158 after the 2026-08-23 audit found a
+# PAT in plaintext. If any of these ever appear in `git status`, stop and fix
+# the ignore rule; do not commit "just this once".
+.dc-github-pat
+*.pat
+*token*.txt
+.env
+.env.*
+.netrc
+
+# Local staging and internal working docs - never publish
+STAGED_post*/
+PUSH28/
+blog-drafts-pending/
+DC_INSURANCE_OUTSIDE_AUDIT_RECAP_*.md
+DC_Insurance_*.md
+*.patch
+GSC Exports/
