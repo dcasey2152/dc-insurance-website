@@ -35,3 +35,6 @@ DC_INSURANCE_OUTSIDE_AUDIT_RECAP_*.md
 DC_Insurance_*.md
 *.patch
 GSC Exports/
+
+# Internal log tooling, never ships to the live site
+checkpoint.sh
