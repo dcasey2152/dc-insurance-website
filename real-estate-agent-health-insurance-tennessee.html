@@ -100,6 +100,21 @@
     } else if(h.indexOf('wa.me') !== -1){
       gtag('event','whatsapp_click',{link_url:h, link_text:label, lead_source:dcSrc()});
       if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'whatsapp'}); }
+    } else if(/\.pdf($|[?#])/i.test(h)){
+      /* CP-2026-09-11: the guide PDF was downloadable with no event of any kind. */
+      gtag('event','file_download',{link_url:h, link_text:label,
+        file_name:(h.split('/').pop()||'').split('?')[0], lead_source:dcSrc()});
+    } else {
+      /* CP-2026-09-11: internal CTA clicks to /contact and /intake fired nothing,
+         leaving 207 buttons sitewide invisible. Diagnostic only, NOT a key event. */
+      var dest = h.replace(/^(\.\.\/)+/,'').replace(/^\//,'').split(/[?#]/)[0];
+      if(dest === 'contact' || dest === 'intake'){
+        var cls = a.getAttribute('class') || '';
+        gtag('event','cta_click',{link_url:h, link_text:label, destination:dest,
+          cta_style: cls.indexOf('btn-primary') !== -1 ? 'primary'
+                   : (cls.indexOf('btn') !== -1 ? 'button' : 'link'),
+          lead_source:dcSrc()});
+      }
     }
   }, true);
   </script>

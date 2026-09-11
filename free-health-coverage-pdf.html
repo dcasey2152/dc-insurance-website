@@ -100,6 +100,21 @@
     } else if(h.indexOf('wa.me') !== -1){
       gtag('event','whatsapp_click',{link_url:h, link_text:label, lead_source:dcSrc()});
       if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'whatsapp'}); }
+    } else if(/\.pdf($|[?#])/i.test(h)){
+      /* CP-2026-09-11: the guide PDF was downloadable with no event of any kind. */
+      gtag('event','file_download',{link_url:h, link_text:label,
+        file_name:(h.split('/').pop()||'').split('?')[0], lead_source:dcSrc()});
+    } else {
+      /* CP-2026-09-11: internal CTA clicks to /contact and /intake fired nothing,
+         leaving 207 buttons sitewide invisible. Diagnostic only, NOT a key event. */
+      var dest = h.replace(/^(\.\.\/)+/,'').replace(/^\//,'').split(/[?#]/)[0];
+      if(dest === 'contact' || dest === 'intake'){
+        var cls = a.getAttribute('class') || '';
+        gtag('event','cta_click',{link_url:h, link_text:label, destination:dest,
+          cta_style: cls.indexOf('btn-primary') !== -1 ? 'primary'
+                   : (cls.indexOf('btn') !== -1 ? 'button' : 'link'),
+          lead_source:dcSrc()});
+      }
     }
   }, true);
   </script>
@@ -257,10 +272,10 @@
 
     /* ── Direct download link (below form) ── */
     .pdf-direct-link {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: var(--gray);
       text-align: center;
-      margin-top: 0.75rem;
+      margin-top: 1.25rem;
     }
     .pdf-direct-link a { color: var(--teal); }
 
@@ -470,7 +485,7 @@
           <!-- FORM GATE BOX -->
           <div class="pdf-gate-box">
             <h4>Get the Free Guide</h4>
-            <p>Enter your name and email below, we'll send you the download link directly. No spam. No follow-up calls unless you ask for one.</p>
+            <p>Enter your name and email and the download link comes straight to your inbox, usually within a minute. No spam. No follow-up calls unless you ask for one.</p>
 
             <!-- JotForm embed, form ID 261326847315055 -->
             <div class="jotform-wrap" style="min-height:300px;">
@@ -480,11 +495,12 @@
 
           </div>
 
-          <!-- Direct download fallback -->
+          <!-- Direct download fallback. Kept accessible on purpose, but no longer
+               advertised as the easier path. Now fires file_download so the split
+               between gated and ungated is finally measurable. -->
           <p class="pdf-direct-link">
-            <i class="fa-solid fa-file-arrow-down" style="margin-right:0.3rem;"></i>
-            Prefer to skip the form?
-            <a href="dc-insurance-self-employed-guide.pdf?v=2026-06" target="_blank" rel="noopener noreferrer">Download the PDF directly</a>.
+            Rather not share your email?
+            <a href="dc-insurance-self-employed-guide.pdf?v=2026-06" target="_blank" rel="noopener noreferrer">Open the PDF</a>.
           </p>
 
           <!-- Trust signals -->
