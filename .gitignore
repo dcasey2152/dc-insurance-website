@@ -7,6 +7,8 @@ BLOG_PLAN*.md
 
 # Local scripts, logs, temp/OS artifacts
 *.bat
+*.ps1
+*.pkl
 git-push-log.txt
 _webp_tmp/
 .fuse_hidden*
