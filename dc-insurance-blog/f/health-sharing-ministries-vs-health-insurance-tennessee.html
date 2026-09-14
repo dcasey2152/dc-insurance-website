@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+  <link rel="icon" href="/logo.webp" type="image/webp" />
+<link rel="preconnect" href="https://connect.facebook.net" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '972248691901448');
+  fbq('track', 'PageView');
+  </script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=972248691901448&ev=PageView&noscript=1" style="display:none" width="1"/></noscript>
+<!-- End Meta Pixel -->
+<!-- Google Analytics GA4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SX5340TR64"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SX5340TR64');
+  /* ── CP125: lead source capture. First-touch + last-touch, localStorage, 90 days. ── */
+  var DCAttr = (function(){
+    var KEY_FIRST = 'dc_attr_first', KEY_LAST = 'dc_attr_last', TTL = 90*24*60*60*1000;
+    var AI = ['chatgpt.com','chat.openai.com','openai.com','perplexity.ai','claude.ai','gemini.google.com','copilot.microsoft.com','you.com'];
+    var SEARCH = ['google.','bing.com','duckduckgo.com','search.yahoo.','ecosia.org','brave.com'];
+    var SOCIAL = ['facebook.com','fb.com','instagram.com','l.facebook.com','lm.facebook.com','linkedin.com','lnkd.in','t.co','x.com','twitter.com','youtube.com','nextdoor.com'];
+    function host(u){ try { return new URL(u).hostname.replace(/^www\./,''); } catch(e){ return ''; } }
+    function anyMatch(h, list){ for(var i=0;i<list.length;i++){ if(h.indexOf(list[i]) !== -1) return true; } return false; }
+    function read(){
+      var q = {}, s = window.location.search.replace(/^\?/,'');
+      if(s){ s.split('&').forEach(function(p){ var kv = p.split('='); if(kv[0]) { try { q[decodeURIComponent(kv[0]).toLowerCase()] = decodeURIComponent((kv[1]||'').replace(/\+/g,' ')); } catch(e){} } }); }
+      return q;
+    }
+    function classify(){
+      var q = read(), ref = document.referrer || '', rh = host(ref), src, med = q.utm_medium || '', camp = q.utm_campaign || '', cont = q.utm_content || '';
+      if(q.utm_source){ src = q.utm_source; }
+      else if(q.fbclid){ src = 'facebook'; med = med || 'paid-untagged'; }
+      else if(q.gclid){ src = 'google'; med = med || 'cpc-untagged'; }
+      else if(q.msclkid){ src = 'bing'; med = med || 'cpc-untagged'; }
+      else if(rh && anyMatch(rh, AI)){ src = rh; med = 'ai-assistant'; }
+      else if(rh && anyMatch(rh, SEARCH)){ src = rh; med = 'organic-search'; }
+      else if(rh && anyMatch(rh, SOCIAL)){ src = rh; med = 'social'; }
+      else if(rh && rh !== window.location.hostname.replace(/^www\./,'')){ src = rh; med = 'referral'; }
+      else { src = 'direct'; med = 'none'; }
+      var d = new Date(), stamp = d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+      return { source: src, medium: med, campaign: camp, content: cont, landing: window.location.pathname, referrer: rh, date: stamp, ts: d.getTime() };
+    }
+    function label(o){
+      if(!o) return 'unknown';
+      var s = o.source + (o.medium && o.medium !== 'none' ? ' / ' + o.medium : '');
+      if(o.campaign) s += ' / ' + o.campaign;
+      return s + ' | ' + o.date + ' | ' + o.landing;
+    }
+    function get(k){ try { var v = JSON.parse(localStorage.getItem(k) || 'null'); if(v && v.ts && (Date.now() - v.ts) < TTL) return v; } catch(e){} return null; }
+    function set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+    var now = classify(), first = get(KEY_FIRST);
+    /* Only overwrite last-touch on a genuinely new external entry, so internal clicks don't flatten it to "direct". */
+    var isEntry = (now.medium !== 'none') || !get(KEY_LAST);
+    if(!first){ first = now; set(KEY_FIRST, now); }
+    if(isEntry){ set(KEY_LAST, now); }
+    return {
+      first: function(){ return get(KEY_FIRST) || now; },
+      last: function(){ return get(KEY_LAST) || now; },
+      firstLabel: function(){ return label(get(KEY_FIRST) || now); },
+      lastLabel: function(){ return label(get(KEY_LAST) || now); },
+      shortSource: function(){ var o = get(KEY_LAST) || now; return o.source + (o.medium && o.medium !== 'none' ? '/' + o.medium : ''); },
+      params: function(){
+        var f = get(KEY_FIRST) || now, l = get(KEY_LAST) || now;
+        return { lead_source: label(l), lead_source_first: label(f), landing_page: f.landing, referrer_host: l.referrer || 'none' };
+      }
+    };
+  })();
+  window.DCAttr = DCAttr;
+  function dcSrc(){ try { return DCAttr.shortSource(); } catch(e){ return 'unknown'; } }
+  /* Conversion event tracking (CP92). Delegated so it survives markup variation. */
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(!t || typeof t.closest !== 'function'){ return; }
+    var a = t.closest('a[href]');
+    if(!a){ return; }
+    var h = a.getAttribute('href') || '';
+    var label = ((a.textContent || '').trim() || a.getAttribute('aria-label') || '').replace(/\s+/g,' ').trim().slice(0,80);
+    if(h.indexOf('tidycal.com') !== -1){
+      gtag('event','book_call_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Schedule',{content_name:'TidyCal intro call'}); }
+    } else if(h.indexOf('tel:') === 0){
+      gtag('event','phone_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'phone'}); }
+    } else if(h.indexOf('mailto:') === 0){
+      gtag('event','email_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'email'}); }
+    } else if(h.indexOf('wa.me') !== -1){
+      gtag('event','whatsapp_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'whatsapp'}); }
+    } else if(/\.pdf($|[?#])/i.test(h)){
+      /* CP-2026-09-11: the guide PDF was downloadable with no event of any kind. */
+      gtag('event','file_download',{link_url:h, link_text:label,
+        file_name:(h.split('/').pop()||'').split('?')[0], lead_source:dcSrc()});
+    } else {
+      /* CP-2026-09-11: internal CTA clicks to /contact and /intake fired nothing,
+         leaving 207 buttons sitewide invisible. Diagnostic only, NOT a key event. */
+      var dest = h.replace(/^(\.\.\/)+/,'').replace(/^\//,'').split(/[?#]/)[0];
+      if(dest === 'contact' || dest === 'intake'){
+        var cls = a.getAttribute('class') || '';
+        gtag('event','cta_click',{link_url:h, link_text:label, destination:dest,
+          cta_style: cls.indexOf('btn-primary') !== -1 ? 'primary'
+                   : (cls.indexOf('btn') !== -1 ? 'button' : 'link'),
+          lead_source:dcSrc()});
+      }
+    }
+  }, true);
+  </script>
+<!-- End Google Analytics -->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Health Sharing Ministries vs. Health Insurance in Tennessee</title>
+<meta name="description" content="Health sharing ministries are not insurance. DC Insurance explains how they work in Middle Tennessee, what the guidelines control, and what to read first."/>
+<link href="https://dcinsuranceagency.com/dc-insurance-blog/f/health-sharing-ministries-vs-health-insurance-tennessee" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Health Sharing Ministries vs. Health Insurance in Tennessee" property="og:title"/>
+<meta content="A sharing ministry is a membership organization, not an insurance company, and the sharing is generally not a contractual obligation. That difference shows up when you file." property="og:description"/>
+<meta content="https://dcinsuranceagency.com/dc-insurance-blog/f/health-sharing-ministries-vs-health-insurance-tennessee" property="og:url"/>
+<meta content="DC Insurance" property="og:site_name"/>
+<meta content="https://dcinsuranceagency.com/dc-insurance-social-card.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://dcinsuranceagency.com/dc-insurance-blog/f/health-sharing-ministries-vs-health-insurance-tennessee","headline":"Health Sharing Ministries vs. Health Insurance in Tennessee","datePublished":"2026-09-14","dateModified":"2026-09-14","author":{"@type":"Person","name":"Denton Casey"},"publisher":{"@id":"https://dcinsuranceagency.com/#business"},"keywords":["health sharing ministry tennessee","health care sharing ministry","health sharing vs health insurance","health insurance middle tennessee","self employed health insurance tennessee"]},{"@type":["LocalBusiness","InsuranceAgency"],"@id":"https://dcinsuranceagency.com/#business","name":"DC Insurance","telephone":"+1-615-513-0313","url":"https://dcinsuranceagency.com","address":{"@type":"PostalAddress","addressLocality":"Smyrna","addressRegion":"TN","postalCode":"37167","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Nashville"},{"@type":"City","name":"Nolensville"},{"@type":"City","name":"Franklin"},{"@type":"City","name":"College Grove"},{"@type":"City","name":"Murfreesboro"},{"@type":"City","name":"Smyrna"},{"@type":"City","name":"Hendersonville"}],"sameAs":["https://www.facebook.com/dcinsurance/","https://www.instagram.com/dcinsurance2152/","https://www.linkedin.com/in/dentoncasey/"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dcinsuranceagency.com"},{"@type":"ListItem","position":2,"name":"DC Insurance Blog","item":"https://dcinsuranceagency.com/dc-insurance-blog"},{"@type":"ListItem","position":3,"name":"Health Sharing Ministries vs. Health Insurance in Tennessee","item":"https://dcinsuranceagency.com/dc-insurance-blog/f/health-sharing-ministries-vs-health-insurance-tennessee"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a health sharing ministry legal in Tennessee?","acceptedAnswer":{"@type":"Answer","text":"Yes. These organizations operate lawfully under a religious exemption from insurance regulation. The point is not legality. It is that the exemption is exactly what makes it a different product from insurance, with different obligations and different recourse."}},{"@type":"Question","name":"Does a health sharing ministry count as health insurance?","acceptedAnswer":{"@type":"Answer","text":"No. It is a membership organization that coordinates sharing medical bills among members according to its guidelines. It does not hold an insurance license and is not regulated as insurance by the state."}},{"@type":"Question","name":"Can a health sharing ministry turn me down?","acceptedAnswer":{"@type":"Answer","text":"Sharing organizations can decline membership or limit sharing based on their guidelines, including health history and conduct requirements. That is a different process from medical underwriting on an insurance application, and it is governed by the organization's own rules rather than by insurance law."}},{"@type":"Question","name":"If I leave a sharing ministry, can I get a marketplace plan right away?","acceptedAnswer":{"@type":"Answer","text":"Generally no. Leaving a sharing arrangement is not usually a qualifying life event, because you were never on a health plan to lose. That means waiting for open enrollment, which catches people who join and then have a difficult year."}},{"@type":"Question","name":"How is a sharing ministry different from supplemental coverage?","acceptedAnswer":{"@type":"Answer","text":"Completely. Supplemental coverage is insurance that sits on top of a major medical plan and pays out for specific events. A sharing arrangement is generally being used in place of major medical. Layering versus replacing is the distinction, and it gets blurred often in how these products are sold."}}]}]}</script>
+<link href="../../styles.css?v=4" rel="stylesheet"/>
+<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+</head>
+<body>
+<nav class="nav" id="mainNav">
+<div class="container nav-inner">
+<a class="nav-logo" href="../../index"><img alt="DC Insurance" src="../../logo.webp" width="48" height="46"/></a>
+<ul class="nav-links">
+<li><a href="../../index">Home</a></li>
+<li><a href="../../about-us">About</a></li>
+<li class="nav-dropdown">
+<a class="nav-dropdown-toggle" href="../../self-employed-health-insurance-tennessee">Who We Help <span class="nav-arrow">▼</span></a>
+<ul class="nav-dropdown-menu">
+<li><a href="../../self-employed-health-insurance-tennessee">Self-Employed</a></li>
+<li><a href="../../1099-health-insurance-tennessee">1099 Contractors</a></li>
+<li><a href="../../small-business-health-insurance-tennessee">Small Business Owners</a></li>
+<li><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a></li>
+<li><a href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private Plans</a></li>
+<li><a href="../../above-aca-subsidy-health-insurance-tennessee">Above Subsidy Threshold</a></li>
+<li><a href="../../real-estate-agent-health-insurance-tennessee">Real Estate Agents</a></li>
+<li><a href="../../owner-operator-health-insurance-tennessee">Owner-Operators</a></li>
+<li><a href="../../musician-health-insurance-tennessee">Musicians</a></li>
+</ul>
+</li>
+<li><a href="../../dc-insurance-blog">Blog</a></li>
+<li class="nav-dropdown">
+<a class="nav-dropdown-toggle" href="../../services">Services <span class="nav-arrow">▼</span></a>
+<ul class="nav-dropdown-menu">
+<li><a href="../../services">Our Services</a></li>
+<li><a href="../../nashville-insurance">Nashville</a></li>
+<li><a href="../../brentwood-insurance">Brentwood</a></li>
+<li><a href="../../belle-meade-insurance">Belle Meade</a></li>
+<li><a href="../../green-hills-insurance">Green Hills</a></li>
+<li><a href="../../franklin-insurance">Franklin</a></li>
+<li><a href="../../spring-hill-insurance">Spring Hill</a></li>
+<li><a href="../../nolensville-insurance">Nolensville</a></li>
+<li><a href="../../murfreesboro-insurance">Murfreesboro</a></li>
+<li><a href="../../smyrna-insurance">Smyrna</a></li>
+<li><a href="../../hendersonville-insurance">Hendersonville</a></li>
+<li><a href="../../mt-juliet-insurance">Mt. Juliet</a></li>
+<li><a href="../../donelson-insurance">Donelson</a></li>
+<li><a href="../../bellevue-insurance">Bellevue</a></li>
+<li><a href="../../shelbyville-insurance">Shelbyville</a></li>
+<li><a href="../../chapel-hill-insurance">Chapel Hill</a></li>
+<li><a href="../../college-grove-insurance">College Grove</a></li>
+<li><a href="../../christiana-insurance">Christiana</a></li>
+<li><a href="../../manchester-insurance">Manchester</a></li>
+<li><a href="../../tullahoma-insurance">Tullahoma</a></li>
+<li><a href="../../lewisburg-insurance">Lewisburg</a></li>
+<li><a href="../../columbia-insurance">Columbia</a></li>
+</ul>
+</li>
+<li><a href="../../contact">Contact</a></li>
+<li><a href="../../free-health-coverage-pdf">Free Guide</a></li>
+</ul>
+<a class="btn btn-primary nav-cta" href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Review</a>
+<button aria-label="Menu" class="nav-hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="nav-mobile" id="navMobile">
+<a href="../../index">Home</a>
+<a href="../../about-us">About</a>
+<a href="../../community">Community</a>
+<span class="nav-mobile-section-label">Who We Help</span>
+<a class="nav-mobile-indent" href="../../self-employed-health-insurance-tennessee">Self-Employed</a>
+<a class="nav-mobile-indent" href="../../1099-health-insurance-tennessee">1099 Contractors</a>
+<a class="nav-mobile-indent" href="../../small-business-health-insurance-tennessee">Small Business</a>
+<a class="nav-mobile-indent" href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a>
+<a class="nav-mobile-indent" href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private</a>
+<a class="nav-mobile-indent" href="../../above-aca-subsidy-health-insurance-tennessee">Above Subsidy Threshold</a>
+<a class="nav-mobile-indent" href="../../real-estate-agent-health-insurance-tennessee">Real Estate Agents</a>
+<a class="nav-mobile-indent" href="../../owner-operator-health-insurance-tennessee">Owner-Operators</a>
+<a class="nav-mobile-indent" href="../../musician-health-insurance-tennessee">Musicians</a>
+<a href="../../dc-insurance-blog">Blog</a>
+<a href="../../services">Services</a>
+<span class="nav-mobile-section-label">Service Areas</span>
+<a class="nav-mobile-indent" href="../../nashville-insurance">Nashville</a>
+<a class="nav-mobile-indent" href="../../brentwood-insurance">Brentwood</a>
+<a class="nav-mobile-indent" href="../../belle-meade-insurance">Belle Meade</a>
+<a class="nav-mobile-indent" href="../../green-hills-insurance">Green Hills</a>
+<a class="nav-mobile-indent" href="../../franklin-insurance">Franklin</a>
+<a class="nav-mobile-indent" href="../../spring-hill-insurance">Spring Hill</a>
+<a class="nav-mobile-indent" href="../../nolensville-insurance">Nolensville</a>
+<a class="nav-mobile-indent" href="../../murfreesboro-insurance">Murfreesboro</a>
+<a class="nav-mobile-indent" href="../../smyrna-insurance">Smyrna</a>
+<a class="nav-mobile-indent" href="../../hendersonville-insurance">Hendersonville</a>
+<a class="nav-mobile-indent" href="../../mt-juliet-insurance">Mt. Juliet</a>
+<a class="nav-mobile-indent" href="../../donelson-insurance">Donelson</a>
+<a class="nav-mobile-indent" href="../../bellevue-insurance">Bellevue</a>
+<a class="nav-mobile-indent" href="../../shelbyville-insurance">Shelbyville</a>
+<a class="nav-mobile-indent" href="../../chapel-hill-insurance">Chapel Hill</a>
+<a class="nav-mobile-indent" href="../../college-grove-insurance">College Grove</a>
+<a class="nav-mobile-indent" href="../../christiana-insurance">Christiana</a>
+<a class="nav-mobile-indent" href="../../manchester-insurance">Manchester</a>
+<a class="nav-mobile-indent" href="../../tullahoma-insurance">Tullahoma</a>
+<a class="nav-mobile-indent" href="../../lewisburg-insurance">Lewisburg</a>
+<a class="nav-mobile-indent" href="../../columbia-insurance">Columbia</a>
+<a href="../../free-health-coverage-pdf">Free Guide</a>
+<a href="../../contact">Contact</a>
+<a class="btn btn-primary" href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Review</a>
+</div>
+</nav>
+<main>
+
+<section class="section" style="padding-top:7rem;">
+<div class="container">
+<div class="post-layout">
+<article>
+<div class="breadcrumb"><a href="../../index">Home</a> &rsaquo; <a href="../../dc-insurance-blog">Blog</a> &rsaquo; Health Sharing Ministries vs. Health Insurance</div>
+<div class="article-header">
+<span class="blog-tag">Coverage Basics</span><span class="blog-tag">Middle Tennessee</span><span class="blog-tag">Self-Employed</span>
+<h1>Health Sharing Ministries vs. Health Insurance in Tennessee</h1>
+<div class="article-meta"><span><i class="fa-regular fa-calendar"></i> September 14, 2026</span><span><i class="fa-regular fa-clock"></i> 8 min read</span><span><i class="fa-solid fa-user"></i> Denton Casey</span></div>
+</div>
+<div class="post-thumbnail"><img src="../../blog-images/health-sharing-ministries-vs-health-insurance-tennessee-card.webp" alt="Reading the member guidelines of a health sharing ministry at a kitchen table in Middle Tennessee" loading="eager" /></div>
+<div class="article-body">
+
+<p>Somebody brings this up to me most months. The premium on a health sharing plan looks like a fraction of what they are paying now, the pitch is warm and community minded, and the question is always some version of the same thing: is this real?</p>
+
+<p>It is real. It is also not insurance, and that is not a technicality. It changes what you are holding when something goes wrong.</p>
+
+<h2>What a health sharing ministry actually is</h2>
+
+<p>A health care sharing ministry is a membership organization. Members pay a monthly amount, usually called a share, into a pool. When a member has a medical bill that qualifies under the organization's guidelines, the organization coordinates paying it out of that pool.</p>
+
+<p>That is the whole model, and there is nothing shady about it. It predates the ACA, it is rooted in faith communities, and plenty of people use one and are satisfied.</p>
+
+<p>What matters is the legal shape underneath it. A health sharing ministry is <strong>not an insurance company</strong>, it does not hold an insurance license, and it is not regulated by the state insurance department the way a carrier is. Most operate under a religious exemption from the rules that govern insurance.</p>
+
+<p>None of that is hidden. Sharing organizations say so in their own materials, usually in a disclosure you have to acknowledge. It is just easy to read past when you are looking at the monthly number.</p>
+
+<h2>The difference that shows up when you file</h2>
+
+<p>Here is the distinction I would want somebody to understand before they sign anything.</p>
+
+<p>An insurance policy is a <strong>contract</strong>. The carrier has a legal obligation to pay a covered claim, and if it does not, you have a defined process to push back: an internal appeal, an external review, and a state insurance department that regulates the carrier and takes complaints. If the carrier becomes insolvent, Tennessee has a guaranty association that exists for that situation.</p>
+
+<p>A sharing arrangement is generally structured as a <strong>voluntary sharing of expenses among members according to guidelines</strong>, not as a contractual promise to pay. The organization's own documents typically say the sharing is not guaranteed. That is not fine print somebody slipped in. It is the structure that keeps it outside of insurance regulation in the first place. The two things go together.</p>
+
+<p>So the practical question is not whether the organization intends to pay. It usually does. The question is what you are holding if it does not, and the honest answer is that it is a different instrument from an insurance policy, with a different set of remedies behind it.</p>
+
+<div class="comparison-table-wrap" style="overflow-x:auto;margin:1.75rem 0;">
+<table class="comparison-table" style="width:100%;border-collapse:collapse;font-size:0.94rem;">
+<thead>
+<tr>
+<th style="text-align:left;padding:0.75rem;border-bottom:2px solid var(--teal,#0d9488);">&nbsp;</th>
+<th style="text-align:left;padding:0.75rem;border-bottom:2px solid var(--teal,#0d9488);">Major medical insurance</th>
+<th style="text-align:left;padding:0.75rem;border-bottom:2px solid var(--teal,#0d9488);">Health sharing ministry</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;"><strong>Obligation to pay</strong></td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Contractual</td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Generally voluntary, per guidelines</td></tr>
+<tr><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;"><strong>State insurance regulation</strong></td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Yes</td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Generally exempt</td></tr>
+<tr><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;"><strong>Appeal and external review</strong></td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Defined process</td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Organization's own process</td></tr>
+<tr><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;"><strong>Guaranty association backing</strong></td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Yes</td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">No</td></tr>
+<tr><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;"><strong>Annual or lifetime dollar caps</strong></td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Not permitted on essential health benefits</td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Permitted, and common</td></tr>
+<tr><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;"><strong>Pre-existing conditions</strong></td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Cannot be excluded on marketplace plans</td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Commonly limited or phased in</td></tr>
+<tr><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;"><strong>Network and negotiated rates</strong></td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Built in</td><td style="padding:0.7rem;border-bottom:1px solid #e5e7eb;">Often the member's job</td></tr>
+<tr><td style="padding:0.7rem;"><strong>Premium tax credit</strong></td><td style="padding:0.7rem;">Available on the marketplace if eligible</td><td style="padding:0.7rem;">Not available</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Where the guidelines do the work</h2>
+
+<p>Because there is no policy contract, the document that governs everything is the <strong>member guidelines</strong>. That is the one to read, and it is where most of the surprises live.</p>
+
+<p>Things that are commonly in there, and that people do not expect:</p>
+
+<p><strong>Pre-existing conditions.</strong> Many sharing organizations limit or phase in sharing for conditions you had before joining, often on a schedule over the first several years of membership. That review happens when you submit a bill rather than when you join, and the definition of a pre-existing condition sits in the guidelines rather than in a regulated policy form. It is closer to a claim-time review than to how a marketplace plan works.</p>
+
+<p><strong>Lifestyle and faith requirements.</strong> Membership usually requires agreeing to a statement of belief and a code of conduct. Some organizations limit or decline sharing for conditions they consider connected to conduct outside that code. Whether that sits well with you is a personal call, but you should know it is in there.</p>
+
+<p><strong>Sharing caps.</strong> There is often a limit per incident, per year, or over a lifetime. A regulated major medical plan cannot impose an annual or lifetime dollar cap on essential health benefits. A sharing organization is not bound by that rule.</p>
+
+<p><strong>What is excluded outright.</strong> Categories that a major medical plan has to cover as essential health benefits, things like mental health care, maternity in some cases, or prescription drugs beyond a short window, are frequently limited or excluded. The <a href="aca-marketplace-vs-medically-underwritten-private-ppo-plans">essential health benefits floor</a> is a feature of regulated insurance and it does not carry over.</p>
+
+<p><strong>Who negotiates the bill.</strong> In a lot of arrangements, the member is the one dealing with the provider, and there is no network with pre-negotiated rates standing behind you. That is a meaningful amount of work at a bad time, and it is the piece people underestimate most.</p>
+
+<h2>The number on the front is not the cost</h2>
+
+<p>This is the same point I make about any plan sold on its monthly price, and it applies here with particular force.</p>
+
+<p>The monthly share is the <strong>price</strong>. What you pay when you actually use it is the <strong>cost</strong>. Those are two different numbers and only one of them is on the brochure.</p>
+
+<p>A sharing arrangement with a low monthly share, a large member responsibility amount before sharing starts, a cap on what gets shared, and no network rates behind it can be <a href="the-real-cost-of-cheap-health-insurance-tennessee">more expensive in the year you need it</a> than a plan that looked worse on paper. It can also be cheaper. Which one it turns out to be depends entirely on whether you have a bad year, which is precisely the thing nobody can tell you in advance.</p>
+
+<p>That is the trade. It is a real one.</p>
+
+<h2>One thing worth being direct about</h2>
+
+<p>There is no premium tax credit on a sharing arrangement, and joining one does not give you a <a href="special-enrollment-periods-tennessee">special enrollment period</a> if you later want to leave it for a marketplace plan. Leaving a sharing ministry is generally not a qualifying life event, because you were never on a health plan to lose.</p>
+
+<p>That one catches people. Somebody joins in March, has a rough year, and finds out in July that the marketplace door does not open again until November. Worth knowing going in, not after.</p>
+
+<p>I am a licensed insurance agent, not a tax preparer, so anything touching how this interacts with your return is a question for whoever does your taxes.</p>
+
+<h2>Who it can work for, honestly</h2>
+
+<p>I would rather give you the fair version than talk you out of something.</p>
+
+<p>A sharing arrangement tends to fit best when several things are true at once. You are healthy and the guidelines' pre-existing rules do not bite. You genuinely share the faith commitment, because that is the point of the organization and not just a form to sign. You have real savings to absorb a bad year, because you might need to. And you understand that you are trading a legal obligation for a community commitment and you are comfortable with that trade.</p>
+
+<p>Where I see it go wrong is when somebody picks it purely on the monthly number, without reading the guidelines, and without the cash to survive being wrong.</p>
+
+<h2>What to compare it against before you decide</h2>
+
+<p>Most people who ask me about sharing plans are asking because the alternatives look expensive. That is a fair starting point. It is usually also an incomplete picture, because they have only priced one lane.</p>
+
+<p>If your income puts you <a href="../../above-aca-subsidy-health-insurance-tennessee">above the subsidy threshold</a>, the marketplace sticker price is not the only option on the table. A <a href="../../private-ppo-health-insurance-tennessee">medically underwritten private PPO</a> is a different lane with different pricing, it is a real insurance contract with the protections that come with one, and for a healthy applicant it is frequently competitive with what drove them to look at sharing in the first place.</p>
+
+<p>If your income does put you in subsidy range, the marketplace number you saw may not be the number you would actually pay.</p>
+
+<p>Either way, price all three lanes before you decide. Comparing a sharing arrangement against one lane is how people end up making this decision on bad information.</p>
+
+<h2>Common questions</h2>
+
+<p><strong>Is a health sharing ministry legal in Tennessee?</strong><br/>
+Yes. These organizations operate lawfully under a religious exemption from insurance regulation. The point is not legality. It is that the exemption is exactly what makes it a different product from insurance, with different obligations and different recourse.</p>
+
+<p><strong>Does it satisfy any coverage requirement?</strong><br/>
+The federal individual mandate penalty was reduced to zero starting in 2019, so at the federal level there is no penalty to satisfy. The more useful question is not whether something counts, but what it does when you file a large claim.</p>
+
+<p><strong>Can I be turned down?</strong><br/>
+Sharing organizations can decline membership or limit sharing based on their guidelines, including health history and the conduct requirements. That is a different process from <a href="what-is-medical-underwriting-does-it-matter">medical underwriting</a> on an insurance application, and it is governed by the organization's own rules rather than by insurance law.</p>
+
+<p><strong>I am already in one and it has been fine. Should I change?</strong><br/>
+Not necessarily, and a stretch of good experience is worth something. What I would do is pull the member guidelines and find four things: the pre-existing condition schedule, the sharing caps, the exclusions list, and what happens on a large hospital bill. Ten minutes of reading tells you what you are actually holding. If it still looks right for you, that is a decision made on information instead of on a monthly number.</p>
+
+<p><strong>How is this different from a supplemental plan?</strong><br/>
+Completely. <a href="supplemental-health-insurance-tennessee">Supplemental coverage</a> is insurance that sits on top of a major medical plan and pays out for specific events. A sharing arrangement is generally being used in place of major medical. Layering versus replacing is the distinction, and it gets blurred often in how these products are sold.</p>
+
+<h2>Where to start</h2>
+
+<p>If you are looking at a sharing arrangement because the alternatives seemed out of reach, that is worth a conversation before you commit. Not because it is the wrong answer for you. It might be the right one. But it should be a decision you make with the guidelines open and all three lanes priced, rather than off the monthly number alone.</p>
+
+<p>Bring the guidelines document if you have one. We can go through the pre-existing rules and the caps together, and put it next to what ACA and private PPO would actually cost in your situation.</p>
+
+<div class="blog-cta-box">
+  <strong>Not sure what you are actually holding? Let's read it together.</strong> DC Insurance offers free consultations with no obligation. <a href="https://tidycal.com/denton/intro-call">Book your free review</a> or call <a href="tel:6155130313">615-513-0313</a>.
+</div>
+<p class="blog-disclaimer"><em>DC Insurance is an independent health insurance agency serving Middle Tennessee. This is general information about how coverage works, not advice about your particular situation. Coverage availability and eligibility vary by individual circumstances.</em></p>
+
+<div class="author-bio" style="display:flex;gap:1rem;align-items:flex-start;margin:2rem 0 1.5rem;padding:1.25rem 1.5rem;background:var(--light-gray,#f8f9fa);border-radius:10px;border-left:4px solid var(--teal,#0d9488);">
+  <img src="../../denton-bio.webp" alt="Denton Casey, DC Insurance" width="150" height="184" loading="lazy" style="border-radius:50%;object-fit:cover;flex-shrink:0;" />
+  <div>
+    <strong style="display:block;font-size:1rem;color:var(--navy,#1e3a5f);">Denton Casey</strong>
+    <span style="display:block;font-size:0.85rem;color:var(--medium-gray,#6b7280);margin-bottom:0.5rem;">Independent Health Insurance Specialist &middot; DC Insurance</span>
+    <p style="font-size:0.9rem;margin:0;line-height:1.6;">Denton helps self-employed individuals, 1099 contractors, and small business owners in Middle Tennessee find coverage that actually fits, comparing every lane available, not just what's easiest to sell. <a href="../../about-us" style="color:var(--teal,#0d9488);">Learn more about Denton &rarr;</a></p>
+  </div>
+</div>
+
+</div>
+</article>
+<aside class="post-sidebar">
+<div class="sidebar-widget" style="background:var(--navy);border-color:var(--navy);"><h4 style="color:rgba(255,255,255,0.5);">Have a Question?</h4><p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Get a straight answer for your specific situation, no pressure, no scripts.</p><a class="btn btn-primary" href="../../contact" style="width:100%;justify-content:center;">Book a Free Review</a><a class="btn btn-outline" href="tel:6155130313" style="width:100%;justify-content:center;margin-top:0.75rem;"><i class="fa-solid fa-phone"></i>  615-513-0313</a></div>
+<div class="sidebar-widget"><h4>Compare Your Options</h4>
+<div class="related-post"><div><a href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private Plans</a><span class="date">Compare Lanes</span></div></div>
+<div class="related-post"><div><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a><span class="date">Compare Lanes</span></div></div>
+<div class="related-post"><div><a href="../../self-employed-health-insurance-tennessee">Self-Employed</a><span class="date">Who We Help</span></div></div>
+</div>
+<div class="sidebar-widget"><h4>Areas We Serve</h4><ul style="font-size:0.88rem;"><li style="margin-bottom:0.4rem;"><a href="../../nashville-insurance" style="color:var(--teal);">Nashville</a></li><li style="margin-bottom:0.4rem;"><a href="../../nolensville-insurance" style="color:var(--teal);">Nolensville</a></li><li style="margin-bottom:0.4rem;"><a href="../../franklin-insurance" style="color:var(--teal);">Franklin</a></li><li style="margin-bottom:0.4rem;"><a href="../../college-grove-insurance" style="color:var(--teal);">College Grove</a></li><li style="margin-bottom:0.4rem;"><a href="../../murfreesboro-insurance" style="color:var(--teal);">Murfreesboro</a></li><li style="margin-bottom:0.4rem;"><a href="../../smyrna-insurance" style="color:var(--teal);">Smyrna</a></li><li style="margin-bottom:0.4rem;"><a href="../../hendersonville-insurance" style="color:var(--teal);">Hendersonville</a></li><li><a href="../../contact" style="color:var(--gray);">+ More Areas</a></li></ul></div>
+<div class="sidebar-widget"><h4>More From the Blog</h4>
+<div class="related-post"><div><a href="the-real-cost-of-cheap-health-insurance-tennessee">The Real Cost of Cheap Health Insurance</a><span class="date">From the Blog</span></div></div>
+<div class="related-post"><div><a href="aca-marketplace-vs-medically-underwritten-private-ppo-plans">ACA Marketplace vs. Private PPO</a><span class="date">From the Blog</span></div></div>
+<div class="related-post"><div><a href="what-is-medical-underwriting-does-it-matter">What Medical Underwriting Means</a><span class="date">From the Blog</span></div></div>
+</div>
+</aside>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a href="../../index" style="display:inline-block;margin-bottom:1rem;">
+<img alt="DC Insurance" src="../../logo.webp" width="55" height="52"/>
+</a>
+<p>Tennessee's independent health insurance specialist. Private PPO plans, supplemental coverage, and honest comparisons for self-employed individuals and small business owners.</p>
+<p class="footer-disclaimer" style="margin-top:1rem;">Licensed health insurance agent. Coverage availability and eligibility vary by state and individual circumstances. TN Insurance License #3002519070 | NPN: 20716644</p>
+</div>
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="../../index">Home</a></li>
+<li><a href="../../about-us">About</a></li>
+<li><a href="../../services">Services</a></li>
+<li><a href="../../dc-insurance-blog">Blog</a></li>
+<li><a href="../../contact">Contact</a></li>
+<li><a href="../../free-health-coverage-pdf">Free Guide</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Service Areas</h4>
+<ul>
+<li><a href="../../nashville-insurance">Nashville</a></li>
+<li><a href="../../brentwood-insurance">Brentwood</a></li>
+<li><a href="../../franklin-insurance">Franklin</a></li>
+<li><a href="../../murfreesboro-insurance">Murfreesboro</a></li>
+<li><a href="../../nolensville-insurance">Nolensville</a></li>
+<li><a href="../../smyrna-insurance">Smyrna</a></li>
+<li><a href="../../belle-meade-insurance">Belle Meade</a></li>
+<li><a href="../../green-hills-insurance">Green Hills</a></li>
+<li><a href="../../bellevue-insurance">Bellevue</a></li>
+<li><a href="../../mt-juliet-insurance">Mt. Juliet</a></li>
+<li><a href="../../hendersonville-insurance">Hendersonville</a></li>
+<li><a href="../../spring-hill-insurance">Spring Hill</a></li>
+<li><a href="../../donelson-insurance">Donelson</a></li>
+<li><a href="../../shelbyville-insurance">Shelbyville</a></li>
+<li><a href="../../chapel-hill-insurance">Chapel Hill</a></li>
+<li><a href="../../college-grove-insurance">College Grove</a></li>
+<li><a href="../../christiana-insurance">Christiana</a></li>
+<li><a href="../../manchester-insurance">Manchester</a></li>
+<li><a href="../../tullahoma-insurance">Tullahoma</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<ul>
+<li><a href="tel:6155130313"><i class="fa-solid fa-phone" style="color:var(--sky);margin-right:0.4rem;"></i>615-513-0313</a></li>
+<li><a href="mailto:denton@dcinsuranceagency.com">denton@dcinsuranceagency.com</a></li>
+<li><a href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Appointment</a></li>
+<li><a href="../../privacy-page" rel="nofollow" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Privacy Policy</a></li>
+<li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon–Fri 8am–5pm · Sat 9am–2pm</li>
+</ul>
+<div class="social-links" style="margin-top:1.25rem;">
+<a aria-label="Facebook" class="social-link fb" href="https://www.facebook.com/dcinsurance/" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+<a aria-label="Instagram" class="social-link ig" href="https://www.instagram.com/dcinsurance2152/" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+<a aria-label="LinkedIn" class="social-link li" href="https://www.linkedin.com/in/dentoncasey/" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="footer-col">
+<h4>Who We Help</h4>
+<ul>
+<li><a href="../../self-employed-health-insurance-tennessee">Self-Employed</a></li>
+<li><a href="../../1099-health-insurance-tennessee">1099 Contractors</a></li>
+<li><a href="../../small-business-health-insurance-tennessee">Small Business Owners</a></li>
+<li><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a></li>
+<li><a href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 DC Insurance · Denton Casey · Middle Tennessee</span>
+<span>Independent Health Insurance Specialist · 615-513-0313</span>
+</div>
+</div>
+</footer>
+
+<a aria-label="Message on WhatsApp" class="whatsapp-float" href="https://wa.me/16155130313" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('navMobile');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      if(window.innerWidth < 900){
+          e.preventDefault();
+          li.classList.toggle('open');
+          document.querySelectorAll('.nav-dropdown').forEach(function(other){
+            if(other !== li) other.classList.remove('open');
+          });
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.nav-dropdown')){
+        document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      }
+    });
+  })();
+  </script>
+  <script src="/animations.js" defer></script>
+</body>
+</html>
