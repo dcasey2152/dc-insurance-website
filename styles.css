@@ -46,3 +46,94 @@ body.has-mobile-cta .whatsapp-float{bottom:calc(76px + env(safe-area-inset-botto
 @media (max-width:359px){
 .mobile-cta-bar a{font-size:0.82rem;padding-left:0.3rem;padding-right:0.3rem;gap:0.3rem}
 }
+/* Font Awesome 6.5.0 self-hosted subset, built by tools/fa-subset/build.py. Icons not in the subset render blank: re-run the build after adding a new fa-* class. */
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:swap;src:url(/fonts/fa-solid-sub.v1.woff2) format("woff2")}
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/fa-regular-sub.v1.woff2) format("woff2")}
+@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/fa-brands-sub.v1.woff2) format("woff2")}
+.fa,.fa-brands,.fa-regular,.fa-solid,.fab,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}
+.fa,.fa-solid,.fas{font-family:"Font Awesome 6 Free";font-weight:900}
+.fa-regular,.far{font-family:"Font Awesome 6 Free";font-weight:400}
+.fa-brands,.fab{font-family:"Font Awesome 6 Brands";font-weight:400}
+.fa-fw{text-align:center;width:1.25em}.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}
+.fa-dollar-sign:before{content:"\24"}
+.fa-house-chimney-user:before{content:"\e065"}
+.fa-arrow-trend-up:before{content:"\e098"}
+.fa-wheat-awn:before{content:"\e2cd"}
+.fa-house-chimney:before{content:"\e3af"}
+.fa-house-flag:before{content:"\e50d"}
+.fa-magnifying-glass-chart:before{content:"\e522"}
+.fa-people-group:before{content:"\e533"}
+.fa-music:before{content:"\f001"}
+.fa-star:before{content:"\f005"}
+.fa-user:before{content:"\f007"}
+.fa-check:before{content:"\f00c"}
+.fa-xmark:before{content:"\f00d"}
+.fa-clock:before{content:"\f017"}
+.fa-road:before{content:"\f018"}
+.fa-lock:before{content:"\f023"}
+.fa-circle-check:before{content:"\f058"}
+.fa-circle-info:before{content:"\f05a"}
+.fa-arrow-left:before{content:"\f060"}
+.fa-arrow-right:before{content:"\f061"}
+.fa-triangle-exclamation:before{content:"\f071"}
+.fa-calendar-days:before{content:"\f073"}
+.fa-chevron-down:before{content:"\f078"}
+.fa-arrows-left-right:before{content:"\f07e"}
+.fa-comments:before{content:"\f086"}
+.fa-arrow-up-right-from-square:before{content:"\f08e"}
+.fa-phone:before{content:"\f095"}
+.fa-list-check:before{content:"\f0ae"}
+.fa-briefcase:before{content:"\f0b1"}
+.fa-users:before{content:"\f0c0"}
+.fa-truck:before{content:"\f0d1"}
+.fa-envelope:before{content:"\f0e0"}
+.fa-linkedin-in:before{content:"\f0e1"}
+.fa-umbrella:before{content:"\f0e9"}
+.fa-arrow-right-arrow-left:before{content:"\f0ec"}
+.fa-stethoscope:before{content:"\f0f1"}
+.fa-hospital:before{content:"\f0f8"}
+.fa-laptop:before{content:"\f109"}
+.fa-microphone:before{content:"\f130"}
+.fa-calendar:before{content:"\f133"}
+.fa-instagram:before{content:"\f16d"}
+.fa-circle-dot:before{content:"\f192"}
+.fa-graduation-cap:before{content:"\f19d"}
+.fa-building:before{content:"\f1ad"}
+.fa-car:before{content:"\f1b9"}
+.fa-file-pdf:before{content:"\f1c1"}
+.fa-paper-plane:before{content:"\f1d8"}
+.fa-sliders:before{content:"\f1de"}
+.fa-chart-line:before{content:"\f201"}
+.fa-heart-pulse:before{content:"\f21e"}
+.fa-whatsapp:before{content:"\f232"}
+.fa-scale-balanced:before{content:"\f24e"}
+.fa-calendar-check:before{content:"\f274"}
+.fa-industry:before{content:"\f275"}
+.fa-map:before{content:"\f279"}
+.fa-handshake:before{content:"\f2b5"}
+.fa-rotate:before{content:"\f2f1"}
+.fa-right-left:before{content:"\f362"}
+.fa-facebook-f:before{content:"\f39e"}
+.fa-location-dot:before{content:"\f3c5"}
+.fa-shield-halved:before{content:"\f3ed"}
+.fa-notes-medical:before{content:"\f481"}
+.fa-hand-holding-heart:before{content:"\f4be"}
+.fa-route:before{content:"\f4d7"}
+.fa-seedling:before{content:"\f4d8"}
+.fa-truck-moving:before{content:"\f4df"}
+.fa-user-tie:before{content:"\f508"}
+.fa-store:before{content:"\f54e"}
+.fa-file-invoice-dollar:before{content:"\f571"}
+.fa-map-location-dot:before{content:"\f5a0"}
+.fa-pen-nib:before{content:"\f5ad"}
+.fa-gauge-high:before{content:"\f625"}
+.fa-city:before{content:"\f64f"}
+.fa-magnifying-glass-dollar:before{content:"\f688"}
+.fa-cow:before{content:"\f6c8"}
+.fa-hammer:before{content:"\f6e3"}
+.fa-horse:before{content:"\f6f0"}
+.fa-network-wired:before{content:"\f6ff"}
+.fa-tractor:before{content:"\f722"}
+.fa-guitar:before{content:"\f7a6"}
+.fa-hard-hat:before{content:"\f807"}
+.fa-person-digging:before{content:"\f85e"}
