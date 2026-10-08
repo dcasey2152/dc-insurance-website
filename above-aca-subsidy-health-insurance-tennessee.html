@@ -141,7 +141,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness","InsuranceAgency"],
+      "@type": [
+        "LocalBusiness",
+        "InsuranceAgency"
+      ],
       "@id": "https://dcinsuranceagency.com/#business",
       "name": "DC Insurance",
       "description": "Independent health insurance agent specializing in private PPO plans and honest comparisons for self-employed individuals and small business owners in Middle Tennessee, including those above the ACA subsidy income threshold.",
@@ -150,7 +153,10 @@
       "email": "denton@dcinsuranceagency.com",
       "priceRange": "Free Consultation",
       "image": "https://dcinsuranceagency.com/logo.webp",
-      "founder": {"@type": "Person","name": "Denton Casey"},
+      "founder": {
+        "@type": "Person",
+        "name": "Denton Casey"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Smyrna",
@@ -158,31 +164,177 @@
         "postalCode": "37167",
         "addressCountry": "US"
       },
-      "openingHours": ["Mo-Fr 08:00-17:00","Sa 09:00-14:00"],
-      "areaServed": [
-        {"@type": "City","name": "Nashville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Franklin","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Brentwood","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Nolensville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Murfreesboro","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Smyrna","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Spring Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Hendersonville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Mt. Juliet","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Belle Meade","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Green Hills","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Donelson","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Bellevue","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Shelbyville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Chapel Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "College Grove","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Christiana","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Manchester","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Tullahoma","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City", "name": "Columbia"},
-        {"@type": "City", "name": "Lewisburg"}
+      "openingHours": [
+        "Mo-Fr 08:00-17:00",
+        "Sa 09:00-14:00"
       ],
-      "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "27"},
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nashville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Franklin",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Brentwood",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Nolensville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Murfreesboro",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Smyrna",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Spring Hill",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Hendersonville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mt. Juliet",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Belle Meade",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Green Hills",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Donelson",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Bellevue",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Shelbyville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Chapel Hill",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "College Grove",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Christiana",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Manchester",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Tullahoma",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Columbia"
+        },
+        {
+          "@type": "City",
+          "name": "Lewisburg"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "27"
+      },
       "sameAs": [
         "https://www.facebook.com/dcinsurance/",
         "https://www.instagram.com/dcinsurance2152/",
@@ -194,7 +346,9 @@
       "@id": "https://dcinsuranceagency.com/above-aca-subsidy-health-insurance-tennessee",
       "url": "https://dcinsuranceagency.com/above-aca-subsidy-health-insurance-tennessee",
       "name": "Health Insurance When ACA Subsidies Don't Apply, Tennessee | DC Insurance",
-      "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+      "isPartOf": {
+        "@id": "https://dcinsuranceagency.com/#website"
+      }
     },
     {
       "@type": "FAQPage",
@@ -204,31 +358,31 @@
           "name": "What happens to my health insurance options when I earn too much for ACA subsidies in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Once your household income exceeds the ACA subsidy threshold, you pay the full unsubsidized community-rate premium with no income-based relief. At that point, the ACA is no longer subsidized coverage, it's just one option among several. For healthy individuals, the private market often provides comparable or better protection at a more favorable rate, because private plans are medically underwritten rather than community-rated. The right answer depends on your health history, income, and what you want coverage to do."
+            "text": "Once your household income exceeds the subsidy threshold, you pay the full unsubsidized community-rate premium, no income-based assistance. At that point, the ACA is just one option among several, and for healthy individuals, the private market often provides comparable or better protection at a more favorable rate. The right answer depends on your health history, income, and what you want coverage to do. The comparison is worth running before you default to whatever the marketplace shows."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the ACA subsidy income threshold in Tennessee?",
+          "name": "What is the ACA subsidy income threshold in Tennessee for 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ACA subsidy eligibility is based on your Modified Adjusted Gross Income (MAGI) relative to the federal poverty level (FPL), adjusted annually for household size. Once your income exceeds the subsidy-eligible range, you pay the full unsubsidized marketplace premium. For self-employed individuals whose income varies year to year, it's worth understanding exactly where you land, and what your options look like on both sides of that threshold."
+            "text": "ACA subsidy eligibility is based on your Modified Adjusted Gross Income (MAGI) relative to the federal poverty level (FPL), adjusted annually for household size. For self-employed individuals, MAGI is generally your net business income after deductions, which means the threshold isn't just about gross revenue. Subsidy amounts and income limits are updated annually. If you're unsure where your income lands relative to the threshold, a free review can establish your exact picture before you choose a plan."
           }
         },
         {
           "@type": "Question",
-          "name": "Is a private PPO plan better than ACA when you don't get subsidies?",
+          "name": "Is a private PPO plan better than ACA when I don't qualify for subsidies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For healthy individuals above the subsidy threshold, a medically underwritten private PPO plan often provides stronger coverage per dollar than an unsubsidized ACA plan. Private plans are priced around your individual health history rather than the community rate, which tends to favor healthier applicants. They also typically offer nationwide network access with no referral requirements, a meaningful difference from many ACA plans in Tennessee, which use regional EPO structures. That said, the comparison depends on your specific health profile. Not everyone qualifies for the private market, and the ACA's guaranteed-issue protection matters for those with significant health history."
+            "text": "For healthy individuals above the subsidy threshold, a medically underwritten private PPO plan often provides stronger coverage per dollar than an unsubsidized ACA plan, both because private plans are priced around your individual health rather than the community rate, and because they typically offer nationwide network access with no referral requirements. That said, the comparison depends on your health history. If you have significant ongoing conditions, the ACA's guaranteed-issue protection may be exactly what you need. No honest broker should push you away from that protection if you need it."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I still get ACA coverage if I earn above the subsidy threshold?",
+          "name": "Can I still buy ACA coverage even if my income is above the subsidy limit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Being above the subsidy threshold doesn't disqualify you from purchasing an ACA marketplace plan, it just means you'll pay the full unsubsidized premium without income-based assistance. You can still enroll during the annual Open Enrollment Period or during a qualifying Special Enrollment Period. The question isn't whether you can get an ACA plan, it's whether a full-price ACA plan is actually the best option for your situation when the private market is also available."
+            "text": "Yes. Earning above the subsidy threshold doesn't disqualify you from purchasing an ACA plan, it just means you'll pay the full unsubsidized premium. You can still enroll during the annual Open Enrollment Period (which begins November 1) or during a Special Enrollment Period triggered by a qualifying life event. The question isn't whether you can get an ACA plan, it's whether full-price ACA is actually the best fit when the private market is also available to you."
           }
         },
         {
@@ -236,23 +390,23 @@
           "name": "What happens if I took ACA subsidies and then earned more than I projected?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ACA subsidies are advance payments of the federal Premium Tax Credit, based on your projected income at enrollment. At tax time, the IRS reconciles what you received against your actual income on Form 8962. If you received more in advance credits than your actual income entitled you to, you owe that excess back. For households that exceed the subsidy-eligible range entirely, the repayment can be the full amount received, uncapped. If your subsidy was $500/month for 12 months, that's a potential $6,000 owed at tax time. This is a significant and often overlooked risk for self-employed Tennesseans with variable income. A private market plan has no subsidy advance and no year-end reconciliation, your premium is fixed at underwriting with no income-based adjustment."
+            "text": "If you received advance Premium Tax Credits (subsidies) during the year based on a projected income, and your actual income came in higher than that projection, the IRS reconciles the difference on Form 8962 when you file your tax return. If you received more in advance credits than your actual income entitled you to, you owe that excess back. For households that exceed the subsidy-eligible income range entirely, that repayment can be the full amount of subsidies received, with no cap. If your subsidy was $500/month for 12 months, that's a $6,000 line on your tax return. This is one of the most significant and least-discussed risks for self-employed Tennesseans with variable income. Talk to your CPA about your specific situation, and factor repayment risk into the comparison when you're deciding between ACA and private coverage."
           }
         },
         {
           "@type": "Question",
-          "name": "What if my income fluctuates and I'm sometimes above and sometimes below the subsidy threshold?",
+          "name": "What if my income fluctuates above and below the subsidy threshold from year to year?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Variable income is one of the most common planning challenges for self-employed Tennesseans. If your income fluctuates across the subsidy threshold from year to year, it's worth understanding both ACA and private options, and having a plan for what you'll do in higher-income years. Some clients with variable income maintain private coverage in high-income years and evaluate ACA options in lower-income years depending on subsidy eligibility. This is exactly the kind of situation where having a direct conversation about your income picture makes sense before choosing a lane."
+            "text": "Variable income is one of the most common planning challenges for self-employed Tennesseans. If you fluctuate near the threshold, it's worth building a coverage strategy that accounts for both scenarios rather than deciding year to year in a reactive way. Some clients maintain private coverage through both high and lower-income years. Others take a different approach depending on projected income. The right answer is case by case, which is exactly the kind of planning conversation worth having before you're trying to make the decision under time pressure."
           }
         },
         {
           "@type": "Question",
-          "name": "Do high-income households in Middle Tennessee typically use ACA or private plans?",
+          "name": "Do high earners in Brentwood and Franklin use ACA or private plans?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In higher-income corridors like Brentwood, Franklin, Belle Meade, Green Hills, and College Grove, many self-employed households and small business owners are above the ACA subsidy threshold. For those who are in good health, the private market is often the more competitive option, both on overall cost when you factor in the full picture and on network flexibility. The specific answer depends on each household's health profile, but it's a comparison worth running rather than defaulting to whatever the marketplace shows."
+            "text": "In Williamson County and the higher-income parts of Davidson County, many self-employed households and business owners are above the ACA subsidy threshold. For those who are in good health, private market PPO plans tend to be the more competitive option, both on total cost when you model the full picture, and on network flexibility. The right comparison depends on each household's health profile, but it's one worth running before defaulting to whatever the marketplace shows first."
           }
         }
       ]
@@ -260,13 +414,23 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com"},
-        {"@type": "ListItem", "position": 2, "name": "Health Insurance When ACA Subsidies Don't Apply, Tennessee", "item": "https://dcinsuranceagency.com/above-aca-subsidy-health-insurance-tennessee"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dcinsuranceagency.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Health Insurance When ACA Subsidies Don't Apply, Tennessee",
+          "item": "https://dcinsuranceagency.com/above-aca-subsidy-health-insurance-tennessee"
+        }
       ]
     }
   ]
 }
-  </script>
+</script>
   <link rel="stylesheet" href="styles.css?v=5" />
 <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />

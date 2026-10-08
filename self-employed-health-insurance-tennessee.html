@@ -141,7 +141,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness","InsuranceAgency"],
+      "@type": [
+        "LocalBusiness",
+        "InsuranceAgency"
+      ],
       "@id": "https://dcinsuranceagency.com/#business",
       "name": "DC Insurance",
       "description": "Independent health insurance agent helping self-employed individuals in Tennessee compare ACA and private PPO coverage options.",
@@ -150,10 +153,24 @@
       "email": "denton@dcinsuranceagency.com",
       "priceRange": "Free Consultation",
       "image": "https://dcinsuranceagency.com/logo.webp",
-      "founder": {"@type": "Person","name": "Denton Casey"},
-      "address": {"@type": "PostalAddress","addressRegion": "TN","addressCountry": "US"},
-      "areaServed": {"@type": "AdministrativeArea","name": "Middle Tennessee"},
-      "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "27"},
+      "founder": {
+        "@type": "Person",
+        "name": "Denton Casey"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "TN",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Middle Tennessee"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "27"
+      },
       "sameAs": [
         "https://www.facebook.com/dcinsurance/",
         "https://www.instagram.com/dcinsurance2152/",
@@ -165,7 +182,9 @@
       "@id": "https://dcinsuranceagency.com/self-employed-health-insurance-tennessee",
       "url": "https://dcinsuranceagency.com/self-employed-health-insurance-tennessee",
       "name": "Self-Employed Health Insurance in Tennessee | DC Insurance",
-      "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+      "isPartOf": {
+        "@id": "https://dcinsuranceagency.com/#website"
+      }
     },
     {
       "@type": "FAQPage",
@@ -183,7 +202,7 @@
           "name": "What's the difference between ACA and private health insurance for self-employed people?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ACA plans are guaranteed issue (no medical underwriting), use community rating, and may offer premium subsidies based on income. Private plans are medically underwritten, the carrier evaluates your health history, and priced based on your individual risk. For healthy individuals above the subsidy range, private plans often offer different cost structures and broader network access. For those with pre-existing conditions or qualifying for subsidies, ACA plans are usually the better fit."
+            "text": "ACA plans are guaranteed issue, no medical underwriting, and may offer premium subsidies based on your income. Private plans are medically underwritten, priced based on your individual health history, and often have different cost structures and broader network access. For healthy individuals above the subsidy range, private plans are worth comparing. For those with pre-existing conditions or qualifying for subsidies, ACA plans are usually the better starting point."
           }
         },
         {
@@ -191,7 +210,7 @@
           "name": "Can I deduct health insurance premiums if I'm self-employed?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Potentially yes, self-employed individuals may be eligible to deduct 100% of health insurance premiums paid for themselves and their dependents as an above-the-line deduction. This reduces your adjusted gross income and changes the real cost of coverage. The specifics depend on your business structure and tax situation, so confirm the details with your CPA or tax advisor."
+            "text": "Potentially yes. Self-employed individuals may be eligible to deduct 100% of health insurance premiums paid for themselves and their family as an adjustment to gross income, not just as an itemized deduction. This applies whether you're on an ACA plan or a private plan. Confirm specifics with a CPA, as eligibility depends on net business income and other factors."
           }
         },
         {
@@ -199,7 +218,7 @@
           "name": "What if I have a pre-existing condition?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "If you have an ongoing health condition, the ACA marketplace is typically the right starting point. ACA plans are required to cover pre-existing conditions without exclusions or additional premium. Private underwritten plans may decline coverage, exclude certain conditions, or apply riders, so for anyone with significant health history, the marketplace provides the guaranteed access that private underwriting cannot."
+            "text": "If you have an ongoing health condition, the ACA marketplace is typically the right starting point. ACA plans are required to cover pre-existing conditions without exclusions or premium surcharges. Private market plans use medical underwriting and may decline coverage or exclude certain conditions. I'll tell you honestly which path fits your situation."
           }
         },
         {
@@ -207,7 +226,7 @@
           "name": "When can I enroll in health insurance if I'm self-employed?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ACA marketplace plans have an annual open enrollment period beginning November 1 in Tennessee, with coverage starting the following month. Special enrollment periods are available for qualifying life events year-round. Private market plans can be applied for at any time, there's no enrollment window, but underwriting applies."
+            "text": "ACA marketplace plans have an annual Open Enrollment Period beginning November 1 in Tennessee. Outside of OEP, you'll need a qualifying life event to enroll. Private market plans are available year-round with no enrollment periods. If you've recently left a job, moved, or had a change in household size, you likely have a current enrollment window."
           }
         },
         {
@@ -215,7 +234,7 @@
           "name": "Is there a penalty for not having health insurance in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The federal individual mandate penalty was reduced to $0 beginning in 2019, so there is currently no federal tax penalty for being uninsured. Tennessee does not have a state-level individual mandate. That said, the financial risk of being uninsured, not the penalty, is the more important consideration."
+            "text": "The federal individual mandate penalty was reduced to $0 beginning in 2019, so there is currently no federal tax penalty for going uninsured. Tennessee does not have a state-level individual mandate. That said, going without coverage carries real financial risk, a single hospitalization can result in significant out-of-pocket costs."
           }
         },
         {
@@ -223,7 +242,7 @@
           "name": "How do I know if I qualify for ACA subsidies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ACA premium tax credits are based on your projected modified adjusted gross income relative to the federal poverty level. In general, you need to be above roughly 100% of the FPL to qualify for marketplace subsidies in Tennessee, since the state did not expand Medicaid. The subsidy amount decreases as income rises and phases out at higher income levels."
+            "text": "ACA premium tax credits are based on your projected modified adjusted gross income relative to the federal poverty level. For self-employed individuals, income can vary year to year, which makes estimating carefully important. The subsidy amount decreases as income rises. A conversation about your projected income for the year is usually the fastest way to determine what you'd qualify for."
           }
         },
         {
@@ -231,15 +250,15 @@
           "name": "What happens if my income changes after I enroll in an ACA plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "If your income ends up higher than projected, you may owe back a portion of the premium tax credit at tax time. If it comes in lower, you may receive additional credit. Self-employed individuals with variable income should estimate conservatively and report income changes during the year. Private market plans avoid this issue since premiums are not income-based."
+            "text": "If your income ends up higher than projected, you may owe back a portion of the premium tax credit at tax time. If it comes in lower, you may receive additional credit. Self-employed individuals with variable income should estimate conservatively and report income changes to the marketplace during the year. Private market plans avoid this issue entirely since premiums aren't income-based."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I get health insurance coverage any time of year, or only during open enrollment?",
+          "name": "Can I get coverage any time of year, or only during open enrollment?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For ACA marketplace plans, enrollment is generally limited to the window that begins November 1 unless you have a qualifying life event. Private market plans have no enrollment window, you can apply any time of year. If you are currently uninsured and outside of an ACA enrollment window, private coverage is often the fastest path to getting something in place."
+            "text": "For ACA marketplace plans, enrollment is generally limited to the window that begins November 1 unless you have a qualifying life event (job loss, marriage, birth of a child, move, etc.). Private market plans have no enrollment window, you can apply any time of year. If you're currently uninsured and outside of an ACA enrollment window, private coverage is often the fastest path to getting something in place."
           }
         },
         {
@@ -247,15 +266,57 @@
           "name": "Is a private PPO plan right for me as a self-employed person in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on your health history and your income. If you are in good health and earning above the ACA subsidy range, a private PPO plan is often where the strongest protection-per-dollar lives, nationwide network access, no referral requirements, and pricing that reflects your individual risk rather than a community average. If you have significant health history or qualify for meaningful subsidies, the ACA marketplace is usually the better fit."
+            "text": "It depends on two things: your health history and your income. If you're in good health and earning above the ACA subsidy range, a private PPO plan is often where the strongest protection-per-dollar lives, nationwide network access, no referral requirements, and pricing that reflects your individual risk rather than a community average. If you have significant health history or qualify for meaningful subsidies, the ACA marketplace is usually the better fit. We walk through both options with every client before recommending a direction."
           }
         }
       ]
     },
-    {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com"}, {"@type": "ListItem", "position": 2, "name": "Self-Employed Health Insurance Tennessee", "item": "https://dcinsuranceagency.com/self-employed-health-insurance-tennessee"}]}
-,{"@type":"HowTo","name":"How to Get Health Insurance as a Self-Employed Professional in Tennessee","description":"A simple 3-step process to compare ACA marketplace, private PPO, and supplemental coverage options for self-employed Tennesseans.","url":"https://dcinsuranceagency.com/self-employed-health-insurance-tennessee","step":[{"@type":"HowToStep","position":1,"name":"15-Minute Conversation","text":"We cover your income range, health history, what you're paying now, and what you actually need coverage to do. No forms until we know the right direction."},{"@type":"HowToStep","position":2,"name":"Full-Market Comparison","text":"ACA marketplace options, private PPO plans, and any supplemental coverage worth layering in, all compared side by side with real numbers. We don't cherry-pick what pays best."},{"@type":"HowToStep","position":3,"name":"You Decide, We Handle the Rest","text":"No pressure to choose in the moment. Once you're ready, we manage the application, follow up with the carrier, and stay reachable if questions come up after enrollment."}]}]
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dcinsuranceagency.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Self-Employed Health Insurance Tennessee",
+          "item": "https://dcinsuranceagency.com/self-employed-health-insurance-tennessee"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Get Health Insurance as a Self-Employed Professional in Tennessee",
+      "description": "A simple 3-step process to compare ACA marketplace, private PPO, and supplemental coverage options for self-employed Tennesseans.",
+      "url": "https://dcinsuranceagency.com/self-employed-health-insurance-tennessee",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "15-Minute Conversation",
+          "text": "We cover your income range, health history, what you're paying now, and what you actually need coverage to do. No forms until we know the right direction."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Full-Market Comparison",
+          "text": "ACA marketplace options, private PPO plans, and any supplemental coverage worth layering in, all compared side by side with real numbers. We don't cherry-pick what pays best."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "You Decide, We Handle the Rest",
+          "text": "No pressure to choose in the moment. Once you're ready, we manage the application, follow up with the carrier, and stay reachable if questions come up after enrollment."
+        }
+      ]
+    }
+  ]
 }
-  </script>
+</script>
   <link rel="stylesheet" href="styles.css?v=5" />
 <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />

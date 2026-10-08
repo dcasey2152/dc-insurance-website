@@ -142,7 +142,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness","InsuranceAgency"],
+      "@type": [
+        "LocalBusiness",
+        "InsuranceAgency"
+      ],
       "@id": "https://dcinsuranceagency.com/#business",
       "name": "DC Insurance",
       "description": "Independent health insurance agent specializing in private market PPO plans for self-employed individuals and small business owners in Middle Tennessee.",
@@ -151,7 +154,10 @@
       "email": "denton@dcinsuranceagency.com",
       "priceRange": "Free Consultation",
       "image": "https://dcinsuranceagency.com/logo.webp",
-      "founder": {"@type": "Person","name": "Denton Casey"},
+      "founder": {
+        "@type": "Person",
+        "name": "Denton Casey"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Smyrna",
@@ -159,31 +165,177 @@
         "postalCode": "37167",
         "addressCountry": "US"
       },
-      "openingHours": ["Mo-Fr 08:00-17:00","Sa 09:00-14:00"],
-      "areaServed": [
-        {"@type": "City","name": "Nashville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Franklin","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Brentwood","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Nolensville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Murfreesboro","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Smyrna","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Spring Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Hendersonville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Mt. Juliet","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Belle Meade","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Green Hills","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Donelson","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Bellevue","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Shelbyville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Chapel Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "College Grove","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Christiana","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Manchester","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Tullahoma","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City", "name": "Columbia"},
-        {"@type": "City", "name": "Lewisburg"}
+      "openingHours": [
+        "Mo-Fr 08:00-17:00",
+        "Sa 09:00-14:00"
       ],
-      "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "27"},
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nashville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Franklin",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Brentwood",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Nolensville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Murfreesboro",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Smyrna",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Spring Hill",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Hendersonville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mt. Juliet",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Belle Meade",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Green Hills",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Donelson",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Bellevue",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Shelbyville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Chapel Hill",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "College Grove",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Christiana",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Manchester",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Tullahoma",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Columbia"
+        },
+        {
+          "@type": "City",
+          "name": "Lewisburg"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "27"
+      },
       "sameAs": [
         "https://www.facebook.com/dcinsurance/",
         "https://www.instagram.com/dcinsurance2152/",
@@ -195,7 +347,9 @@
       "@id": "https://dcinsuranceagency.com/private-ppo-health-insurance-tennessee",
       "url": "https://dcinsuranceagency.com/private-ppo-health-insurance-tennessee",
       "name": "Private PPO Health Insurance in Tennessee | DC Insurance",
-      "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+      "isPartOf": {
+        "@id": "https://dcinsuranceagency.com/#website"
+      }
     },
     {
       "@type": "FAQPage",
@@ -205,7 +359,7 @@
           "name": "Can I get a private PPO if I have a pre-existing condition?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on the condition. Minor past issues (resolved infections, old injuries) often clear underwriting without issue. Ongoing conditions like diabetes, heart disease, or recent cancer treatment are more likely to result in a denial or exclusion rider. ACA marketplace plans are guaranteed issue regardless of health, so for people with significant ongoing conditions, the marketplace is usually the right lane."
+            "text": "It depends on the condition. Minor past issues, resolved infections, old injuries, past prescriptions for common conditions, often clear underwriting without issue. Ongoing managed conditions like diabetes, heart disease, or recent cancer treatment are more likely to result in a denial or exclusion rider. ACA marketplace plans are guaranteed issue regardless of health history, so for people with significant ongoing conditions, the marketplace is usually the right lane. The way to know where you'd land is to have a direct conversation before anything gets submitted."
           }
         },
         {
@@ -213,7 +367,7 @@
           "name": "Is there an open enrollment period for private PPO plans?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. One of the advantages of private market plans is that you can apply any time of year. You don't have to wait for a qualifying life event or the ACA open enrollment window (which begins November 1). This flexibility is especially valuable for self-employed individuals who start a business mid-year or leave an employer outside of open enrollment."
+            "text": "No. One of the advantages of private market plans is that you can apply any time of year. You don't have to wait for a qualifying life event or the ACA open enrollment window (which begins November 1). This flexibility is especially valuable for self-employed individuals who start a business mid-year, leave an employer outside of open enrollment, or simply want to shop their options without being tied to a calendar."
           }
         },
         {
@@ -221,7 +375,7 @@
           "name": "Can I deduct private PPO premiums if I'm self-employed?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Self-employed individuals can generally deduct 100% of health insurance premiums paid for themselves and their families, regardless of whether the plan is through the ACA marketplace or the private market. This deduction reduces your adjusted gross income, not just your taxable income as an itemized deduction. Consult your CPA or tax advisor on specifics for your situation."
+            "text": "Self-employed individuals can generally deduct 100% of health insurance premiums paid for themselves and their families, regardless of whether the plan is through the ACA marketplace or the private market. This deduction reduces your adjusted gross income, not just as an itemized deduction. One caveat: if you're eligible for coverage through a spouse's employer plan, the deduction may not apply during months you were eligible for that plan. Consult your CPA or tax advisor on specifics for your situation."
           }
         },
         {
@@ -229,7 +383,7 @@
           "name": "How long does it take to get approved for a private PPO plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The underwriting timeline varies by carrier but typically runs between a few days and a few weeks. Most applications are submitted electronically. The carrier reviews your health questionnaire and medical history, and may request additional information for certain conditions. Once approved, coverage typically starts on a date you select at application."
+            "text": "The underwriting timeline varies by carrier but typically runs between a few business days and a few weeks. For straightforward health histories, approvals often come back quickly. For more complex situations, the carrier may request additional information, which can extend the timeline. Once approved, coverage typically starts on a date you select at application, often the first of the following month."
           }
         },
         {
@@ -237,7 +391,7 @@
           "name": "How do private PPO plans handle prescriptions?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most private PPO plans include prescription drug coverage, but formularies and tier structures vary by carrier and plan. If you take ongoing medications, reviewing the formulary before selecting a plan is important, this is one of the specific comparison points covered during a free review."
+            "text": "Most private PPO plans include prescription drug coverage, but formularies and tier structures vary by carrier and plan. If you take ongoing medications, reviewing the formulary before selecting a plan is important, this is one of the specific comparison points covered during a free review. Some medications that are on a preferred tier with one carrier may be on a higher-cost tier with another, which affects your actual out-of-pocket for that prescription."
           }
         },
         {
@@ -245,7 +399,7 @@
           "name": "What is the difference between a private PPO and an ACA marketplace plan in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The two primary differences are underwriting and network structure. ACA plans are guaranteed issue with no health screening and often use regional EPO networks. Private PPO plans are medically underwritten, healthier individuals typically pay lower premiums, and offer nationwide network access with no referral requirements. For self-employed Tennesseans above the ACA subsidy threshold who are in good health, the private market often offers more coverage for the dollar."
+            "text": "The two primary differences are underwriting and network structure. ACA plans are guaranteed issue with no health screening and often use regional EPO networks. Private PPO plans are medically underwritten, healthier individuals typically pay lower premiums than the ACA community rate, and offer nationwide network access with no referral requirements. For self-employed Tennesseans above the ACA subsidy threshold who are in good health, the private market often offers more coverage flexibility per dollar. See the full comparison on our ACA vs. Private Plans page."
           }
         },
         {
@@ -253,15 +407,31 @@
           "name": "Do private PPO plans cover preventive care?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Coverage varies by plan. Some private market plans include preventive services similar to ACA requirements; others have different structures. This is one of the key points reviewed during a consultation alongside deductible, out-of-pocket maximum, and network access."
+            "text": "Coverage varies by plan and carrier. Some private market plans include preventive services comparable to ACA requirements; others have different structures. This is one of the key points reviewed during a free consultation alongside deductible levels, out-of-pocket maximum, and network access, it's part of the full picture, not just the premium comparison."
           }
         }
       ]
     },
-    {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com"}, {"@type": "ListItem", "position": 2, "name": "Private PPO Health Insurance Tennessee", "item": "https://dcinsuranceagency.com/private-ppo-health-insurance-tennessee"}]}
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dcinsuranceagency.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Private PPO Health Insurance Tennessee",
+          "item": "https://dcinsuranceagency.com/private-ppo-health-insurance-tennessee"
+        }
+      ]
+    }
   ]
 }
-  </script>
+</script>
   <link rel="stylesheet" href="styles.css?v=5" />
 <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />

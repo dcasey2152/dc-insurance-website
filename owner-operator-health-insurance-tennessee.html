@@ -141,7 +141,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness","InsuranceAgency"],
+      "@type": [
+        "LocalBusiness",
+        "InsuranceAgency"
+      ],
       "@id": "https://dcinsuranceagency.com/#business",
       "name": "DC Insurance",
       "description": "Independent health insurance agent specializing in coverage for owner-operators, 1099 contractors, and self-employed individuals in Middle Tennessee.",
@@ -150,7 +153,10 @@
       "email": "denton@dcinsuranceagency.com",
       "priceRange": "Free Consultation",
       "image": "https://dcinsuranceagency.com/logo.webp",
-      "founder": {"@type": "Person","name": "Denton Casey"},
+      "founder": {
+        "@type": "Person",
+        "name": "Denton Casey"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Smyrna",
@@ -158,23 +164,109 @@
         "postalCode": "37167",
         "addressCountry": "US"
       },
-      "openingHours": ["Mo-Fr 08:00-17:00","Sa 09:00-14:00"],
-      "areaServed": [
-        {"@type": "City","name": "Nashville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Murfreesboro","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Smyrna","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Franklin","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Brentwood","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Nolensville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Spring Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Hendersonville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Mt. Juliet","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Shelbyville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "AdministrativeArea","name": "Middle Tennessee"},
-        {"@type": "City", "name": "Columbia"},
-        {"@type": "City", "name": "Lewisburg"}
+      "openingHours": [
+        "Mo-Fr 08:00-17:00",
+        "Sa 09:00-14:00"
       ],
-      "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "27"},
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nashville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Murfreesboro",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Smyrna",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Franklin",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Brentwood",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Nolensville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Spring Hill",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Hendersonville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mt. Juliet",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Shelbyville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Middle Tennessee"
+        },
+        {
+          "@type": "City",
+          "name": "Columbia"
+        },
+        {
+          "@type": "City",
+          "name": "Lewisburg"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "27"
+      },
       "sameAs": [
         "https://www.facebook.com/dcinsurance/",
         "https://www.instagram.com/dcinsurance2152/",
@@ -186,7 +278,9 @@
       "@id": "https://dcinsuranceagency.com/owner-operator-health-insurance-tennessee",
       "url": "https://dcinsuranceagency.com/owner-operator-health-insurance-tennessee",
       "name": "Health Insurance for Owner-Operators &amp; Independent Truckers in Tennessee | DC Insurance",
-      "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+      "isPartOf": {
+        "@id": "https://dcinsuranceagency.com/#website"
+      }
     },
     {
       "@type": "FAQPage",
@@ -196,7 +290,7 @@
           "name": "What health insurance options do owner-operators in Tennessee have?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "As an owner-operator, your main options are: the ACA marketplace (with or without income-based subsidies depending on your net income), medically underwritten private market PPO plans, or a spouse's employer plan if available. Private PPO plans are often especially well-suited for owner-operators because they provide nationwide coverage with no network boundaries, which matters when you're running routes across multiple states. The right option depends on your income, health history, and how much you value network flexibility."
+            "text": "Your main options are the ACA marketplace (with or without income-based subsidies depending on your net income), medically underwritten private market PPO plans, and any carrier or leasing company plan if you're leased-on to a carrier that offers one. Private PPO plans are often the strongest fit for healthy owner-operators because they provide nationwide coverage that works on any route, not just in Tennessee."
           }
         },
         {
@@ -204,7 +298,7 @@
           "name": "What happens to my health insurance when I leave a carrier to go independent?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Leaving a company driver position, and losing employer-sponsored coverage, is a qualifying life event that opens a Special Enrollment Period on the ACA marketplace, typically for 60 days from your last day of coverage. COBRA is also available from your former employer's plan, but it's often expensive because you're paying the full premium the employer was covering. It's worth comparing all three options before defaulting to COBRA."
+            "text": "Losing employer-sponsored coverage is a qualifying life event that opens a Special Enrollment Period on the ACA marketplace, typically for 60 days. COBRA extends your former employer's plan, but you pay the full premium the employer was covering. Before defaulting to COBRA, it's worth comparing individual market options, you may find better coverage at a lower cost."
           }
         },
         {
@@ -212,7 +306,7 @@
           "name": "Can owner-operators deduct health insurance premiums?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Self-employed owner-operators are generally eligible to deduct 100% of health insurance premiums paid for themselves and their family as an adjustment to gross income, not just as an itemized deduction. This applies whether you're on an ACA plan or a private plan. Your after-tax cost of coverage is meaningfully lower than the quoted premium. Confirm specifics with your CPA, but this deduction is a real factor in any cost comparison."
+            "text": "Yes. Self-employed owner-operators are generally eligible to deduct 100% of health insurance premiums paid for themselves and their family as an adjustment to gross income. Your after-tax cost of coverage is meaningfully lower than the quoted premium. Confirm the specifics with your accountant, but factor this deduction into any coverage cost comparison."
           }
         },
         {
@@ -220,7 +314,7 @@
           "name": "Do I need nationwide coverage as a trucker, and does the ACA cover that?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most ACA plans in Tennessee are EPOs structured around a regional provider network. Out-of-state care is typically covered on an emergency basis only. If you're running routes through multiple states, that limitation is a practical problem. Private PPO plans provide nationwide coverage, any provider in the national network is covered at in-network rates regardless of what state you're in. For owner-operators running interstate routes, nationwide PPO coverage is often worth the conversation."
+            "text": "Most ACA plans in Tennessee are EPOs with regional provider networks. Out-of-state care is typically covered only for emergencies. If you're running multi-state routes, that's a real gap. Private PPO plans provide nationwide coverage, any in-network provider in any state at in-network rates. For OTR and regional drivers, this distinction matters."
           }
         },
         {
@@ -228,33 +322,97 @@
           "name": "What if I'm leased-on to a carrier, am I eligible for their group plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on the carrier and how the lease agreement is structured. Some carriers offer access to group plans for leased owner-operators; others don't. If you do have access to a carrier plan, it's worth comparing it against your individual market options before enrolling. Carrier group plans vary significantly in cost and design, and for healthy owner-operators, individual private coverage is sometimes the more competitive option."
+            "text": "It depends on the carrier and how your lease agreement is structured. Some offer group plan access to leased owner-operators; others don't. If access is available, compare it against individual market options before enrolling, carrier plans vary significantly and aren't always the most competitive option for healthy truckers."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I get health insurance year-round as an owner-operator, or do I have to wait for open enrollment?",
+          "name": "Can I get health insurance year-round, or do I have to wait for open enrollment?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Private market plans are available year-round with no enrollment periods. If you're looking to leave COBRA, start fresh, or upgrade your coverage, you can apply for a private plan at any point. ACA marketplace plans have an annual Open Enrollment Period that begins November 1 and require a qualifying life event outside of that window. If you recently left employer coverage, that departure typically qualifies you for a Special Enrollment Period."
+            "text": "Private market plans are available year-round with no enrollment windows. If you recently lost employer coverage, you also have a 60-day Special Enrollment Period for the ACA marketplace. ACA plans outside of qualifying events require waiting for November's Open Enrollment Period. Private plans have no such restriction."
           }
         },
-        {"@type":"Question","name":"Is COBRA worth it for an owner-operator who just left a company driver job?","acceptedAnswer":{"@type":"Answer","text":"Sometimes, but often not. COBRA keeps the exact plan you had, which is convenient if you're mid-treatment or want zero disruption. The catch is cost: you pay the full premium your employer was subsidizing, plus an administrative fee, so it's frequently the most expensive lane. Before defaulting to COBRA, compare it against a private PPO and the ACA marketplace. For a healthy driver, a private plan with nationwide coverage is often less expensive and a better fit for life on the road."}},
-        {"@type":"Question","name":"What is the difference between an EPO and a PPO, and why does it matter for truckers?","acceptedAnswer":{"@type":"Answer","text":"An EPO (common on Tennessee ACA plans) covers a regional network and generally pays for out-of-network care only in emergencies. A PPO covers a nationwide network and pays in-network rates with any participating provider, in any state, usually with no referral needed. For an owner-operator running interstate routes, that difference is the whole ballgame: an EPO can leave you exposed the moment you need non-emergency care away from home, while a PPO travels with you."}},
-        {"@type":"Question","name":"Can I cover my spouse and kids, including a husband-and-wife driving team?","acceptedAnswer":{"@type":"Answer","text":"Yes. Both ACA and private plans can cover your spouse and dependents on the same policy. For husband-and-wife teams who both drive, nationwide PPO coverage often makes even more sense, since you're both away from your home network regularly. Family coverage is priced on the household, and the self-employed premium deduction generally applies to the family portion too."}},
-        {"@type":"Question","name":"Will my coverage pay if I get sick or hurt in another state?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on your plan type. On a regional EPO, non-emergency care in another state is typically not covered, so a clinic visit for an infection or a flare-up on the road could come out of your pocket. A nationwide PPO covers in-network care in any state at in-network rates, which is why it's usually the stronger fit for OTR and regional drivers. Knowing exactly how your plan handles out-of-state care before you need it is part of what a 15-minute review sorts out."}}
+        {
+          "@type": "Question",
+          "name": "Is COBRA worth it for an owner-operator who just left a company driver job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes, but often not. COBRA keeps the exact plan you had, which is convenient if you're mid-treatment or want zero disruption. The catch is cost: you pay the full premium your employer was subsidizing, plus an administrative fee, so it's frequently the most expensive lane. Before defaulting to COBRA, compare it against a private PPO and the ACA marketplace. For a healthy driver, a private plan with nationwide coverage is often less expensive and a better fit for life on the road."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between an EPO and a PPO, and why does it matter for truckers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An EPO (common on Tennessee ACA plans) covers a regional network and generally pays for out-of-network care only in emergencies. A PPO covers a nationwide network and pays in-network rates with any participating provider, in any state, usually with no referral needed. For an owner-operator running interstate routes, that difference is the whole ballgame: an EPO can leave you exposed the moment you need non-emergency care away from home, while a PPO travels with you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I cover my spouse and kids, including a husband-and-wife driving team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Both ACA and private plans can cover your spouse and dependents on the same policy. For husband-and-wife teams who both drive, nationwide PPO coverage often makes even more sense, since you're both away from your home network regularly. Family coverage is priced on the household, and the self-employed premium deduction generally applies to the family portion too. We build the comparison around your whole household, not just you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my coverage pay if I get sick or hurt in another state?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends entirely on your plan type. On a regional EPO, non-emergency care in another state is typically not covered, so a clinic visit for an infection or a flare-up on the road could come out of your pocket. A nationwide PPO covers in-network care in any state at in-network rates, which is why it's usually the stronger fit for OTR and regional drivers. Knowing exactly how your plan handles out-of-state care, before you need it, is part of what a 15-minute review sorts out."
+          }
+        }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com"},
-        {"@type": "ListItem", "position": 2, "name": "Health Insurance for Owner-Operators in Tennessee", "item": "https://dcinsuranceagency.com/owner-operator-health-insurance-tennessee"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dcinsuranceagency.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Health Insurance for Owner-Operators in Tennessee",
+          "item": "https://dcinsuranceagency.com/owner-operator-health-insurance-tennessee"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Get Health Insurance as an Owner-Operator in Tennessee",
+      "description": "A simple 3-step process to compare every health insurance option available to Tennessee owner-operators and independent truckers, including ACA marketplace, private PPO, COBRA, and carrier plans.",
+      "url": "https://dcinsuranceagency.com/owner-operator-health-insurance-tennessee",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "We Talk Through Your Situation",
+          "text": "15 minutes. You tell me your routes, income range, household size, what you're paying now (if anything), and any relevant health history. No forms to fill out first. This is just a conversation."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "I Run the Comparison Across All Three Lanes",
+          "text": "ACA marketplace, private PPO, and any carrier or COBRA plan on the table. I look at real numbers, not just premiums, but how the coverage actually holds up when you're running routes out of state."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "You Get a Straight Recommendation",
+          "text": "No pressure. I'll tell you what I think fits your routes, income, and health profile, and why. If the ACA is the right answer, I'll say that. If a private PPO makes more sense, I'll show you why."
+        }
       ]
     }
-,{"@type":"HowTo","name":"How to Get Health Insurance as an Owner-Operator in Tennessee","description":"A simple 3-step process to compare every health insurance option available to Tennessee owner-operators and independent truckers, including ACA marketplace, private PPO, COBRA, and carrier plans.","url":"https://dcinsuranceagency.com/owner-operator-health-insurance-tennessee","step":[{"@type":"HowToStep","position":1,"name":"We Talk Through Your Situation","text":"15 minutes. You tell me your routes, income range, household size, what you're paying now (if anything), and any relevant health history. No forms to fill out first. This is just a conversation."},{"@type":"HowToStep","position":2,"name":"I Run the Comparison Across All Three Lanes","text":"ACA marketplace, private PPO, and any carrier or COBRA plan on the table. I look at real numbers, not just premiums, but how the coverage actually holds up when you're running routes out of state."},{"@type":"HowToStep","position":3,"name":"You Get a Straight Recommendation","text":"No pressure. I'll tell you what I think fits your routes, income, and health profile, and why. If the ACA is the right answer, I'll say that. If a private PPO makes more sense, I'll show you why."}]}]
+  ]
 }
-  </script>
+</script>
   <link rel="stylesheet" href="styles.css?v=5" />
 <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />

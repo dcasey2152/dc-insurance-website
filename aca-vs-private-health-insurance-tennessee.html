@@ -141,7 +141,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness","InsuranceAgency"],
+      "@type": [
+        "LocalBusiness",
+        "InsuranceAgency"
+      ],
       "@id": "https://dcinsuranceagency.com/#business",
       "name": "DC Insurance",
       "description": "Independent health insurance agent comparing ACA marketplace and private PPO options for self-employed individuals and small business owners in Middle Tennessee.",
@@ -150,7 +153,10 @@
       "email": "denton@dcinsuranceagency.com",
       "priceRange": "Free Consultation",
       "image": "https://dcinsuranceagency.com/logo.webp",
-      "founder": {"@type": "Person","name": "Denton Casey"},
+      "founder": {
+        "@type": "Person",
+        "name": "Denton Casey"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Smyrna",
@@ -158,31 +164,177 @@
         "postalCode": "37167",
         "addressCountry": "US"
       },
-      "openingHours": ["Mo-Fr 08:00-17:00","Sa 09:00-14:00"],
-      "areaServed": [
-        {"@type": "City","name": "Nashville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Franklin","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Brentwood","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Nolensville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Murfreesboro","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Smyrna","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Spring Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Hendersonville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Mt. Juliet","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Belle Meade","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Green Hills","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Donelson","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Bellevue","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Shelbyville","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Chapel Hill","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "College Grove","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Christiana","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Manchester","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City","name": "Tullahoma","containedInPlace": {"@type": "State","name": "Tennessee"}},
-        {"@type": "City", "name": "Columbia"},
-        {"@type": "City", "name": "Lewisburg"}
+      "openingHours": [
+        "Mo-Fr 08:00-17:00",
+        "Sa 09:00-14:00"
       ],
-      "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "27"},
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Nashville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Franklin",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Brentwood",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Nolensville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Murfreesboro",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Smyrna",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Spring Hill",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Hendersonville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mt. Juliet",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Belle Meade",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Green Hills",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Donelson",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Bellevue",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Shelbyville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Chapel Hill",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "College Grove",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Christiana",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Manchester",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Tullahoma",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Columbia"
+        },
+        {
+          "@type": "City",
+          "name": "Lewisburg"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "27"
+      },
       "sameAs": [
         "https://www.facebook.com/dcinsurance/",
         "https://www.instagram.com/dcinsurance2152/",
@@ -194,7 +346,9 @@
       "@id": "https://dcinsuranceagency.com/aca-vs-private-health-insurance-tennessee",
       "url": "https://dcinsuranceagency.com/aca-vs-private-health-insurance-tennessee",
       "name": "ACA vs. Private Health Insurance in Tennessee | DC Insurance",
-      "isPartOf": {"@id": "https://dcinsuranceagency.com/#website"}
+      "isPartOf": {
+        "@id": "https://dcinsuranceagency.com/#website"
+      }
     },
     {
       "@type": "FAQPage",
@@ -204,7 +358,7 @@
           "name": "Who benefits most from ACA marketplace plans in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ACA marketplace plans are typically the best fit for people with significant pre-existing conditions (since coverage is guaranteed issue and premiums can't be based on health history), and for people whose household income qualifies them for meaningful subsidies. If you're below the subsidy threshold and in good health, the ACA math often doesn't work in your favor at full price."
+            "text": "ACA marketplace plans are typically the best fit for people with significant pre-existing conditions (since coverage is guaranteed issue and premiums can't be based on health history), and for people whose household income qualifies them for meaningful subsidies. If you're below the subsidy threshold and in good health, the ACA math often doesn't work in your favor at full unsubsidized price."
           }
         },
         {
@@ -212,7 +366,7 @@
           "name": "Who benefits most from private market PPO plans in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Private PPO plans tend to work well for self-employed individuals and 1099 contractors who are generally healthy, earn above the ACA subsidy threshold, and want nationwide network access with no referral requirements. Because private plans are medically underwritten, healthier applicants often access more favorable rates than the ACA community rate."
+            "text": "Private PPO plans tend to work well for self-employed individuals and 1099 contractors who are generally healthy, earn above the ACA subsidy threshold, and want nationwide network access with no referral requirements. Because private plans are medically underwritten, healthier applicants often access more favorable rates than the ACA community rate for their age and county."
           }
         },
         {
@@ -220,7 +374,7 @@
           "name": "What is the ACA subsidy income threshold in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ACA subsidies are based on modified adjusted gross income (MAGI) relative to the federal poverty level. Eligibility and subsidy amounts change annually and vary by household size. The key point: once your income exceeds the subsidy range, you pay full unsubsidized ACA premiums, which in Tennessee are often significantly higher than what a healthy individual can access in the private market."
+            "text": "ACA subsidies are based on modified adjusted gross income (MAGI) relative to the federal poverty level. Eligibility and subsidy amounts change annually and vary by household size. The key point: once your income exceeds the subsidy range, you pay full unsubsidized ACA premiums, which in Tennessee are often significantly higher than what a healthy individual can access in the private market. Tennessee also did not expand Medicaid, so there's a gap at the lower income end worth understanding too."
           }
         },
         {
@@ -228,15 +382,15 @@
           "name": "Can I switch from ACA to a private plan at any time?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Private market plans can be purchased year-round, there's no enrollment window. ACA marketplace plans require enrollment during the annual Open Enrollment Period (which begins November 1) unless you qualify for a Special Enrollment Period due to a qualifying life event such as losing employer coverage, getting married, or having a child."
+            "text": "Private market plans can be purchased year-round, there's no enrollment window. ACA marketplace plans require enrollment during the annual Open Enrollment Period (which begins November 1) unless you qualify for a Special Enrollment Period due to a qualifying life event such as losing employer coverage, getting married, or having a child. If you're currently in an ACA plan and want to explore the private market, you can do so at any point during the year."
           }
         },
         {
           "@type": "Question",
-          "name": "What pre-existing conditions affect private health insurance in Tennessee?",
+          "name": "What pre-existing conditions affect private health insurance eligibility in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Private market plans in Tennessee use medical underwriting, which means the carrier reviews your health history before issuing a policy. Common conditions that can affect approval, pricing, or result in exclusion riders include: recent cancer treatment, heart disease, diabetes, COPD, and other ongoing conditions. Minor or resolved health history may have no impact. Every applicant is reviewed individually."
+            "text": "Private market plans in Tennessee use medical underwriting, which means the carrier reviews your health history before issuing a policy. Common conditions that can affect approval, pricing, or result in exclusion riders include ongoing managed conditions like heart disease or diabetes, recent cancer treatment, and certain chronic conditions. Minor or resolved health history may have no impact at all. Every applicant is reviewed individually, the only way to know where you'd land is to have a direct conversation before anything gets submitted."
           }
         },
         {
@@ -244,23 +398,47 @@
           "name": "Do ACA plans cover the same doctors as private PPO plans in Tennessee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not necessarily. Many ACA plans in Tennessee use EPO network structures with regional provider networks. Private PPO plans typically offer access to a national network with no referral requirements, which matters if you travel frequently, see specialists, or want flexibility to choose any provider without prior authorization."
+            "text": "Not necessarily. Many ACA plans in Tennessee use EPO network structures with regional provider networks. Private PPO plans typically offer access to a national network with no referral requirements, you can see a specialist in another state with the same coverage you'd use in Nashville. If you travel frequently, see multiple specialists, or simply want the flexibility to choose any doctor without prior authorization, a nationwide PPO network is a meaningful difference from a regional marketplace plan."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I know which plan is actually cheaper for me?",
+          "name": "What happens if I took ACA subsidies and then earned more than I projected for the year?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The monthly premium is only one number. The real cost comparison involves deductibles, coinsurance rates, out-of-pocket maximums, and how each plan behaves for the specific healthcare you actually use. A free 15-minute review with DC Insurance walks through both options for your specific income, health profile, and priorities, no pressure, just a real comparison."
+            "text": "ACA subsidies are advance payments of the federal Premium Tax Credit, based on your projected income at enrollment. At tax time, the IRS reconciles those advance payments against your actual income on Form 8962. If your actual income exceeded your projection, you received more in advance credits than you were entitled to, and you owe that excess back as part of your tax return. For households that exceed the subsidy-eligible income range entirely, that repayment can be the full amount received with no cap. A $500/month subsidy for 12 months is $6,000 in advance credits, all potentially owed back if your income exceeded the threshold. This is a particularly significant risk for self-employed individuals with variable income. A private market plan doesn't have this exposure: your premium is fixed at underwriting with no year-end reconciliation tied to how your income develops. Talk to your CPA about your specific situation if you're concerned about prior-year subsidy repayment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know which plan is actually cheaper for my specific situation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The monthly premium is only one number. A complete cost comparison involves deductibles, coinsurance rates, out-of-pocket maximums, and how each plan behaves for the specific healthcare you actually use. For self-employed individuals, the self-employed health insurance tax deduction also affects the net cost of premiums, which sometimes shifts which plan wins on a total dollar basis. A free 15-minute review with DC Insurance walks through both options for your income, health profile, and priorities, no pressure, just a real comparison."
           }
         }
       ]
     },
-    {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dcinsuranceagency.com"}, {"@type": "ListItem", "position": 2, "name": "ACA vs. Private Health Insurance Tennessee", "item": "https://dcinsuranceagency.com/aca-vs-private-health-insurance-tennessee"}]}
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dcinsuranceagency.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ACA vs. Private Health Insurance Tennessee",
+          "item": "https://dcinsuranceagency.com/aca-vs-private-health-insurance-tennessee"
+        }
+      ]
+    }
   ]
 }
-  </script>
+</script>
   <link rel="stylesheet" href="styles.css?v=5" />
 <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
