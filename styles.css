@@ -137,3 +137,29 @@ body.has-mobile-cta .whatsapp-float{bottom:calc(76px + env(safe-area-inset-botto
 .fa-guitar:before{content:"\f7a6"}
 .fa-hard-hat:before{content:"\f807"}
 .fa-person-digging:before{content:"\f85e"}
+
+/* ── Custom icon set (icons.svg sprite) and photo cards, 2026-10-08 ── */
+.ic{display:block;width:100%;height:100%;overflow:visible}
+.card-icon .ic{width:36px;height:36px}
+.plan-item>.ic{width:36px;height:36px;flex-shrink:0}
+.who-chip>.ic{width:26px;height:26px;flex-shrink:0;--ic-sw:2}
+.value-item{display:flex;gap:1rem;margin-bottom:1.75rem;align-items:flex-start}
+.value-icon{width:48px;height:48px;background:var(--sky-light);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--teal);flex-shrink:0;margin-top:.15rem}
+.value-body h4{margin-bottom:.3rem}
+.value-body p{font-size:.95rem}
+.value-icon .ic{width:32px;height:32px}
+.value-icon[style*="red-light"]{--ic-a:var(--red)}
+.why-strip .why-icon{width:44px;height:44px;flex-shrink:0}
+.why-icon .ic{width:28px;height:28px}
+.who-help-card.has-photo{padding:0;gap:0;overflow:hidden}
+.who-help-card.has-photo img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;transition:transform .4s ease}
+.who-help-card.has-photo:hover img{transform:scale(1.04)}
+.whc-body{display:flex;flex-direction:column;gap:.5rem;flex:1;padding:1.2rem 1.4rem 1.4rem}
+.whc-go{margin-top:auto;padding-top:.35rem;font-size:.85rem;font-weight:600;color:var(--teal)}
+.home-blog-card{display:flex;flex-direction:column;background:var(--off-white);border-radius:var(--radius-lg);overflow:hidden;text-decoration:none;transition:box-shadow .2s,transform .2s}
+.home-blog-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.10);transform:translateY(-3px)}
+.home-blog-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.hbc-body{padding:1.4rem 1.6rem 1.6rem}
+.hbc-body h3{color:var(--navy);margin:0 0 .5rem;font-size:1.1rem}
+.hbc-body p{color:var(--gray);font-size:.9rem;margin:0}
+.chip-text{flex:1;min-width:0}
