@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo-nav.webp" type="image/webp" />
+<link rel="preconnect" href="https://connect.facebook.net" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '972248691901448');
+  fbq('track', 'PageView');
+  </script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=972248691901448&ev=PageView&noscript=1" style="display:none" width="1"/></noscript>
+<!-- End Meta Pixel -->
+<!-- Google Analytics GA4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SX5340TR64"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SX5340TR64');
+  /* ── CP125: lead source capture. First-touch + last-touch, localStorage, 90 days. ── */
+  var DCAttr = (function(){
+    var KEY_FIRST = 'dc_attr_first', KEY_LAST = 'dc_attr_last', TTL = 90*24*60*60*1000;
+    var AI = ['chatgpt.com','chat.openai.com','openai.com','perplexity.ai','claude.ai','gemini.google.com','copilot.microsoft.com','you.com'];
+    var SEARCH = ['google.','bing.com','duckduckgo.com','search.yahoo.','ecosia.org','brave.com'];
+    var SOCIAL = ['facebook.com','fb.com','instagram.com','l.facebook.com','lm.facebook.com','linkedin.com','lnkd.in','t.co','x.com','twitter.com','youtube.com','nextdoor.com'];
+    function host(u){ try { return new URL(u).hostname.replace(/^www\./,''); } catch(e){ return ''; } }
+    function anyMatch(h, list){ for(var i=0;i<list.length;i++){ if(h.indexOf(list[i]) !== -1) return true; } return false; }
+    function read(){
+      var q = {}, s = window.location.search.replace(/^\?/,'');
+      if(s){ s.split('&').forEach(function(p){ var kv = p.split('='); if(kv[0]) { try { q[decodeURIComponent(kv[0]).toLowerCase()] = decodeURIComponent((kv[1]||'').replace(/\+/g,' ')); } catch(e){} } }); }
+      return q;
+    }
+    function classify(){
+      var q = read(), ref = document.referrer || '', rh = host(ref), src, med = q.utm_medium || '', camp = q.utm_campaign || '', cont = q.utm_content || '';
+      if(q.utm_source){ src = q.utm_source; }
+      else if(q.fbclid){ src = 'facebook'; med = med || 'paid-untagged'; }
+      else if(q.gclid){ src = 'google'; med = med || 'cpc-untagged'; }
+      else if(q.msclkid){ src = 'bing'; med = med || 'cpc-untagged'; }
+      else if(rh && anyMatch(rh, AI)){ src = rh; med = 'ai-assistant'; }
+      else if(rh && anyMatch(rh, SEARCH)){ src = rh; med = 'organic-search'; }
+      else if(rh && anyMatch(rh, SOCIAL)){ src = rh; med = 'social'; }
+      else if(rh && rh !== window.location.hostname.replace(/^www\./,'')){ src = rh; med = 'referral'; }
+      else { src = 'direct'; med = 'none'; }
+      var d = new Date(), stamp = d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+      return { source: src, medium: med, campaign: camp, content: cont, landing: window.location.pathname, referrer: rh, date: stamp, ts: d.getTime() };
+    }
+    function label(o){
+      if(!o) return 'unknown';
+      var s = o.source + (o.medium && o.medium !== 'none' ? ' / ' + o.medium : '');
+      if(o.campaign) s += ' / ' + o.campaign;
+      return s + ' | ' + o.date + ' | ' + o.landing;
+    }
+    function get(k){ try { var v = JSON.parse(localStorage.getItem(k) || 'null'); if(v && v.ts && (Date.now() - v.ts) < TTL) return v; } catch(e){} return null; }
+    function set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+    var now = classify(), first = get(KEY_FIRST);
+    /* Only overwrite last-touch on a genuinely new external entry, so internal clicks don't flatten it to "direct". */
+    var isEntry = (now.medium !== 'none') || !get(KEY_LAST);
+    if(!first){ first = now; set(KEY_FIRST, now); }
+    if(isEntry){ set(KEY_LAST, now); }
+    return {
+      first: function(){ return get(KEY_FIRST) || now; },
+      last: function(){ return get(KEY_LAST) || now; },
+      firstLabel: function(){ return label(get(KEY_FIRST) || now); },
+      lastLabel: function(){ return label(get(KEY_LAST) || now); },
+      shortSource: function(){ var o = get(KEY_LAST) || now; return o.source + (o.medium && o.medium !== 'none' ? '/' + o.medium : ''); },
+      params: function(){
+        var f = get(KEY_FIRST) || now, l = get(KEY_LAST) || now;
+        return { lead_source: label(l), lead_source_first: label(f), landing_page: f.landing, referrer_host: l.referrer || 'none' };
+      }
+    };
+  })();
+  window.DCAttr = DCAttr;
+  function dcSrc(){ try { return DCAttr.shortSource(); } catch(e){ return 'unknown'; } }
+  /* Conversion event tracking (CP92). Delegated so it survives markup variation. */
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(!t || typeof t.closest !== 'function'){ return; }
+    var a = t.closest('a[href]');
+    if(!a){ return; }
+    var h = a.getAttribute('href') || '';
+    var label = ((a.textContent || '').trim() || a.getAttribute('aria-label') || '').replace(/\s+/g,' ').trim().slice(0,80);
+    if(h.indexOf('tidycal.com') !== -1){
+      gtag('event','book_call_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Schedule',{content_name:'TidyCal intro call'}); }
+    } else if(h.indexOf('tel:') === 0){
+      gtag('event','phone_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'phone'}); }
+    } else if(h.indexOf('mailto:') === 0){
+      gtag('event','email_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'email'}); }
+    } else if(h.indexOf('wa.me') !== -1){
+      gtag('event','whatsapp_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'whatsapp'}); }
+    } else if(/\.pdf($|[?#])/i.test(h)){
+      /* CP-2026-09-11: the guide PDF was downloadable with no event of any kind. */
+      gtag('event','file_download',{link_url:h, link_text:label,
+        file_name:(h.split('/').pop()||'').split('?')[0], lead_source:dcSrc()});
+    } else {
+      /* CP-2026-09-11: internal CTA clicks to /contact and /intake fired nothing,
+         leaving 207 buttons sitewide invisible. Diagnostic only, NOT a key event. */
+      var dest = h.replace(/^(\.\.\/)+/,'').replace(/^\//,'').split(/[?#]/)[0];
+      if(dest === 'contact' || dest === 'intake'){
+        var cls = a.getAttribute('class') || '';
+        gtag('event','cta_click',{link_url:h, link_text:label, destination:dest,
+          cta_style: cls.indexOf('btn-primary') !== -1 ? 'primary'
+                   : (cls.indexOf('btn') !== -1 ? 'button' : 'link'),
+          lead_source:dcSrc()});
+      }
+    }
+  }, true);
+  </script>
+<!-- End Google Analytics -->
+<title>Why Underwritten Health Plans Enroll Year-Round</title>
+<meta name="description" content="Marketplace plans open November 1. Private PPO plans can start almost any month. DC Insurance explains why, and the tradeoff, for Middle Tennessee families."/>
+<link href="https://dcinsuranceagency.com/dc-insurance-blog/f/why-underwritten-health-plans-enroll-year-round-tennessee" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Why Underwritten Health Plans Enroll Year-Round" property="og:title"/>
+<meta content="The marketplace has a window because it cannot ask about your health. Underwritten plans have no window because they do. Here is what that means for your timing." property="og:description"/>
+<meta content="https://dcinsuranceagency.com/dc-insurance-blog/f/why-underwritten-health-plans-enroll-year-round-tennessee" property="og:url"/>
+<meta content="DC Insurance" property="og:site_name"/>
+<meta content="https://dcinsuranceagency.com/dc-insurance-social-card.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Why Underwritten Health Plans Enroll Year-Round" />
+<meta name="twitter:description" content="The marketplace has a window because it cannot ask about your health. Underwritten plans have no window because they do. Here is what that means for your timing." />
+<meta name="twitter:image" content="https://dcinsuranceagency.com/dc-insurance-social-card.jpg" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://dcinsuranceagency.com/dc-insurance-blog/f/why-underwritten-health-plans-enroll-year-round-tennessee","headline":"Why Underwritten Health Plans Enroll Year-Round","datePublished":"2026-10-20","dateModified":"2026-10-20","author":{"@type":"Person","name":"Denton Casey"},"publisher":{"@id":"https://dcinsuranceagency.com/#business"},"keywords":["private health insurance year round tennessee","enroll in health insurance outside open enrollment","medically underwritten plan enrollment","private ppo any time of year","missed open enrollment tennessee options"]},{"@type":["LocalBusiness","InsuranceAgency"],"@id":"https://dcinsuranceagency.com/#business","name":"DC Insurance","telephone":"+1-615-513-0313","url":"https://dcinsuranceagency.com","address":{"@type":"PostalAddress","addressLocality":"Smyrna","addressRegion":"TN","postalCode":"37167","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Nashville"},{"@type":"City","name":"Nolensville"},{"@type":"City","name":"Franklin"},{"@type":"City","name":"College Grove"},{"@type":"City","name":"Murfreesboro"},{"@type":"City","name":"Smyrna"},{"@type":"City","name":"Hendersonville"}],"sameAs":["https://www.facebook.com/dcinsurance/","https://www.instagram.com/dcinsurance2152/","https://www.linkedin.com/in/dentoncasey/"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dcinsuranceagency.com"},{"@type":"ListItem","position":2,"name":"DC Insurance Blog","item":"https://dcinsuranceagency.com/dc-insurance-blog"},{"@type":"ListItem","position":3,"name":"Why Underwritten Plans Enroll Year-Round","item":"https://dcinsuranceagency.com/dc-insurance-blog/f/why-underwritten-health-plans-enroll-year-round-tennessee"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I buy health insurance outside of open enrollment in Tennessee?","acceptedAnswer":{"@type":"Answer","text":"Yes, in two ways. If you have a qualifying event, like losing other coverage, getting married or having a baby, a special enrollment period on the marketplace may be open to you. Separately, medically underwritten private plans can be applied for any time of year. They ask health questions and can decline an application, so they are not a guaranteed option. Coverage availability and eligibility vary by individual circumstances."}},{"@type":"Question","name":"Why does the marketplace only let me enroll at certain times?","acceptedAnswer":{"@type":"Answer","text":"Marketplace plans are guaranteed issue, which means they cannot ask about your health or turn you down for it. Limiting enrollment to open enrollment and special enrollment periods is how they keep people from waiting until they are sick to sign up. The window is what makes saying yes to everyone workable."}},{"@type":"Question","name":"If a private plan is open all year, can I wait until I need it?","acceptedAnswer":{"@type":"Answer","text":"That is the situation underwriting is designed to catch. The application looks at your health as it is on the day you apply, so the private lane is most likely to be open when you are not in the middle of a health issue. It is worth knowing your options before you need them."}},{"@type":"Question","name":"What happens if my private plan application is declined?","acceptedAnswer":{"@type":"Answer","text":"You still have the marketplace. During open enrollment, which begins November 1, or during a special enrollment period after a qualifying event, a marketplace plan cannot turn you down for your health history. Applying for a private plan before open enrollment means you know the answer while the window is still ahead of you."}},{"@type":"Question","name":"Can I switch from a marketplace plan to a private plan in the middle of the year?","acceptedAnswer":{"@type":"Answer","text":"You can apply for a private plan at any time. If you are approved, the plan will have a start date. Keep your current coverage in place until the new plan is approved and its start date is set, so there is no gap. If you receive a premium tax credit on the marketplace, ask whoever prepares your return how ending that coverage early affects your taxes. I am a licensed insurance agent, not a tax preparer."}}]}]}</script>
+<link href="../../styles.css?v=7" rel="stylesheet"/>
+<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/fa-solid-sub.v1.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+<nav class="nav" id="mainNav">
+<div class="container nav-inner">
+<a class="nav-logo" href="/"><img alt="DC Insurance" src="../../logo-nav.webp" width="48" height="46"/></a>
+<ul class="nav-links">
+<li><a href="/">Home</a></li>
+<li><a href="../../about-us">About</a></li>
+<li class="nav-dropdown">
+<a class="nav-dropdown-toggle" href="../../self-employed-health-insurance-tennessee">Who We Help <span class="nav-arrow">▼</span></a>
+<ul class="nav-dropdown-menu">
+<li><a href="../../self-employed-health-insurance-tennessee">Self-Employed</a></li>
+<li><a href="../../1099-health-insurance-tennessee">1099 Contractors</a></li>
+<li><a href="../../small-business-health-insurance-tennessee">Small Business Owners</a></li>
+<li><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a></li>
+<li><a href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private Plans</a></li>
+<li><a href="../../above-aca-subsidy-health-insurance-tennessee">Above Subsidy Threshold</a></li>
+<li><a href="../../real-estate-agent-health-insurance-tennessee">Real Estate Agents</a></li>
+<li><a href="../../owner-operator-health-insurance-tennessee">Owner-Operators</a></li>
+<li><a href="../../musician-health-insurance-tennessee">Musicians</a></li>
+</ul>
+</li>
+<li><a href="../../dc-insurance-blog">Blog</a></li>
+<li class="nav-dropdown">
+<a class="nav-dropdown-toggle" href="../../services">Services <span class="nav-arrow">▼</span></a>
+<ul class="nav-dropdown-menu">
+<li><a href="../../services">Our Services</a></li>
+<li><a href="../../open-enrollment-tennessee">Open Enrollment Review</a></li>
+<li><a href="../../nashville-insurance">Nashville</a></li>
+<li><a href="../../brentwood-insurance">Brentwood</a></li>
+<li><a href="../../belle-meade-insurance">Belle Meade</a></li>
+<li><a href="../../green-hills-insurance">Green Hills</a></li>
+<li><a href="../../franklin-insurance">Franklin</a></li>
+<li><a href="../../spring-hill-insurance">Spring Hill</a></li>
+<li><a href="../../nolensville-insurance">Nolensville</a></li>
+<li><a href="../../murfreesboro-insurance">Murfreesboro</a></li>
+<li><a href="../../smyrna-insurance">Smyrna</a></li>
+<li><a href="../../hendersonville-insurance">Hendersonville</a></li>
+<li><a href="../../mt-juliet-insurance">Mt. Juliet</a></li>
+<li><a href="../../donelson-insurance">Donelson</a></li>
+<li><a href="../../bellevue-insurance">Bellevue</a></li>
+<li><a href="../../shelbyville-insurance">Shelbyville</a></li>
+<li><a href="../../chapel-hill-insurance">Chapel Hill</a></li>
+<li><a href="../../college-grove-insurance">College Grove</a></li>
+<li><a href="../../christiana-insurance">Christiana</a></li>
+<li><a href="../../manchester-insurance">Manchester</a></li>
+<li><a href="../../tullahoma-insurance">Tullahoma</a></li>
+<li><a href="../../lewisburg-insurance">Lewisburg</a></li>
+<li><a href="../../columbia-insurance">Columbia</a></li>
+</ul>
+</li>
+<li><a href="../../contact">Contact</a></li>
+<li><a href="../../free-health-coverage-pdf">Free Guide</a></li>
+</ul>
+<a class="btn btn-primary nav-cta" href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Review</a>
+<button aria-label="Menu" class="nav-hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="nav-mobile" id="navMobile">
+<a href="/">Home</a>
+<a href="../../about-us">About</a>
+<a href="../../community">Community</a>
+<span class="nav-mobile-section-label">Who We Help</span>
+<a class="nav-mobile-indent" href="../../self-employed-health-insurance-tennessee">Self-Employed</a>
+<a class="nav-mobile-indent" href="../../1099-health-insurance-tennessee">1099 Contractors</a>
+<a class="nav-mobile-indent" href="../../small-business-health-insurance-tennessee">Small Business</a>
+<a class="nav-mobile-indent" href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a>
+<a class="nav-mobile-indent" href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private</a>
+<a class="nav-mobile-indent" href="../../above-aca-subsidy-health-insurance-tennessee">Above Subsidy Threshold</a>
+<a class="nav-mobile-indent" href="../../real-estate-agent-health-insurance-tennessee">Real Estate Agents</a>
+<a class="nav-mobile-indent" href="../../owner-operator-health-insurance-tennessee">Owner-Operators</a>
+<a class="nav-mobile-indent" href="../../musician-health-insurance-tennessee">Musicians</a>
+<a href="../../dc-insurance-blog">Blog</a>
+<a href="../../services">Services</a>
+<a href="../../open-enrollment-tennessee" class="nav-mobile-indent">Open Enrollment</a>
+<span class="nav-mobile-section-label">Service Areas</span>
+<a class="nav-mobile-indent" href="../../nashville-insurance">Nashville</a>
+<a class="nav-mobile-indent" href="../../brentwood-insurance">Brentwood</a>
+<a class="nav-mobile-indent" href="../../belle-meade-insurance">Belle Meade</a>
+<a class="nav-mobile-indent" href="../../green-hills-insurance">Green Hills</a>
+<a class="nav-mobile-indent" href="../../franklin-insurance">Franklin</a>
+<a class="nav-mobile-indent" href="../../spring-hill-insurance">Spring Hill</a>
+<a class="nav-mobile-indent" href="../../nolensville-insurance">Nolensville</a>
+<a class="nav-mobile-indent" href="../../murfreesboro-insurance">Murfreesboro</a>
+<a class="nav-mobile-indent" href="../../smyrna-insurance">Smyrna</a>
+<a class="nav-mobile-indent" href="../../hendersonville-insurance">Hendersonville</a>
+<a class="nav-mobile-indent" href="../../mt-juliet-insurance">Mt. Juliet</a>
+<a class="nav-mobile-indent" href="../../donelson-insurance">Donelson</a>
+<a class="nav-mobile-indent" href="../../bellevue-insurance">Bellevue</a>
+<a class="nav-mobile-indent" href="../../shelbyville-insurance">Shelbyville</a>
+<a class="nav-mobile-indent" href="../../chapel-hill-insurance">Chapel Hill</a>
+<a class="nav-mobile-indent" href="../../college-grove-insurance">College Grove</a>
+<a class="nav-mobile-indent" href="../../christiana-insurance">Christiana</a>
+<a class="nav-mobile-indent" href="../../manchester-insurance">Manchester</a>
+<a class="nav-mobile-indent" href="../../tullahoma-insurance">Tullahoma</a>
+<a class="nav-mobile-indent" href="../../lewisburg-insurance">Lewisburg</a>
+<a class="nav-mobile-indent" href="../../columbia-insurance">Columbia</a>
+<a href="../../free-health-coverage-pdf">Free Guide</a>
+<a href="../../contact">Contact</a>
+<a class="btn btn-primary" href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Review</a>
+</div>
+</nav>
+<main>
+
+<section class="section" style="padding-top:7rem;">
+<div class="container">
+<div class="post-layout">
+<article>
+<div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="../../dc-insurance-blog">Blog</a> &rsaquo; Why Underwritten Plans Enroll Year-Round</div>
+<div class="article-header">
+<span class="blog-tag">Underwriting</span><span class="blog-tag">Private PPO</span><span class="blog-tag">Enrollment</span>
+<h1>Why Underwritten Health Plans Enroll Year-Round, and the Marketplace Does Not</h1>
+<div class="article-meta"><span><i class="fa-regular fa-calendar"></i> October 20, 2026</span><span><i class="fa-regular fa-clock"></i> 7 min read</span><span><i class="fa-solid fa-user"></i> Denton Casey</span></div>
+<div class="article-btns">
+<a href="https://tidycal.com/denton/intro-call" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book a Free 15-Minute Call</a>
+<a href="tel:6155130313" class="btn btn-dark"><i class="fa-solid fa-phone"></i> Call 615-513-0313</a>
+</div>
+</div>
+<div class="post-thumbnail"><img width="960" height="540" src="../../blog-images/why-underwritten-health-plans-enroll-year-round-tennessee-card.webp" alt="Smiling Middle Tennessee woman on a sunny spring porch talking on the phone about health coverage" loading="eager" /></div>
+<div class="article-body">
+<p>Every fall the same question comes up in a lot of my conversations. Someone has heard that the marketplace only opens November 1, and then hears me say a private plan can start almost any month of the year. It sounds like one of those two things has to be wrong.</p>
+
+<p>Both are right. They are two different answers to the same problem, and once you see the problem, the calendar makes sense. So does the tradeoff that comes with it.</p>
+
+<h2>The problem both lanes are solving</h2>
+
+<p>Health insurance works because healthy people and sick people are in the same pool. The premiums from the people who barely use their coverage pay for the people who need a lot of it. Any plan has to protect that balance, or it stops working.</p>
+
+<p>The risk is simple. If anyone could buy coverage at any moment with no questions asked, a lot of people would wait until they were sick to buy it. The pool would fill up with claims and empty out of everyone else, and the price would climb for whoever was left.</p>
+
+<p>There are two ways to stop that. One is to control <em>when</em> people can get in. The other is to look at <em>who</em> is getting in. The marketplace uses the first. Medically underwritten plans use the second.</p>
+
+<h2>The marketplace controls the calendar</h2>
+
+<p>Marketplace plans are guaranteed issue. They do not ask health questions, they cannot turn you down for your health history, and they cannot charge you more because of it. That is a real protection, and for a lot of people it is the most important thing about the <a href="../../aca-vs-private-health-insurance-tennessee">ACA lane</a>.</p>
+
+<p>Because the plan cannot look at your health, it controls timing instead. You can enroll during <a href="../../open-enrollment-tennessee">open enrollment</a>, which begins November 1, or during a special enrollment period after a qualifying event, like losing other coverage, getting married or having a baby. Outside those windows, the door is generally closed. I go through the qualifying events in the post on <a href="special-enrollment-periods-tennessee">special enrollment periods</a>.</p>
+
+<p>The window is not there to make life hard. It is what lets the marketplace say yes to everyone.</p>
+
+<h2>Underwritten plans control the application</h2>
+
+<p>A medically underwritten private plan solves the same problem at the front door instead of on the calendar. The application asks about your health: conditions, treatment, medications, sometimes a phone interview. The carrier reviews it and makes a decision. If you are approved, the plan sets a start date, and that can be almost any month.</p>
+
+<p>Since every applicant is reviewed, there is no need for a window. Someone waiting until they are sick to apply does not get past the application the way they would get past a calendar. That is the whole reason the <a href="../../private-ppo-health-insurance-tennessee">private PPO lane</a> is open in March, in July, and the week before Thanksgiving.</p>
+
+<p>I explain what the review actually involves in <a href="what-is-medical-underwriting-does-it-matter">what medical underwriting is</a>, and the steps from application to decision in <a href="applying-for-private-health-plan-tennessee">what happens when you apply for a private health plan</a>.</p>
+
+<div class="comparison-table-wrap">
+<table class="comparison-table">
+<thead><tr><th></th><th>ACA marketplace</th><th>Medically underwritten private plan</th></tr></thead>
+<tbody>
+<tr><td><strong>How it protects the pool</strong></td><td>Limits when you can enroll</td><td>Reviews health before approving</td></tr>
+<tr><td><strong>When you can apply</strong></td><td>Open enrollment, beginning November 1, or a special enrollment period</td><td>Any time of year</td></tr>
+<tr><td><strong>Health questions</strong></td><td>None</td><td>Yes, and they shape the decision</td></tr>
+<tr><td><strong>Can you be turned down</strong></td><td>No</td><td>Yes</td></tr>
+<tr><td><strong>Pre-existing conditions</strong></td><td>Covered, cannot be excluded</td><td>Reviewed at application, may affect eligibility</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Year-round is the flip side of underwriting, not a bonus</h2>
+
+<p>This is the part I want people to hear plainly. Year-round enrollment is not a perk the private side throws in. It comes from the exact same thing that makes the private side harder to get into.</p>
+
+<p>The application asks questions that can feel invasive, and it feels like the carrier is looking for a reason to say no. It is looking. But that scrutiny happens up front, before you are relying on the plan. A no at application is a no you can plan around. Coverage that never asked hard questions is coverage that has to manage its risk some other way, sometimes when a claim comes in. I wrote about that difference in <a href="time-of-claim-underwriting-tennessee">time-of-claim underwriting</a>.</p>
+
+<p>So the honest version is this: the private lane is open all year, and it is not open to everyone. Health history works in more ways than people expect, and I would never tell anyone how a particular application will land before a carrier has looked at it.</p>
+
+<h2>What year-round actually means for you</h2>
+
+<p><strong>You can start a business in March.</strong> Leave a job, go out on your own, and you do not have to plan your health coverage around a November date. If you lost employer coverage, a special enrollment period on the marketplace is usually open too, so you can compare both lanes at the same time. The <a href="lost-job-cobra-special-enrollment-open-enrollment-tennessee">post on losing job coverage this fall</a> walks through how those windows overlap.</p>
+
+<p><strong>You can fix a plan that is not working.</strong> If you are a few months into a plan and the network or the deductible is not what you expected, a private application does not have to wait for next fall. Keep your current coverage in place until a new plan is approved with a start date.</p>
+
+<p><strong>You can know your answer before open enrollment.</strong> This is the one that matters right now. Apply in October and you will usually have a decision before November 1. If it is a yes, you are comparing two real options in the window instead of a real option and a maybe. If it is a no, the marketplace is still there.</p>
+
+<p><strong>You are not stuck after the window closes.</strong> People who miss open enrollment often think they have to wait a full year. If you are healthy, the private lane may still be open. If it is not, a qualifying event or the next open enrollment is the path, and that is worth knowing early rather than finding out in February.</p>
+
+<div class="blog-cta-box">
+  <strong>Not sure which lane fits your timing?</strong> We can look at both before November 1, so you choose with an answer in hand. <a href="https://tidycal.com/denton/intro-call">Book a free 15-minute call</a> or call <a href="tel:6155130313">615-513-0313</a>.
+</div>
+
+<h2>The mistake year-round makes easy</h2>
+
+<p>The one misread I want to head off: "It is open all year, so I can apply when I need it." That is the exact situation the application is built to catch. Underwriting looks at your health as it is on the day you apply. The time to explore the private lane is while you are not in the middle of something, because that is when the door is most likely to be open.</p>
+
+<p>That is not a reason to rush into anything. It is a reason to know your options before you need them, which is most of what I do with people.</p>
+
+<h2>Common questions</h2>
+
+<div class="faq-item"><h3>Can I buy health insurance outside of open enrollment in Tennessee?</h3><p>Yes, in two ways. If you have a qualifying event, like losing other coverage, getting married or having a baby, a special enrollment period on the marketplace may be open to you. Separately, medically underwritten private plans can be applied for any time of year. They ask health questions and can decline an application, so they are not a guaranteed option. Coverage availability and eligibility vary by individual circumstances.</p></div>
+<div class="faq-item"><h3>Why does the marketplace only let me enroll at certain times?</h3><p>Marketplace plans are guaranteed issue, which means they cannot ask about your health or turn you down for it. Limiting enrollment to open enrollment and special enrollment periods is how they keep people from waiting until they are sick to sign up. The window is what makes saying yes to everyone workable.</p></div>
+<div class="faq-item"><h3>If a private plan is open all year, can I wait until I need it?</h3><p>That is the situation underwriting is designed to catch. The application looks at your health as it is on the day you apply, so the private lane is most likely to be open when you are not in the middle of a health issue. It is worth knowing your options before you need them.</p></div>
+<div class="faq-item"><h3>What happens if my private plan application is declined?</h3><p>You still have the marketplace. During open enrollment, which begins November 1, or during a special enrollment period after a qualifying event, a marketplace plan cannot turn you down for your health history. Applying for a private plan before open enrollment means you know the answer while the window is still ahead of you.</p></div>
+<div class="faq-item"><h3>Can I switch from a marketplace plan to a private plan in the middle of the year?</h3><p>You can apply for a private plan at any time. If you are approved, the plan will have a start date. Keep your current coverage in place until the new plan is approved and its start date is set, so there is no gap. If you receive a premium tax credit on the marketplace, ask whoever prepares your return how ending that coverage early affects your taxes. I am a licensed insurance agent, not a tax preparer.</p></div>
+
+<h2>Where to start</h2>
+
+<p>The marketplace has a window because it cannot ask about your health. Underwritten plans have no window because they do. Neither one is the better lane for everyone, and the calendar is not the thing that should decide it for you.</p>
+
+<p>If you are self-employed, between jobs, or just tired of planning your coverage around one month a year, it is worth knowing what the private side would say before you need it. That is a 15-minute conversation, and it can happen any month you like.</p>
+
+<div class="blog-cta-box">
+  <strong>The private lane is open any month. So am I.</strong> DC Insurance offers free consultations with no obligation. <a href="https://tidycal.com/denton/intro-call">Book your free review</a> or call <a href="tel:6155130313">615-513-0313</a>.
+</div>
+
+
+<p class="blog-disclaimer"><em>DC Insurance is an independent health insurance agency serving Middle Tennessee. This is general information about how coverage works, not advice about your particular situation. Coverage availability and eligibility vary by individual circumstances.</em></p>
+
+<div class="author-bio" style="display:flex;gap:1rem;align-items:flex-start;margin:2rem 0 1.5rem;padding:1.25rem 1.5rem;background:var(--light-gray,#f8f9fa);border-radius:10px;border-left:4px solid var(--teal,#0d9488);">
+  <img src="../../denton-bio.webp" alt="Denton Casey, DC Insurance" width="150" height="184" loading="lazy" style="border-radius:50%;object-fit:cover;flex-shrink:0;" />
+  <div>
+    <strong style="display:block;font-size:1rem;color:var(--navy,#1e3a5f);">Denton Casey</strong>
+    <span style="display:block;font-size:0.85rem;color:var(--medium-gray,#6b7280);margin-bottom:0.5rem;">Independent Health Insurance Specialist &middot; DC Insurance</span>
+    <p style="font-size:0.9rem;margin:0;line-height:1.6;">Denton helps self-employed individuals, 1099 contractors, and small business owners in Middle Tennessee find coverage that actually fits, comparing every lane available, not just what's easiest to sell. <a href="../../about-us" style="color:var(--teal,#0d9488);">Learn more about Denton &rarr;</a></p>
+  </div>
+</div>
+
+</div>
+</article>
+<aside class="post-sidebar">
+<div class="sidebar-widget" style="background:var(--navy);border-color:var(--navy);"><h4 style="color:rgba(255,255,255,0.5);">Have a Question?</h4><p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Get a straight answer for your specific situation, no pressure, no scripts.</p><a class="btn btn-primary" href="../../contact" style="width:100%;justify-content:center;">Book a Free Review</a><a class="btn btn-outline" href="tel:6155130313" style="width:100%;justify-content:center;margin-top:0.75rem;"><i class="fa-solid fa-phone"></i>  615-513-0313</a></div>
+<div class="sidebar-widget"><h4>Compare Your Options</h4>
+<div class="related-post"><div><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a><span class="date">Coverage Options</span></div></div>
+<div class="related-post"><div><a href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private</a><span class="date">Compare</span></div></div>
+<div class="related-post"><div><a href="../../self-employed-health-insurance-tennessee">Self-Employed</a><span class="date">Who We Help</span></div></div>
+<div class="related-post"><div><a href="../../open-enrollment-tennessee">Open Enrollment in Tennessee</a><span class="date">Start Here</span></div></div>
+</div>
+<div class="sidebar-widget"><h4>Areas We Serve</h4><ul style="font-size:0.88rem;"><li style="margin-bottom:0.4rem;"><a href="../../nashville-insurance" style="color:var(--teal);">Nashville</a></li><li style="margin-bottom:0.4rem;"><a href="../../nolensville-insurance" style="color:var(--teal);">Nolensville</a></li><li style="margin-bottom:0.4rem;"><a href="../../franklin-insurance" style="color:var(--teal);">Franklin</a></li><li style="margin-bottom:0.4rem;"><a href="../../college-grove-insurance" style="color:var(--teal);">College Grove</a></li><li style="margin-bottom:0.4rem;"><a href="../../murfreesboro-insurance" style="color:var(--teal);">Murfreesboro</a></li><li style="margin-bottom:0.4rem;"><a href="../../smyrna-insurance" style="color:var(--teal);">Smyrna</a></li><li style="margin-bottom:0.4rem;"><a href="../../hendersonville-insurance" style="color:var(--teal);">Hendersonville</a></li><li><a href="../../contact" style="color:var(--gray);">+ More Areas</a></li></ul></div>
+<div class="sidebar-widget"><h4>More From the Blog</h4>
+<div class="related-post"><div><a href="applying-for-private-health-plan-tennessee">Applying for a Private Plan</a><span class="date">Underwriting</span></div></div>
+<div class="related-post"><div><a href="time-of-claim-underwriting-tennessee">Time-of-Claim Underwriting</a><span class="date">Underwriting</span></div></div>
+<div class="related-post"><div><a href="special-enrollment-periods-tennessee">Special Enrollment Periods</a><span class="date">Enrollment</span></div></div>
+</div>
+</aside>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a href="/" style="display:inline-block;margin-bottom:1rem;">
+<img alt="DC Insurance" src="../../logo-nav.webp" width="55" height="52"/>
+</a>
+<p>Tennessee's independent health insurance specialist. Private PPO plans, supplemental coverage, and honest comparisons for self-employed individuals and small business owners.</p>
+<p class="footer-disclaimer" style="margin-top:1rem;">Licensed health insurance agent. Coverage availability and eligibility vary by state and individual circumstances. TN Insurance License #3002519070 | NPN: 20716644</p>
+</div>
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="../../about-us">About</a></li>
+<li><a href="../../services">Services</a></li>
+<li><a href="../../dc-insurance-blog">Blog</a></li>
+<li><a href="../../contact">Contact</a></li>
+<li><a href="../../free-health-coverage-pdf">Free Guide</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Service Areas</h4>
+<ul>
+<li><a href="../../nashville-insurance">Nashville</a></li>
+<li><a href="../../brentwood-insurance">Brentwood</a></li>
+<li><a href="../../franklin-insurance">Franklin</a></li>
+<li><a href="../../murfreesboro-insurance">Murfreesboro</a></li>
+<li><a href="../../nolensville-insurance">Nolensville</a></li>
+<li><a href="../../smyrna-insurance">Smyrna</a></li>
+<li><a href="../../belle-meade-insurance">Belle Meade</a></li>
+<li><a href="../../green-hills-insurance">Green Hills</a></li>
+<li><a href="../../bellevue-insurance">Bellevue</a></li>
+<li><a href="../../mt-juliet-insurance">Mt. Juliet</a></li>
+<li><a href="../../hendersonville-insurance">Hendersonville</a></li>
+<li><a href="../../spring-hill-insurance">Spring Hill</a></li>
+<li><a href="../../donelson-insurance">Donelson</a></li>
+<li><a href="../../shelbyville-insurance">Shelbyville</a></li>
+<li><a href="../../chapel-hill-insurance">Chapel Hill</a></li>
+<li><a href="../../college-grove-insurance">College Grove</a></li>
+<li><a href="../../christiana-insurance">Christiana</a></li>
+<li><a href="../../manchester-insurance">Manchester</a></li>
+<li><a href="../../tullahoma-insurance">Tullahoma</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<ul>
+<li><a href="tel:6155130313"><i class="fa-solid fa-phone" style="color:var(--sky);margin-right:0.4rem;"></i>615-513-0313</a></li>
+<li><a href="mailto:denton@dcinsuranceagency.com">denton@dcinsuranceagency.com</a></li>
+<li><a href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Appointment</a></li>
+<li><a href="../../privacy-page" rel="nofollow" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Privacy Policy</a></li>
+<li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon–Fri 8am–5pm · Sat 9am–2pm</li>
+</ul>
+<div class="social-links" style="margin-top:1.25rem;">
+<a aria-label="Facebook" class="social-link fb" href="https://www.facebook.com/dcinsurance/" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+<a aria-label="Instagram" class="social-link ig" href="https://www.instagram.com/dcinsurance2152/" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+<a aria-label="LinkedIn" class="social-link li" href="https://www.linkedin.com/in/dentoncasey/" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="footer-col">
+<h4>Who We Help</h4>
+<ul>
+<li><a href="../../self-employed-health-insurance-tennessee">Self-Employed</a></li>
+<li><a href="../../1099-health-insurance-tennessee">1099 Contractors</a></li>
+<li><a href="../../small-business-health-insurance-tennessee">Small Business Owners</a></li>
+<li><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a></li>
+<li><a href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 DC Insurance · Denton Casey · Middle Tennessee</span>
+<span>Independent Health Insurance Specialist · 615-513-0313</span>
+</div>
+</div>
+</footer>
+
+<a aria-label="Message on WhatsApp" class="whatsapp-float" href="https://wa.me/16155130313" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('navMobile');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      if(window.innerWidth < 900){
+          e.preventDefault();
+          li.classList.toggle('open');
+          document.querySelectorAll('.nav-dropdown').forEach(function(other){
+            if(other !== li) other.classList.remove('open');
+          });
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.nav-dropdown')){
+        document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      }
+    });
+  })();
+  </script>
+  <script src="/animations.js" defer></script>
+</body>
+</html>
