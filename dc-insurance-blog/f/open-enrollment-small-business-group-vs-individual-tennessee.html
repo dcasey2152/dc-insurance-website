@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo-nav.webp" type="image/webp" />
+<link rel="preconnect" href="https://connect.facebook.net" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '972248691901448');
+  fbq('track', 'PageView');
+  </script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=972248691901448&ev=PageView&noscript=1" style="display:none" width="1"/></noscript>
+<!-- End Meta Pixel -->
+<!-- Google Analytics GA4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SX5340TR64"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SX5340TR64');
+  /* ── CP125: lead source capture. First-touch + last-touch, localStorage, 90 days. ── */
+  var DCAttr = (function(){
+    var KEY_FIRST = 'dc_attr_first', KEY_LAST = 'dc_attr_last', TTL = 90*24*60*60*1000;
+    var AI = ['chatgpt.com','chat.openai.com','openai.com','perplexity.ai','claude.ai','gemini.google.com','copilot.microsoft.com','you.com'];
+    var SEARCH = ['google.','bing.com','duckduckgo.com','search.yahoo.','ecosia.org','brave.com'];
+    var SOCIAL = ['facebook.com','fb.com','instagram.com','l.facebook.com','lm.facebook.com','linkedin.com','lnkd.in','t.co','x.com','twitter.com','youtube.com','nextdoor.com'];
+    function host(u){ try { return new URL(u).hostname.replace(/^www\./,''); } catch(e){ return ''; } }
+    function anyMatch(h, list){ for(var i=0;i<list.length;i++){ if(h.indexOf(list[i]) !== -1) return true; } return false; }
+    function read(){
+      var q = {}, s = window.location.search.replace(/^\?/,'');
+      if(s){ s.split('&').forEach(function(p){ var kv = p.split('='); if(kv[0]) { try { q[decodeURIComponent(kv[0]).toLowerCase()] = decodeURIComponent((kv[1]||'').replace(/\+/g,' ')); } catch(e){} } }); }
+      return q;
+    }
+    function classify(){
+      var q = read(), ref = document.referrer || '', rh = host(ref), src, med = q.utm_medium || '', camp = q.utm_campaign || '', cont = q.utm_content || '';
+      if(q.utm_source){ src = q.utm_source; }
+      else if(q.fbclid){ src = 'facebook'; med = med || 'paid-untagged'; }
+      else if(q.gclid){ src = 'google'; med = med || 'cpc-untagged'; }
+      else if(q.msclkid){ src = 'bing'; med = med || 'cpc-untagged'; }
+      else if(rh && anyMatch(rh, AI)){ src = rh; med = 'ai-assistant'; }
+      else if(rh && anyMatch(rh, SEARCH)){ src = rh; med = 'organic-search'; }
+      else if(rh && anyMatch(rh, SOCIAL)){ src = rh; med = 'social'; }
+      else if(rh && rh !== window.location.hostname.replace(/^www\./,'')){ src = rh; med = 'referral'; }
+      else { src = 'direct'; med = 'none'; }
+      var d = new Date(), stamp = d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+      return { source: src, medium: med, campaign: camp, content: cont, landing: window.location.pathname, referrer: rh, date: stamp, ts: d.getTime() };
+    }
+    function label(o){
+      if(!o) return 'unknown';
+      var s = o.source + (o.medium && o.medium !== 'none' ? ' / ' + o.medium : '');
+      if(o.campaign) s += ' / ' + o.campaign;
+      return s + ' | ' + o.date + ' | ' + o.landing;
+    }
+    function get(k){ try { var v = JSON.parse(localStorage.getItem(k) || 'null'); if(v && v.ts && (Date.now() - v.ts) < TTL) return v; } catch(e){} return null; }
+    function set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+    var now = classify(), first = get(KEY_FIRST);
+    /* Only overwrite last-touch on a genuinely new external entry, so internal clicks don't flatten it to "direct". */
+    var isEntry = (now.medium !== 'none') || !get(KEY_LAST);
+    if(!first){ first = now; set(KEY_FIRST, now); }
+    if(isEntry){ set(KEY_LAST, now); }
+    return {
+      first: function(){ return get(KEY_FIRST) || now; },
+      last: function(){ return get(KEY_LAST) || now; },
+      firstLabel: function(){ return label(get(KEY_FIRST) || now); },
+      lastLabel: function(){ return label(get(KEY_LAST) || now); },
+      shortSource: function(){ var o = get(KEY_LAST) || now; return o.source + (o.medium && o.medium !== 'none' ? '/' + o.medium : ''); },
+      params: function(){
+        var f = get(KEY_FIRST) || now, l = get(KEY_LAST) || now;
+        return { lead_source: label(l), lead_source_first: label(f), landing_page: f.landing, referrer_host: l.referrer || 'none' };
+      }
+    };
+  })();
+  window.DCAttr = DCAttr;
+  function dcSrc(){ try { return DCAttr.shortSource(); } catch(e){ return 'unknown'; } }
+  /* Conversion event tracking (CP92). Delegated so it survives markup variation. */
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(!t || typeof t.closest !== 'function'){ return; }
+    var a = t.closest('a[href]');
+    if(!a){ return; }
+    var h = a.getAttribute('href') || '';
+    var label = ((a.textContent || '').trim() || a.getAttribute('aria-label') || '').replace(/\s+/g,' ').trim().slice(0,80);
+    if(h.indexOf('tidycal.com') !== -1){
+      gtag('event','book_call_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Schedule',{content_name:'TidyCal intro call'}); }
+    } else if(h.indexOf('tel:') === 0){
+      gtag('event','phone_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'phone'}); }
+    } else if(h.indexOf('mailto:') === 0){
+      gtag('event','email_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'email'}); }
+    } else if(h.indexOf('wa.me') !== -1){
+      gtag('event','whatsapp_click',{link_url:h, link_text:label, lead_source:dcSrc()});
+      if(typeof fbq === 'function'){ fbq('track','Contact',{content_name:'whatsapp'}); }
+    } else if(/\.pdf($|[?#])/i.test(h)){
+      /* CP-2026-09-11: the guide PDF was downloadable with no event of any kind. */
+      gtag('event','file_download',{link_url:h, link_text:label,
+        file_name:(h.split('/').pop()||'').split('?')[0], lead_source:dcSrc()});
+    } else {
+      /* CP-2026-09-11: internal CTA clicks to /contact and /intake fired nothing,
+         leaving 207 buttons sitewide invisible. Diagnostic only, NOT a key event. */
+      var dest = h.replace(/^(\.\.\/)+/,'').replace(/^\//,'').split(/[?#]/)[0];
+      if(dest === 'contact' || dest === 'intake'){
+        var cls = a.getAttribute('class') || '';
+        gtag('event','cta_click',{link_url:h, link_text:label, destination:dest,
+          cta_style: cls.indexOf('btn-primary') !== -1 ? 'primary'
+                   : (cls.indexOf('btn') !== -1 ? 'button' : 'link'),
+          lead_source:dcSrc()});
+      }
+    }
+  }, true);
+  </script>
+<!-- End Google Analytics -->
+<title>Small Business Open Enrollment: Group or Individual?</title>
+<meta name="description" content="Open enrollment is for individual coverage, while a group plan keeps its own calendar. DC Insurance helps Middle Tennessee business owners sort out both."/>
+<link href="https://dcinsuranceagency.com/dc-insurance-blog/f/open-enrollment-small-business-group-vs-individual-tennessee" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Small Business Open Enrollment: Group or Individual?" property="og:title"/>
+<meta content="Open enrollment is loud, and most of it is aimed at individuals. For a small business owner it touches two separate questions with two separate calendars." property="og:description"/>
+<meta content="https://dcinsuranceagency.com/dc-insurance-blog/f/open-enrollment-small-business-group-vs-individual-tennessee" property="og:url"/>
+<meta content="DC Insurance" property="og:site_name"/>
+<meta content="https://dcinsuranceagency.com/dc-insurance-social-card.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Small Business Open Enrollment: Group or Individual?" />
+<meta name="twitter:description" content="Open enrollment is loud, and most of it is aimed at individuals. For a small business owner it touches two separate questions with two separate calendars." />
+<meta name="twitter:image" content="https://dcinsuranceagency.com/dc-insurance-social-card.jpg" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://dcinsuranceagency.com/dc-insurance-blog/f/open-enrollment-small-business-group-vs-individual-tennessee","headline":"Small Business Open Enrollment: Group or Individual?","datePublished":"2026-11-04","dateModified":"2026-11-04","author":{"@type":"Person","name":"Denton Casey"},"publisher":{"@id":"https://dcinsuranceagency.com/#business"},"keywords":["small business health insurance open enrollment tennessee","group vs individual health insurance small business","small business owner health insurance middle tennessee","employees individual health insurance open enrollment","small group health plan renewal tennessee"]},{"@type":["LocalBusiness","InsuranceAgency"],"@id":"https://dcinsuranceagency.com/#business","name":"DC Insurance","telephone":"+1-615-513-0313","url":"https://dcinsuranceagency.com","address":{"@type":"PostalAddress","addressLocality":"Smyrna","addressRegion":"TN","postalCode":"37167","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Nashville"},{"@type":"City","name":"Nolensville"},{"@type":"City","name":"Franklin"},{"@type":"City","name":"College Grove"},{"@type":"City","name":"Murfreesboro"},{"@type":"City","name":"Smyrna"},{"@type":"City","name":"Hendersonville"}],"sameAs":["https://www.facebook.com/dcinsurance/","https://www.instagram.com/dcinsurance2152/","https://www.linkedin.com/in/dentoncasey/"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dcinsuranceagency.com"},{"@type":"ListItem","position":2,"name":"DC Insurance Blog","item":"https://dcinsuranceagency.com/dc-insurance-blog"},{"@type":"ListItem","position":3,"name":"Open Enrollment for Small Business","item":"https://dcinsuranceagency.com/dc-insurance-blog/f/open-enrollment-small-business-group-vs-individual-tennessee"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does open enrollment apply to my small group health plan?","acceptedAnswer":{"@type":"Answer","text":"Generally not in the same way. The open enrollment that begins November 1 is for individual coverage, including the ACA marketplace. A small group plan usually runs on its own renewal schedule, so your group's renewal date is the date to plan around for the group side."}},{"@type":"Question","name":"Can my employees use open enrollment if the business does not offer a group plan?","acceptedAnswer":{"@type":"Answer","text":"Yes. Open enrollment is when the ACA marketplace is open to everyone for individual coverage, so employees who buy their own coverage can enroll or change plans during this window. Outside it, they would generally need a qualifying life event. Eligibility for any premium tax credit varies by individual circumstances."}},{"@type":"Question","name":"Should I, as the owner, be on the same plan as my employees?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. The owner's coverage is a separate decision from how the team is covered. Depending on your income, health and household, an individual plan may fit you better than the group plan, or the reverse. It is worth comparing once rather than assuming."}},{"@type":"Question","name":"What about ICHRA or QSEHRA?","acceptedAnswer":{"@type":"Answer","text":"Both are arrangements where a business helps pay for individual coverage instead of sponsoring a group plan. They have their own rules about eligibility, required notices and how they interact with marketplace premium tax credits, and the details decide whether they help. That is worth working through with your CPA or tax advisor alongside a licensed agent. I am a licensed insurance agent, not a tax preparer or an attorney."}},{"@type":"Question","name":"Is a group plan ever the better choice for a small business?","acceptedAnswer":{"@type":"Answer","text":"Yes. For some teams, especially those with health conditions or an older workforce, a group plan that does not ask each employee to qualify individually can be the strongest option. The goal is to choose it after comparing, not by default. Coverage availability and eligibility vary by individual circumstances."}}]}]}</script>
+<link href="../../styles.css?v=7" rel="stylesheet"/>
+<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/fa-solid-sub.v1.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+<nav class="nav" id="mainNav">
+<div class="container nav-inner">
+<a class="nav-logo" href="/"><img alt="DC Insurance" src="../../logo-nav.webp" width="48" height="46"/></a>
+<ul class="nav-links">
+<li><a href="/">Home</a></li>
+<li><a href="../../about-us">About</a></li>
+<li class="nav-dropdown">
+<a class="nav-dropdown-toggle" href="../../self-employed-health-insurance-tennessee">Who We Help <span class="nav-arrow">▼</span></a>
+<ul class="nav-dropdown-menu">
+<li><a href="../../self-employed-health-insurance-tennessee">Self-Employed</a></li>
+<li><a href="../../1099-health-insurance-tennessee">1099 Contractors</a></li>
+<li><a href="../../small-business-health-insurance-tennessee">Small Business Owners</a></li>
+<li><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a></li>
+<li><a href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private Plans</a></li>
+<li><a href="../../above-aca-subsidy-health-insurance-tennessee">Above Subsidy Threshold</a></li>
+<li><a href="../../real-estate-agent-health-insurance-tennessee">Real Estate Agents</a></li>
+<li><a href="../../owner-operator-health-insurance-tennessee">Owner-Operators</a></li>
+<li><a href="../../musician-health-insurance-tennessee">Musicians</a></li>
+</ul>
+</li>
+<li><a href="../../dc-insurance-blog">Blog</a></li>
+<li class="nav-dropdown">
+<a class="nav-dropdown-toggle" href="../../services">Services <span class="nav-arrow">▼</span></a>
+<ul class="nav-dropdown-menu">
+<li><a href="../../services">Our Services</a></li>
+<li><a href="../../open-enrollment-tennessee">Open Enrollment Review</a></li>
+<li><a href="../../nashville-insurance">Nashville</a></li>
+<li><a href="../../brentwood-insurance">Brentwood</a></li>
+<li><a href="../../belle-meade-insurance">Belle Meade</a></li>
+<li><a href="../../green-hills-insurance">Green Hills</a></li>
+<li><a href="../../franklin-insurance">Franklin</a></li>
+<li><a href="../../spring-hill-insurance">Spring Hill</a></li>
+<li><a href="../../nolensville-insurance">Nolensville</a></li>
+<li><a href="../../murfreesboro-insurance">Murfreesboro</a></li>
+<li><a href="../../smyrna-insurance">Smyrna</a></li>
+<li><a href="../../hendersonville-insurance">Hendersonville</a></li>
+<li><a href="../../mt-juliet-insurance">Mt. Juliet</a></li>
+<li><a href="../../donelson-insurance">Donelson</a></li>
+<li><a href="../../bellevue-insurance">Bellevue</a></li>
+<li><a href="../../shelbyville-insurance">Shelbyville</a></li>
+<li><a href="../../chapel-hill-insurance">Chapel Hill</a></li>
+<li><a href="../../college-grove-insurance">College Grove</a></li>
+<li><a href="../../christiana-insurance">Christiana</a></li>
+<li><a href="../../manchester-insurance">Manchester</a></li>
+<li><a href="../../tullahoma-insurance">Tullahoma</a></li>
+<li><a href="../../lewisburg-insurance">Lewisburg</a></li>
+<li><a href="../../columbia-insurance">Columbia</a></li>
+</ul>
+</li>
+<li><a href="../../contact">Contact</a></li>
+<li><a href="../../free-health-coverage-pdf">Free Guide</a></li>
+</ul>
+<a class="btn btn-primary nav-cta" href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Review</a>
+<button aria-label="Menu" class="nav-hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="nav-mobile" id="navMobile">
+<a href="/">Home</a>
+<a href="../../about-us">About</a>
+<a href="../../community">Community</a>
+<span class="nav-mobile-section-label">Who We Help</span>
+<a class="nav-mobile-indent" href="../../self-employed-health-insurance-tennessee">Self-Employed</a>
+<a class="nav-mobile-indent" href="../../1099-health-insurance-tennessee">1099 Contractors</a>
+<a class="nav-mobile-indent" href="../../small-business-health-insurance-tennessee">Small Business</a>
+<a class="nav-mobile-indent" href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a>
+<a class="nav-mobile-indent" href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private</a>
+<a class="nav-mobile-indent" href="../../above-aca-subsidy-health-insurance-tennessee">Above Subsidy Threshold</a>
+<a class="nav-mobile-indent" href="../../real-estate-agent-health-insurance-tennessee">Real Estate Agents</a>
+<a class="nav-mobile-indent" href="../../owner-operator-health-insurance-tennessee">Owner-Operators</a>
+<a class="nav-mobile-indent" href="../../musician-health-insurance-tennessee">Musicians</a>
+<a href="../../dc-insurance-blog">Blog</a>
+<a href="../../services">Services</a>
+<a href="../../open-enrollment-tennessee" class="nav-mobile-indent">Open Enrollment</a>
+<span class="nav-mobile-section-label">Service Areas</span>
+<a class="nav-mobile-indent" href="../../nashville-insurance">Nashville</a>
+<a class="nav-mobile-indent" href="../../brentwood-insurance">Brentwood</a>
+<a class="nav-mobile-indent" href="../../belle-meade-insurance">Belle Meade</a>
+<a class="nav-mobile-indent" href="../../green-hills-insurance">Green Hills</a>
+<a class="nav-mobile-indent" href="../../franklin-insurance">Franklin</a>
+<a class="nav-mobile-indent" href="../../spring-hill-insurance">Spring Hill</a>
+<a class="nav-mobile-indent" href="../../nolensville-insurance">Nolensville</a>
+<a class="nav-mobile-indent" href="../../murfreesboro-insurance">Murfreesboro</a>
+<a class="nav-mobile-indent" href="../../smyrna-insurance">Smyrna</a>
+<a class="nav-mobile-indent" href="../../hendersonville-insurance">Hendersonville</a>
+<a class="nav-mobile-indent" href="../../mt-juliet-insurance">Mt. Juliet</a>
+<a class="nav-mobile-indent" href="../../donelson-insurance">Donelson</a>
+<a class="nav-mobile-indent" href="../../bellevue-insurance">Bellevue</a>
+<a class="nav-mobile-indent" href="../../shelbyville-insurance">Shelbyville</a>
+<a class="nav-mobile-indent" href="../../chapel-hill-insurance">Chapel Hill</a>
+<a class="nav-mobile-indent" href="../../college-grove-insurance">College Grove</a>
+<a class="nav-mobile-indent" href="../../christiana-insurance">Christiana</a>
+<a class="nav-mobile-indent" href="../../manchester-insurance">Manchester</a>
+<a class="nav-mobile-indent" href="../../tullahoma-insurance">Tullahoma</a>
+<a class="nav-mobile-indent" href="../../lewisburg-insurance">Lewisburg</a>
+<a class="nav-mobile-indent" href="../../columbia-insurance">Columbia</a>
+<a href="../../free-health-coverage-pdf">Free Guide</a>
+<a href="../../contact">Contact</a>
+<a class="btn btn-primary" href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Review</a>
+</div>
+</nav>
+<main>
+
+<section class="section" style="padding-top:7rem;">
+<div class="container">
+<div class="post-layout">
+<article>
+<div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="../../dc-insurance-blog">Blog</a> &rsaquo; Open Enrollment for Small Business</div>
+<div class="article-header">
+<span class="blog-tag">Open Enrollment</span><span class="blog-tag">Small Business</span>
+<h1>Open Enrollment for Small Business Owners: Group Plan or Individual Coverage?</h1>
+<div class="article-meta"><span><i class="fa-regular fa-calendar"></i> November 4, 2026</span><span><i class="fa-regular fa-clock"></i> 6 min read</span><span><i class="fa-solid fa-user"></i> Denton Casey</span></div>
+<div class="article-btns">
+<a href="https://tidycal.com/denton/intro-call" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fa-regular fa-calendar-check"></i> Book a Free 15-Minute Call</a>
+<a href="tel:6155130313" class="btn btn-dark"><i class="fa-solid fa-phone"></i> Call 615-513-0313</a>
+</div>
+</div>
+<div class="post-thumbnail"><img width="960" height="540" src="../../blog-images/open-enrollment-small-business-group-vs-individual-tennessee-card.webp" alt="Smiling small business owner in a blue shirt laughing with two employees around a wood table with coffee mugs and a laptop in a sunlit Middle Tennessee workshop office" loading="eager" /></div>
+<div class="article-body">
+
+<p><a href="../../open-enrollment-tennessee">Open enrollment</a> opened November 1, and if you own a small business in Middle Tennessee it can feel like a deadline that applies to everybody except you. Your employees are hearing about it. Your spouse is hearing about it. And you are trying to work out whether any of it has anything to do with the company.</p>
+
+<p>The honest answer is that it touches you in two places, and it helps to pull them apart.</p>
+
+<h2>Open enrollment is the individual market's window, not your group's</h2>
+
+<p>The open enrollment that started November 1 is for individual coverage: the ACA marketplace and the plans people buy for themselves and their families. A small group plan, if you have one, generally runs on its own calendar and usually renews around the anniversary of when the group started, not on November 1. Our <a href="../../small-business-health-insurance-tennessee">small business coverage page</a> covers how group plans can be set up during the year.</p>
+
+<p>So this window is not when your group plan gets decided. It is when the individual side of the market is open to everyone, and that matters for two sets of people: you, and anyone on your team who is not on a group plan.</p>
+
+<h2>Question one: how are you covering yourself?</h2>
+
+<p>Owners tend to put their own coverage last. They sort out the team, then take whatever is left. That can be the right call, but it should be a call and not a default.</p>
+
+<p>If you are on your own group plan, it is worth comparing once against what you could do individually. If your income puts you above the range where premium tax credits help, the marketplace can get expensive without that offset, and a medically underwritten <a href="../../private-ppo-health-insurance-tennessee">private PPO</a> may be worth a look. Those plans ask health questions and can come back as a no, so nobody can promise you an approval. They can also be applied for any month of the year, not just in this window.</p>
+
+<p>The <a href="../../self-employed-health-insurance-tennessee">self-employed coverage page</a> walks through the owner's side in more detail.</p>
+
+<h2>Question two: how is the team covered?</h2>
+
+<p>This is where owners get the most conflicting advice. Broadly, the small businesses I talk with land in one of three places.</p>
+
+<p><strong>A traditional group plan.</strong> One plan structure for everyone, bought through the business. In what I have seen, a group plan's real strength is that it does not ask each employee to qualify on their own health history the way a private underwritten plan does. For a team with health conditions, that can matter more than anything else on the table.</p>
+
+<p><strong>Everyone on their own individual coverage.</strong> Each person picks a plan that fits their doctors and their household, and the business may or may not help pay for it. For those employees, this window is exactly when the marketplace is open to them without needing a qualifying life event.</p>
+
+<p><strong>Something in between.</strong> Plenty of small teams end up mixed: a couple of people on a spouse's employer plan, one on the marketplace, the owner on a private plan. That is not a failure to pick a strategy. Sometimes it is the strategy.</p>
+
+<p>There are also reimbursement arrangements, usually called ICHRA and QSEHRA, where a business helps pay for individual coverage instead of sponsoring a group plan. They come with their own rules about eligibility, notices and how they interact with marketplace credits. I am not going to summarize those rules in a blog post, because the details decide whether they help or hurt, and they deserve to be worked through with your CPA in the room. I am a licensed insurance agent, not a tax preparer or an attorney.</p>
+
+<div class="blog-cta-box">
+  <strong>Trying to sort out your own plan and the team's at the same time?</strong> We can take them one at a time. <a href="https://tidycal.com/denton/intro-call">Book a free 15-minute review</a> or call <a href="tel:6155130313">615-513-0313</a>.
+</div>
+
+<h2>When a group plan is still the right answer</h2>
+
+<p>I do not start from the idea that group plans are bad. For some teams, older ones, teams with health conditions, or businesses where one shared plan is part of how you hire, a group plan can be the strongest thing available. The point is to choose it after looking at the alternatives, not because it was the only option anyone mentioned.</p>
+
+<p>If you want the longer version of that argument, the <a href="health-insurance-small-business-owners-middle-tennessee">post for small business owners</a> goes through where individual strategies tend to work and where group still wins.</p>
+
+<h2>What to gather this month</h2>
+
+<p><strong>A simple headcount.</strong> Who works for you, roughly what ages, and who is already covered somewhere else, like a spouse's plan.</p>
+
+<p><strong>Your group plan's renewal date, if you have one.</strong> That is your real decision date for the group side, and it may not be anywhere near November.</p>
+
+<p><strong>What you want to do for your people, in your own terms.</strong> Not a number for me. A sense of whether you want to cover people fully, help them, or simply point them somewhere good.</p>
+
+<p><strong>Your own doctors and your own renewal notice.</strong> Because question one is still on the table.</p>
+
+<h2>Frequently asked questions</h2>
+
+<div class="faq-item"><h3>Does open enrollment apply to my small group health plan?</h3><p>Generally not in the same way. The open enrollment that begins November 1 is for individual coverage, including the ACA marketplace. A small group plan usually runs on its own renewal schedule, so your group's renewal date is the date to plan around for the group side.</p></div>
+<div class="faq-item"><h3>Can my employees use open enrollment if the business does not offer a group plan?</h3><p>Yes. Open enrollment is when the ACA marketplace is open to everyone for individual coverage, so employees who buy their own coverage can enroll or change plans during this window. Outside it, they would generally need a qualifying life event. Eligibility for any premium tax credit varies by individual circumstances.</p></div>
+<div class="faq-item"><h3>Should I, as the owner, be on the same plan as my employees?</h3><p>Not necessarily. The owner's coverage is a separate decision from how the team is covered. Depending on your income, health and household, an individual plan may fit you better than the group plan, or the reverse. It is worth comparing once rather than assuming.</p></div>
+<div class="faq-item"><h3>What about ICHRA or QSEHRA?</h3><p>Both are arrangements where a business helps pay for individual coverage instead of sponsoring a group plan. They have their own rules about eligibility, required notices and how they interact with marketplace premium tax credits, and the details decide whether they help. That is worth working through with your CPA or tax advisor alongside a licensed agent. I am a licensed insurance agent, not a tax preparer or an attorney.</p></div>
+<div class="faq-item"><h3>Is a group plan ever the better choice for a small business?</h3><p>Yes. For some teams, especially those with health conditions or an older workforce, a group plan that does not ask each employee to qualify individually can be the strongest option. The goal is to choose it after comparing, not by default. Coverage availability and eligibility vary by individual circumstances.</p></div>
+
+<h2>Where to start</h2>
+
+<p>Open enrollment is loud this time of year, and most of what you hear is aimed at individuals. For an owner, the useful move is to split it into the two questions above: how you are covered, and how your team is covered. They have different answers, and sometimes different calendars.</p>
+
+<p>Take the first one now, while the individual market is open. Put the second one on the calendar against your actual renewal date. Either way, look at the options side by side once before you sign up for another year of whatever you had.</p>
+
+<div class="blog-cta-box">
+  <strong>Open enrollment is open. Own a small business? Start with your own coverage, then the team's.</strong> DC Insurance offers free consultations with no obligation. <a href="https://tidycal.com/denton/intro-call">Book your free review</a> or call <a href="tel:6155130313">615-513-0313</a>.
+</div>
+
+
+<p class="blog-disclaimer"><em>DC Insurance is an independent health insurance agency serving Middle Tennessee. This is general information about how coverage works, not advice about your particular situation. Coverage availability and eligibility vary by individual circumstances.</em></p>
+
+<div class="author-bio" style="display:flex;gap:1rem;align-items:flex-start;margin:2rem 0 1.5rem;padding:1.25rem 1.5rem;background:var(--light-gray,#f8f9fa);border-radius:10px;border-left:4px solid var(--teal,#0d9488);">
+  <img src="../../denton-bio.webp" alt="Denton Casey, DC Insurance" width="150" height="184" loading="lazy" style="border-radius:50%;object-fit:cover;flex-shrink:0;" />
+  <div>
+    <strong style="display:block;font-size:1rem;color:var(--navy,#1e3a5f);">Denton Casey</strong>
+    <span style="display:block;font-size:0.85rem;color:var(--medium-gray,#6b7280);margin-bottom:0.5rem;">Independent Health Insurance Specialist &middot; DC Insurance</span>
+    <p style="font-size:0.9rem;margin:0;line-height:1.6;">Denton helps self-employed individuals, 1099 contractors, and small business owners in Middle Tennessee find coverage that actually fits, comparing every lane available, not just what's easiest to sell. <a href="../../about-us" style="color:var(--teal,#0d9488);">Learn more about Denton &rarr;</a></p>
+  </div>
+</div>
+
+</div>
+</article>
+<aside class="post-sidebar">
+<div class="sidebar-widget" style="background:var(--navy);border-color:var(--navy);"><h4 style="color:rgba(255,255,255,0.5);">Have a Question?</h4><p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.25rem;">Get a straight answer for your specific situation, no pressure, no scripts.</p><a class="btn btn-primary" href="../../contact" style="width:100%;justify-content:center;">Book a Free Review</a><a class="btn btn-outline" href="tel:6155130313" style="width:100%;justify-content:center;margin-top:0.75rem;"><i class="fa-solid fa-phone"></i>  615-513-0313</a></div>
+<div class="sidebar-widget"><h4>Compare Your Options</h4>
+<div class="related-post"><div><a href="../../small-business-health-insurance-tennessee">Small Business Coverage</a><span class="date">Who We Help</span></div></div>
+<div class="related-post"><div><a href="../../self-employed-health-insurance-tennessee">Self-Employed Coverage</a><span class="date">Who We Help</span></div></div>
+<div class="related-post"><div><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a><span class="date">Coverage Options</span></div></div>
+<div class="related-post"><div><a href="../../open-enrollment-tennessee">Open Enrollment in Tennessee</a><span class="date">Start Here</span></div></div>
+</div>
+<div class="sidebar-widget"><h4>Areas We Serve</h4><ul style="font-size:0.88rem;"><li style="margin-bottom:0.4rem;"><a href="../../nashville-insurance" style="color:var(--teal);">Nashville</a></li><li style="margin-bottom:0.4rem;"><a href="../../nolensville-insurance" style="color:var(--teal);">Nolensville</a></li><li style="margin-bottom:0.4rem;"><a href="../../franklin-insurance" style="color:var(--teal);">Franklin</a></li><li style="margin-bottom:0.4rem;"><a href="../../college-grove-insurance" style="color:var(--teal);">College Grove</a></li><li style="margin-bottom:0.4rem;"><a href="../../murfreesboro-insurance" style="color:var(--teal);">Murfreesboro</a></li><li style="margin-bottom:0.4rem;"><a href="../../smyrna-insurance" style="color:var(--teal);">Smyrna</a></li><li style="margin-bottom:0.4rem;"><a href="../../hendersonville-insurance" style="color:var(--teal);">Hendersonville</a></li><li><a href="../../contact" style="color:var(--gray);">+ More Areas</a></li></ul></div>
+<div class="sidebar-widget"><h4>More From the Blog</h4>
+<div class="related-post"><div><a href="health-insurance-small-business-owners-middle-tennessee">Health Insurance for Small Business Owners</a><span class="date">Small Business</span></div></div>
+<div class="related-post"><div><a href="open-enrollment-nolensville-williamson-county">Which Enrollment to Settle First</a><span class="date">Open Enrollment</span></div></div>
+<div class="related-post"><div><a href="open-enrollment-1099-commission-income-tennessee">Open Enrollment on 1099 Income</a><span class="date">Open Enrollment</span></div></div>
+</div>
+</aside>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a href="/" style="display:inline-block;margin-bottom:1rem;">
+<img alt="DC Insurance" src="../../logo-nav.webp" width="55" height="52"/>
+</a>
+<p>Tennessee's independent health insurance specialist. Private PPO plans, supplemental coverage, and honest comparisons for self-employed individuals and small business owners.</p>
+<p class="footer-disclaimer" style="margin-top:1rem;">Licensed health insurance agent. Coverage availability and eligibility vary by state and individual circumstances. TN Insurance License #3002519070 | NPN: 20716644</p>
+</div>
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="../../about-us">About</a></li>
+<li><a href="../../services">Services</a></li>
+<li><a href="../../dc-insurance-blog">Blog</a></li>
+<li><a href="../../contact">Contact</a></li>
+<li><a href="../../free-health-coverage-pdf">Free Guide</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Service Areas</h4>
+<ul>
+<li><a href="../../nashville-insurance">Nashville</a></li>
+<li><a href="../../brentwood-insurance">Brentwood</a></li>
+<li><a href="../../franklin-insurance">Franklin</a></li>
+<li><a href="../../murfreesboro-insurance">Murfreesboro</a></li>
+<li><a href="../../nolensville-insurance">Nolensville</a></li>
+<li><a href="../../smyrna-insurance">Smyrna</a></li>
+<li><a href="../../belle-meade-insurance">Belle Meade</a></li>
+<li><a href="../../green-hills-insurance">Green Hills</a></li>
+<li><a href="../../bellevue-insurance">Bellevue</a></li>
+<li><a href="../../mt-juliet-insurance">Mt. Juliet</a></li>
+<li><a href="../../hendersonville-insurance">Hendersonville</a></li>
+<li><a href="../../spring-hill-insurance">Spring Hill</a></li>
+<li><a href="../../donelson-insurance">Donelson</a></li>
+<li><a href="../../shelbyville-insurance">Shelbyville</a></li>
+<li><a href="../../chapel-hill-insurance">Chapel Hill</a></li>
+<li><a href="../../college-grove-insurance">College Grove</a></li>
+<li><a href="../../christiana-insurance">Christiana</a></li>
+<li><a href="../../manchester-insurance">Manchester</a></li>
+<li><a href="../../tullahoma-insurance">Tullahoma</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<ul>
+<li><a href="tel:6155130313"><i class="fa-solid fa-phone" style="color:var(--sky);margin-right:0.4rem;"></i>615-513-0313</a></li>
+<li><a href="mailto:denton@dcinsuranceagency.com">denton@dcinsuranceagency.com</a></li>
+<li><a href="https://tidycal.com/denton/intro-call" rel="noopener noreferrer" target="_blank">Book a Free Appointment</a></li>
+<li><a href="../../privacy-page" rel="nofollow" style="color:rgba(255,255,255,0.5);font-size:0.85rem;">Privacy Policy</a></li>
+<li style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-top:0.5rem;">Mon–Fri 8am–5pm · Sat 9am–2pm</li>
+</ul>
+<div class="social-links" style="margin-top:1.25rem;">
+<a aria-label="Facebook" class="social-link fb" href="https://www.facebook.com/dcinsurance/" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+<a aria-label="Instagram" class="social-link ig" href="https://www.instagram.com/dcinsurance2152/" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+<a aria-label="LinkedIn" class="social-link li" href="https://www.linkedin.com/in/dentoncasey/" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="footer-col">
+<h4>Who We Help</h4>
+<ul>
+<li><a href="../../self-employed-health-insurance-tennessee">Self-Employed</a></li>
+<li><a href="../../1099-health-insurance-tennessee">1099 Contractors</a></li>
+<li><a href="../../small-business-health-insurance-tennessee">Small Business Owners</a></li>
+<li><a href="../../private-ppo-health-insurance-tennessee">Private PPO Plans</a></li>
+<li><a href="../../aca-vs-private-health-insurance-tennessee">ACA vs. Private</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 DC Insurance · Denton Casey · Middle Tennessee</span>
+<span>Independent Health Insurance Specialist · 615-513-0313</span>
+</div>
+</div>
+</footer>
+
+<a aria-label="Message on WhatsApp" class="whatsapp-float" href="https://wa.me/16155130313" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+(function(){
+  var burger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('navMobile');
+  if(burger && mobileNav){
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(e){
+      var li = this.closest('.nav-dropdown');
+      if(!li) return;
+      if(window.innerWidth < 900){
+          e.preventDefault();
+          li.classList.toggle('open');
+          document.querySelectorAll('.nav-dropdown').forEach(function(other){
+            if(other !== li) other.classList.remove('open');
+          });
+        }
+      });
+    });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.nav-dropdown')){
+        document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      }
+    });
+  })();
+  </script>
+  <script src="/animations.js" defer></script>
+</body>
+</html>
